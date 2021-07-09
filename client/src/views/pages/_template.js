@@ -1,14 +1,10 @@
-import './App.css';
-
-function App() {
+const  Page = () => {
   return (
-    <div className="App">
-      <div className="content">
+    <div className="pageBody">
         <h1>App content</h1>
         <p>Content is added here!</p>
-      </div>
     </div>
   );
 }
 
-export default App;
+export default Page;

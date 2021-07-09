@@ -1,12 +1,14 @@
 import './App.css';
+import NavBar from './components/fgd-navbar';
+import HomePage from './views/pages/home';
 
 function App() {
 
   return (
     <div className="App">
+      <NavBar />
       <div className="content">
-        <h1>App content</h1>
-        <p>Content is added here!</p>
+        <HomePage />
         <br />
       </div>
     </div>
