@@ -1,0 +1,41 @@
+footer{
+    background-color: #f3c5bf;
+    width: 100%;
+}
+
+#socials{
+    display: flex;
+    margin-bottom: 2em;
+    justify-content: center;
+}
+  
+.socialBtn{
+    margin-right: 0.5em;
+    margin-top: 1.75em;
+}
+
+#footerInfo{
+    width: 100%;
+    display: flex;
+}
+
+#footerCopyright{
+    width: calc(50%-1.5em);
+    margin-left: 1.5em;
+}
+
+#footerNav{
+    width: 40%;
+    margin-left: calc(76% - 1.5em);
+    margin-right: 1.5em;
+}
+
+#footerLink{
+    display: flex;
+    justify-content: center;
+}
+
+#footerLink a {
+    margin-right: 0.8em;
+    margin-bottom: 1.25em;
+}

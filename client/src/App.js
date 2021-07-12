@@ -1,6 +1,6 @@
-import './App.css';
 import NavBar from './components/fgd-navbar';
 import HomePage from './views/pages/home';
+import Footer from './components/fgd-footer';
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
         <HomePage />
         <br />
       </div>
+      <Footer />
     </div>
   );
 }
