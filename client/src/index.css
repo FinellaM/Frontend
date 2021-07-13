@@ -19,5 +19,11 @@ p, a {
 }
 
 
+img{
+  max-width: 100%;
+}
 
+.cAlign{
+  text-align: center;
+}
 

@@ -1,0 +1,63 @@
+.product{
+    width: calc(100% - 8em);
+    display: flex;
+    padding: 4em;
+}
+h1{
+    text-align: center;
+}
+
+.productRight, .productLeft, .imageLeft, .imageRight {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#missionStatement{
+    width: calc(100% - 8em);
+    margin: 0 2em 1em 2em;
+    box-shadow: 20px 20px 8px #797979, -8px -8px 8px #797979;
+}
+
+#missionHeader{
+    text-align: center;
+}
+
+#missionObj{
+    padding: 2%;
+    margin-bottom: 0.5em;
+    display: flex;
+}
+
+#missionPointers{
+    width: calc(70%-2em);
+    margin-left: 2em;
+}
+
+#missionImg{
+    width: calc(30%-2em);
+    margin-right: 2em;
+}
+
+#missionFooter{
+    width: 100%;
+    margin: 0.5em;
+}
+
+#missonFooter-Img{
+    width: calc(15% - 0.65em);
+    margin-left: 0.65em;
+}
+
+#missionFooter-text{
+    width: 85%;
+}
+
+#insta{
+    align-content: center;
+    width: 100%;
+}
+
+.instaCarosel{
+    display: flex;
+    margin: 0.5em;
+}

@@ -20,14 +20,14 @@ footer{
 }
 
 #footerCopyright{
-    width: calc(50%-1.5em);
-    margin-left: 1.5em;
+    width: calc(50%-2em);
+    margin-left: 2em;
 }
 
 #footerNav{
-    width: 40%;
-    margin-left: calc(76% - 1.5em);
-    margin-right: 1.5em;
+    width: calc(40% -2em);
+    margin-left: calc(76% - 1em);
+    margin-right: 1em;
 }
 
 #footerLink{
