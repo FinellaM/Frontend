@@ -7,6 +7,10 @@ import ContactUs from './ContactUs';
 import Stockist from './Stockist';
 import Cart from './Cart';
 import Footer from './components/fgd-footer';
+import AppleRhuharb from './productAppleRhuharb';
+import Mixed from './productMixed';
+import PeachyPassion from './productPeachPassion';
+import RaspberryHib from './productRaspberryHibiscus';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -22,6 +26,18 @@ function App() {
             </Route>
             <Route exact path="/shop">
               <Shop />
+            </Route>
+            <Route exact path="/product-appleRhuharb">
+              <AppleRhuharb />
+            </Route>
+            <Route exact path="/product-Mixed">
+              <Mixed />
+            </Route>
+            <Route exact path="/product-peachPassionfruit">
+              <PeachyPassion />
+            </Route>
+            <Route exact path="/product-raspberryHibiscus">
+              <RaspberryHib />
             </Route>
             <Route exact path="/about-us">
               <AboutUs />

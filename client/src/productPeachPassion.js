@@ -1,4 +1,6 @@
-const Shop = () => {
+
+
+const peachPassion = () => {
     return (
         <div className="container text-center">
             Shop Page
@@ -6,4 +8,4 @@ const Shop = () => {
     );
 }
  
-export default Shop;
+export default peachPassion;
