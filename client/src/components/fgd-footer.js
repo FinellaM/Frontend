@@ -3,6 +3,7 @@ import SlButton from '@shoelace-style/react/dist/button';
 import SlIcon from '@shoelace-style/react/dist/icon';
 import '@shoelace-style/react/dist/spinner';
 import './footer.css';
+import { Link } from 'react-router-dom';
 
 const Facebook = "https://www.facebook.com/feelgooddrinks";
 const Twitter = "https://twitter.com/feelgooddrinks";
@@ -28,16 +29,16 @@ const  Footer = () => {
                   <p>No part of this work may be reproduced without concent of the original copyright owners. See code comments for references.</p>
                 </div>
                 <div id="footerNav">
-                  <a href="/"><h2>Home</h2></a>
-                  <a href="/shop"><h2>Shop</h2></a>
-                  <a href="/aboutUs"><h2>About Us</h2></a>
-                  <a href="/contact"><h2>Contact</h2></a>
+                  <Link to="/"><h2>Home</h2></Link>
+                  <Link to="/shop"><h2>Shop</h2></Link>
+                  <Link to="/aboutUs"><h2>About Us</h2></Link>
+                  <Link to="/contact"><h2>Contact</h2></Link>
                 </div>
             </div> 
             <div id="footerLink">
-              <a href="/privacy">Privacy Policy</a>
-                  <a href="/termsConditions">Terms and Conditions</a>
-                  <a href="/shipping-Returns">Shipping and Returns</a>
+              <Link to="/privacy">Privacy Policy</Link>
+                  <Link to="/termsConditions">Terms and Conditions</Link>
+                  <Link to="/shipping-Returns">Shipping and Returns</Link>
             </div>         
       </footer>
     );
