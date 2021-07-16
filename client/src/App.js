@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import Header from './Header';
+import Header from './components//Header';
 import Home from './Home';
-import Sidenav from './Sidenav';
+import Sidenav from './components/Sidenav';
 import Shop from './Shop';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Stockist from './Stockist';
 import Cart from './Cart';
+import Footer from './components/fgd-footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );
