@@ -56,34 +56,30 @@ const appleRhuharb = () => {
                     </div>
                     <div className="nutritInfo">
                         <h5 className="nutritAttribute">Energy</h5>
-                        <h5 className="nutritFact">{product.energy}</h5>
+                        <h5 className="nutritFact">31kJ/7 kCal</h5>
                     </div>
                     <div className="nutritInfo">
                         <h5 className="nutritAttribute">Fat</h5>
-                        <h5 className="nutritFact">{product.fat}</h5>
+                        <h5 className="nutritFact">0g</h5>
                     </div>
                     <div className="nutritInfo">
                         <h5 className="nutritAttribute">~ Saturates</h5>
-                        <h5 className="nutritFact">{product.satFats}</h5>
+                        <h5 className="nutritFact">0g</h5>
                     </div>
                     <div className="nutritInfo">
                         <h5 className="nutritAttribute">Carbohydrates</h5>
-                        <h5 className="nutritFact">{product.carbohydrates}</h5>
+                        <h5 className="nutritFact">1.7g</h5>
                     </div>
                     <div className="nutritInfo">
                         <h5 className="nutritAttribute">~ Sugar</h5>
-                        <h5 className="nutritFact">{product.sugar}</h5>
-                    </div>
-                    <div className="nutritInfo">
-                        <h5 className="nutritAttribute">Energy</h5>
-                        <h5 className="nutritFact">{product.energy}</h5>
+                        <h5 className="nutritFact">1.4g</h5>
                     </div>
                     <div className="nutritInfo">
                         <h5 className="nutritAttribute">Protein</h5>
-                        <h5 className="nutritFact">{product.protein}</h5>
+                        <h5 className="nutritFact">0g</h5>
                     </div><div className="nutritInfo">
                         <h5 className="nutritAttribute">Sodium</h5>
-                        <h5 className="nutritFact">{product.sodium}</h5>
+                        <h5 className="nutritFact">0g</h5>
                     </div>
                     
                 </div>
