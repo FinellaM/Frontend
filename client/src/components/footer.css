@@ -5,7 +5,7 @@ footer{
 
 #socials{
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     justify-content: center;
 }
   
@@ -22,6 +22,7 @@ footer{
 #footerCopyright{
     width: calc(50%-2em);
     margin-left: 2em;
+    text-align: center;
 }
 
 #footerNav{
@@ -43,4 +44,8 @@ footer{
 
 #footerNav a {
     color: black;
+}
+
+p {
+    font-size: x-small;
 }
