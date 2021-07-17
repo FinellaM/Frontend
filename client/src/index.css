@@ -70,3 +70,42 @@ a.btn {
 .splash-image {
   width: 100%;
 }
+
+
+/*Contact Page*/
+
+
+.form-required {
+  color: red;
+}
+
+.form {
+  padding: 50px;
+}
+
+.form-field {
+  padding-top: 30px;
+}
+
+.form-input {
+  width: 400px;
+  height: 50px;
+
+}
+
+.message-textarea {
+  width: 400px;
+  height: 100px;
+}
+
+.file-upload {
+  margin-top: 30px;
+}
+
+.form-submit {
+  margin-top: 30px;
+}
+
+.other-contact {
+  margin-top: 50px;
+}

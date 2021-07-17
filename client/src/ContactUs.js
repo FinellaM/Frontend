@@ -2,20 +2,29 @@ const ContactUs = () => {
     return (
         <div className="container text-center">
             <h1>Contact Us</h1>
-                <form class="form">
-                    <label>Full Name<span class="form-required">*</span></label><br></br>
-                        <input name="full_name" type="text" required></input><br></br>
-                    <label>Business Name (Optional)</label><br></br>
-                        <input name="business_name" type="text"></input><br></br>
-                    <label>Email<span class="form-required">*</span></label><br></br>
-                        <input name="email" type="email" required></input><br></br>
-                    <label>Phone (Optional)</label><br></br>
-                        <input name="phone" type="text"></input><br></br>
-                    <label>Message<span class="form-required">*</span></label><br></br>
-                        <textarea name="message" class="message-textarea" maxlength="1000" required></textarea><br></br>
-                    <input type="submit" name="submit" value="Submit" class="contact-submit"></input>
+                <form className="form">
+                    <label className="form-field">Full Name<span className="form-required">*</span></label><br></br>
+                        <input name="full_name" type="text" className="form-input" required></input><br></br>
+                    <label className="form-field">Business Name (Optional)</label><br></br>
+                        <input name="business_name" type="text" className="form-input"></input><br></br>
+                    <label className="form-field">Email<span className="form-required">*</span></label><br></br>
+                        <input name="email" type="email" className="form-input" required></input><br></br>
+                    <label className="form-field">Phone (Optional)</label><br></br>
+                        <input name="phone" type="text" className="form-input"></input><br></br>
+                    <label className="form-field">Message<span className="form-required">*</span></label><br></br>
+                        <textarea name="message" className="message-textarea" maxlength="1000" required></textarea><br></br>
+                    <input type="file" name="filename" className="form-input file-upload"></input><br></br>
+                    <input type="submit" name="submit" value="Submit" className="form-submit"></input>
                 </form>
-        </div>
+
+                <div className="other-contact">
+                    <h2>Other ways to contact us</h2>
+                    <p>Email: contact@feelgooddrinks.com</p>
+                    <p>Phone: 987 654 321</p>
+                    <p>Fax: 987 654 312</p>
+                    <p>Address: Feel Good Drinks, Lyme Regis, Dorset DT7 3LS</p>
+                </div>
+                </div>
     );
 }
  
