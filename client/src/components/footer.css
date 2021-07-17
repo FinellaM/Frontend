@@ -38,4 +38,9 @@ footer{
 #footerLink a {
     margin-right: 0.8em;
     margin-bottom: 1.25em;
+    color: black;
+}
+
+#footerNav a {
+    color: black;
 }
