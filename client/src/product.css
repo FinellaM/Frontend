@@ -67,9 +67,14 @@
 }
 
 .productCard{
-    margin-right: 0.25em;
+    width: calc(33.33% - 2.25em);
+    margin-right: 2.25em;
 }
 
 .productCard img, .productCard h4, .productCard h5, .productCard p{
     margin-bottom: 0;
+}
+
+.productCard h4, .productCard h5{
+    font-weight: 600;
 }

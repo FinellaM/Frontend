@@ -11,11 +11,15 @@ const appleRhuharb = () => {
 
     return (
         <div className="container text-center">
-            <SlButton href="/shop">
-                <SlIcon name="arrow-return-left"></SlIcon>
-                Back
-            </SlButton>
+            
             <div className="productBox">
+                <SlButton href="/shop" style={{textAlign: 'left',
+                marginTop: '1em',
+                marginBottom: '1em',
+                }}>
+                    <SlIcon name="arrow-return-left"></SlIcon>
+                    Back
+                </SlButton>
                 <div className="productImages">
                     <img src="" alt="" className="productImg" />
                     <div className="productImgCarosel">
@@ -89,20 +93,20 @@ const appleRhuharb = () => {
                 <h3>You may Also like</h3>
                 <div className="productCarousel">
                     <SlCard className="productCard">
-                        <img src="" alt="" />
-                        <h4></h4>
+                        <img src="" alt="Feel Good Mixed Pack" />
+                        <h4>Feel Good Mixed Pack</h4>
                         <p>330ml</p>
                         <h5>From £4.50 </h5>
                     </SlCard>
                     <SlCard className="productCard">
-                        <img src="" alt="" />
-                        <h4></h4>
+                        <img src="" alt="Peach & Passionfruit" />
+                        <h4>Peach & Passionfruit</h4>
                         <p>330ml</p>
                         <h5>From £4.50 </h5>
                     </SlCard>
                     <SlCard className="productCard">
-                        <img src="" alt="" />
-                        <h4></h4>
+                        <img src="" alt="Raspberry & Hibiscus" />
+                        <h4>Raspberry & Hibiscus</h4>
                         <p>330ml</p>
                         <h5>From £4.50 </h5>
                     </SlCard>
