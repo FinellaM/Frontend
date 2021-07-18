@@ -27,7 +27,10 @@ const Home = () => {
                     <h1><strong>Find Your Flavour</strong></h1>
                 </div>
             </div>
-
+            {/* Peach and Passionfruit 3D Model Can */}
+            <div id="peach-can">
+                <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+            </div>
             <div className="row m-auto">
                 <div className="col-12 col-md-6 text-center">
                     <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="" />
@@ -55,6 +58,7 @@ const Home = () => {
                 </div>
             </div>
 
+
             <div className="row m-auto">
                 <div className="col-12 col-md-6 order-12 order-md-1">
                     <div className="mt-4 text-center">
@@ -76,10 +80,20 @@ const Home = () => {
                         <a type="button" className="btn btn-light m-3">Shop All</a>
                     </div>
                 </div>
+                {/* Raspberry and Hibiscus 3D Model Can */}
+                <div id="raspberry-can">
+                <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+                </div>
+
                 <div className="col-12 col-md-6 order-1 order-md-12 text-center">
                     <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="" />
                     <img className="drag-drop-image" src="./click_and_drag_icon.png" alt="" width="100px"/> {/* Original Image Sources: Coquet, Adrien. N.d. "Arrow." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/arrow/1766473/.  AND Mokrane, Mourad. N.d. "Pointer." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/pointer/153265/. Image modified by Group Mint*/}
                 </div>
+            </div>
+
+            {/* Apple and Rhubarb 3D Model Can */}
+            <div id="rhubarb-can">
+            <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
             </div>
 
             <div className="row m-auto">

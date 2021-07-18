@@ -67,7 +67,7 @@ const AboutUs = () => {
             <div>
                 <p><strong>At Feel Good each decision we make is a big one because, before we think about the product, we think about the planet and the people. We are at the start of our sustainability journey and are constantly looking to improve our impact as we progress.</strong></p>
             </div>
-            </div>
+        </div>
     );
 }
  

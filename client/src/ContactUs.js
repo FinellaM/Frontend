@@ -24,7 +24,7 @@ const ContactUs = () => {
                     <p>Fax: 987 654 312</p>
                     <p>Address: Feel Good Drinks, Lyme Regis, Dorset DT7 3LS</p>
                 </div>
-                </div>
+        </div>
     );
 }
  
