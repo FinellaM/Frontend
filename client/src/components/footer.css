@@ -11,7 +11,7 @@ footer{
   
 .socialBtn{
     margin-right: 0.5em;
-    margin-top: 1.75em;
+    margin-top: 1.5em;
 }
 
 #footerInfo{
@@ -20,15 +20,13 @@ footer{
 }
 
 #footerCopyright{
-    width: calc(50%-2em);
+    width: calc(40% - 2em);
     margin-left: 2em;
     text-align: center;
 }
 
 #footerNav{
-    width: calc(40% -2em);
-    margin-left: calc(76% - 1em);
-    margin-right: 1em;
+    margin-left: calc(45% - 1em);
 }
 
 #footerLink{
@@ -48,4 +46,60 @@ footer{
 
 p {
     font-size: x-small;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+    #footerCopyright{
+        width: 30%;
+        margin-left: 2em;
+    }
+
+    #footerNav {
+        width: calc(30% - 2em);
+        margin-left: calc(50% - 2em);
+    }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+    #footerCopyright {
+        width: calc(30% - 2em);
+        margin-left: 2em;
+    }
+
+    #footerNav {
+        margin-left: calc(45.5% - 0.5em);
+    }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+    #socials {
+        margin-bottom: 0.75em;
+    }
+
+    #footerCopyright {
+        width: 100%;
+        margin-left: 1em;
+    }
+
+    #footerLink a {
+        margin-left: 0.8em;
+    }
+
+    #footerCopyright {
+        width: calc(50% - 2em);
+        margin: 0 1em;
+    }
+
+    #footerCopyright p {
+        margin-bottom: 0.25em;
+    }
+
+    #footerNav {
+        width: calc(50% - 1em);
+        margin: 0;
+    }
+
 }
