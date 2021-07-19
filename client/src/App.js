@@ -11,7 +11,10 @@ import AppleRhuharb from './productAppleRhuharb';
 import Mixed from './productMixed';
 import PeachyPassion from './productPeachPassion';
 import RaspberryHib from './productRaspberryHibiscus';
+import '@shoelace-style/shoelace/dist/themes/base.css';
+import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+setBasePath('./../dist/shoelace');
 
 function App() {
   return (

@@ -5,13 +5,12 @@ import '@shoelace-style/react/dist/spinner';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import './footer.css';
 import { Link } from 'react-router-dom';
-
 const Facebook = "https://www.facebook.com/feelgooddrinks";
 const Twitter = "https://twitter.com/feelgooddrinks";
 const Instagram = "https://www.instagram.com/feelgooddrinks/";
 const Youtube = "https://www.youtube.com/channel/UCwZ9WaN7QfltGY22mE-Jadg";
 const Linkedin = "https://www.linkedin.com/company/feel-good-drinks";
-setBasePath('@shoelace-style/shoelace');
+setBasePath('./../../dist/shoelace');
 
 const  Footer = () => {
     return (
