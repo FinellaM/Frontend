@@ -2,7 +2,7 @@ var sections = gsap.utils.toArray("section");
 
 sections.forEach((elem, i) => {
 
-  var trigger = elem.querySelector("h2");
+  var trigger = elem.querySelectorAll("h2, h3");
   var headlines = elem.querySelectorAll("h2, h3");
   
   const tl = gsap.timeline( { 
@@ -12,7 +12,7 @@ sections.forEach((elem, i) => {
        start: "+=133 80%",
        end: "+=1000 10%",
        scrub: true,
-       markers: true, /* turns gsap markers on or off */
+       markers: false, /* turns gsap markers on or off */
        toggleActions: "play reverse play reverse",
      }
     
