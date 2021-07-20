@@ -27,10 +27,11 @@ const appleRhuharb = () => {
                         <div className="productImages">
                             <img src="./rhubarb_apple_shop.png" alt="rhubarb & apple can" className="productImg" style={{marginBottom: '1em'}}/>
                             <div className="productImgCarosel">
-                                <img src="./rhubarb_apple_shop.png" alt="" className="productCaroselItem" />
-                                <img src="./rhubarb_apple_shop.png" alt="" className="productCaroselItem" />
-                                <img src="./rhubarb_apple_shop.png" alt="" className="productCaroselItem" />
-                                <img src="./rhubarb_apple_shop.png" alt="" className="productCaroselItem" style={{marginRight: 0}}/>
+                                <img src="./rhubarb_apple_product_1.png" alt="" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_2.png" alt="" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_3.png" alt="" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_4.png" alt="" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_5.png" alt="" className="productCaroselItem" style={{marginRight: 0}}/>
                             </div>
                         </div>
                         <div className="productDesc">
