@@ -16,11 +16,21 @@ const  Footer = () => {
     return (
       <footer>
           <div id="socials">
-            <SlButton size="medium" circle className="socialBtn" href={Facebook} rel="noreferrer" target="_blank"><SlIcon name="facebook" /></SlButton>  
-            <SlButton size="medium" circle className="socialBtn" href={Twitter} rel="noreferrer" target="_blank"><SlIcon name="twitter" /></SlButton> 
-            <SlButton size="medium" circle className="socialBtn" href={Instagram} rel="noreferrer" target="_blank"><SlIcon name="instagram" /></SlButton> 
-            <SlButton size="medium" circle className="socialBtn" href={Youtube} rel="noreferrer" target="_blank"><SlIcon name="youtube" /></SlButton> 
-            <SlButton size="medium" circle className="socialBtn" href={Linkedin} rel="noreferrer" target="_blank"><SlIcon name="linkedin" /></SlButton>
+            <SlButton size="medium" circle className="socialBtn" href={Facebook} rel="noreferrer" target="_blank"><i className="fa fa-facebook" style={{
+                            fontSize: '24px',
+                        }}></i></SlButton>  
+            <SlButton size="medium" circle className="socialBtn" href={Twitter} rel="noreferrer" target="_blank"><i className="fa fa-twitter" style={{
+                            fontSize: '24px',
+                        }}></i></SlButton> 
+            <SlButton size="medium" circle className="socialBtn" href={Instagram} rel="noreferrer" target="_blank"><i className="fa fa-instagram" style={{
+                            fontSize: '24px',
+                        }}></i></SlButton> 
+            <SlButton size="medium" circle className="socialBtn" href={Youtube} rel="noreferrer" target="_blank"><i className="fa fa-youtube" style={{
+                            fontSize: '24px',
+                        }}></i></SlButton> 
+            <SlButton size="medium" circle className="socialBtn" href={Linkedin} rel="noreferrer" target="_blank"><i className="fa fa-linkedin-square" style={{
+                            fontSize: '24px',
+                        }}></i></SlButton>
           </div>
             <div id="footerInfo">
                 <div id="footerCopyright">

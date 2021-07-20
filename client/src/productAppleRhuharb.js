@@ -1,6 +1,5 @@
 import '@shoelace-style/shoelace/dist/themes/base.css';
 import SlButton from '@shoelace-style/react/dist/button';
-import SlIcon from '@shoelace-style/react/dist/icon';
 import SlCard from '@shoelace-style/react/dist/card';
 import SlRating from '@shoelace-style/react/dist/rating';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
@@ -15,7 +14,10 @@ const appleRhuharb = () => {
                     marginTop: '1em',
                     marginBottom: '1em',
                     }}>
-                        <SlIcon name="arrow-return-left"></SlIcon>
+                        <i className="fa fa-arrow-left" style={{
+                            fontSize: '20px',
+                            marginRight:'0.5em',
+                        }}></i>
                         Back
             </SlButton>
             <div className="text-center">
