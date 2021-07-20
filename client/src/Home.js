@@ -162,8 +162,7 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="col-6 text-center">
-                                    {/*<img src="./people_and_planet.png" alt="People and Planet Logo" className="w-50" /> {/* Image Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet */}
-                                    <video className="planet-animation" autoPlay loop muted playsInline>
+                                    <video className="planet-animation" autoPlay loop muted playsInline> {/* Animation of People and Planet logo, set to autoplay, loop forever. Muted for Chrome support, playsInline for IOS support */}
                                     <source src="./people_planet.mp4" type="video/mp4" /> {/* Image Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. Animated by Group Mint*/}
                                     </video>
                                 </div>
