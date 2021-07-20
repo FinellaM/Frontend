@@ -1,10 +1,10 @@
 const AboutUs = () => {
     return (
         <div className="container text-center">
-            <h1>About Us</h1>
+            <h1>About Us</h1> {/* Page title */}
             {/* Entire Page's Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
             <div className="about-people-planet">
-                <h2>3% for People & Planet</h2>
+                <h2>3% for People & Planet</h2> {/* Page section title */}
                     <p>At the beating heart of Feel Good is a mission to make this world a better place for everyone.</p> 
                     <p>We wanted to vreate a brand that could give back to people AND the planet. Giving people a better choice about how they consume. That's why we created the 3% for People & Planet Fund. We donate 3% of our sales to charities that support personal and planetary wellbeing. Now that feels good, doesn't it?</p>
                 <h5>#FeelGoodMoments</h5>
@@ -14,23 +14,23 @@ const AboutUs = () => {
                     <p><strong>So far this year the 3% People & Planet fund has donated over £10k to charity and we are excited to introduce you to the people we have been working with...</strong></p>
             </div>
             <div className="about-sea">
-                <h2>Sea</h2>
+                <h2>Sea</h2> {/* Sub section title */}
                     <p><strong>Project Seagrass</strong> is a brilliant conservation initiative to restore lost ecosystems that absorb high levels of carbon. They are the forefront of societal change to enable the recognition, recovery and resilience of seagrass ecosystems globally - a crucial planetary life support. Marine conservation is a subject very close to Feel Good leader Ed Woolner's heart and one of his main objectives is to offset carbon via ocean and sea protection to restore ocean biodiversity and promote blue health. So this is a very special partnership.</p>
                     <p>Feel Good are joining forces with Project Seagrass to assist in their ocean marine restoration including programmes to rewild seagrass, invite them to speak directly to our community and financially contribute to a short film they have commission for the G7.</p>
             </div>
             <div className="about-earth">
-                <h2>Earth</h2>
+                <h2>Earth</h2> {/* sub section title*/}
                     <p><strong>Planet Mark</strong> is a sustainability certification for every type of organisation which recognises continuous improvement, encourages action and builds an empoweres community of like-minded individuals making a world of difference. At Feel Good we are delighted to be part of this movement.</p>
                     <p>We have already committed to a net zero planet through our certification, will continue to build awareness of the challenges we face with climate change and will collaborate on events around G7 and COP26.</p>
             </div>
             <div className="about-communities">
-                <h2>Communities</h2>
+                <h2>Communities</h2> {/* sub section title */}
                     <p><strong>The Wave</strong> is the first inland-surfing destination of its kind, where people of all ages, backgrounds and abilities can experience the joy of surfing and its physical and mental health benefites. Our Feel Good leader Ed, who has been surfing since he was 8 years old, is passionate about the power of blue health. He believes everyone should have access to this type of activity. It's not just about surfing. It's about getting back to nature, improving health and well-being, connecting with other people and having a lot of fun in the process!</p>
                     <p>Feel Good will be working with The Wave on their forthcoming social impact programme to help those who would not have the opportunity to experience surfing, will spread the word about the benefits of blue health and run a series of events and competitions.</p>
             </div>
-            <hr style={{ borderTop: '3px solid #b8b8b8' }} />
+            <hr style={{ borderTop: '3px solid #b8b8b8' }} /> {/* Line to seperate page sections */}
             <div className="man-behind-brand">
-                <h2>The Man Behind The Brand</h2>
+                <h2>The Man Behind The Brand</h2> {/* Page section title */}
                     <p><strong>We all have feel good moments. Mine is being in the sea. Wether it's swimming, surfing or sailing, either on my own or with my family and friends, it's exactly where I want to be.</strong></p>
                 <div>
                     <p>I was lucky that I knew this from an early age having moved to the Gower when I was 9. Living by the coast became an essential part of my wellbeing and so, at the age of 21, I chose to put the sea permanently at the centre of my world when I moved to West Dorset. It was one of the best decisions I ever made and has kept a balance throughout my life.</p>
@@ -56,9 +56,9 @@ const AboutUs = () => {
                 </div>
 
             </div>
-            <hr style={{ borderTop: '3px solid #b8b8b8' }} />
+            <hr style={{ borderTop: '3px solid #b8b8b8' }} /> {/* Line to seperate page sections */}
             <div className="so-feel-good">
-                <h2>So Far So Feel Good</h2>
+                <h2>So Far So Feel Good</h2> {/* Page section title */}
             </div>
             <div>
                 <p>"Feel Good drinks have the vision and genuine commitment to becoming a regenerative business and I am really glad to see the changes that they have already started to make. It is a pleasure working with Ed and the team supporting their transformational journey."</p>

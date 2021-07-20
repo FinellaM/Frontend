@@ -71,6 +71,7 @@ a.btn {
   width: 100%;
 }
 
+/* Styling for People and Planet animation on Homepage*/
 .planet-animation {
   width: 65%;
 }
@@ -102,7 +103,7 @@ Contact Page
 
 }
 
-/*Adjust message text are size*/
+/*Adjust message text area size*/
 .message-textarea {
   width: 400px;
   height: 100px;
@@ -130,47 +131,47 @@ Contact Page
 /*Styling for Peach and Passionfruit can*/
 #peach-can {
   position: absolute;
-  z-index: 1;
-  height: 80%;
+  z-index: 1; /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
   width: 80%;
-  padding-left: 12%;
+  padding-left: 12%; /* Padding to position can in middle of splash Image*/
 
 
 }
 
 /*Styling for Peach and Passionfruit can model-viewer*/
 #peach-can model-viewer {
-  height: 100%;
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
   width: 100%;
 }
 
 /*Styling for Raspberry and Hibiscus can*/
 #raspberry-can {
   position: absolute;
-  z-index: 1; 
-  height: 80%;
+  z-index: 1;  /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
   width: 80%;
-  padding-left: 18%;
+  padding-left: 18%; /* Padding to position can in middle of splash Image*/
 }
 
 /*Styling for Raspberry and Hibiscus can model-viewer*/
 #raspberry-can model-viewer {
-  height: 100%;
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
   width: 100%;
 }
 
 /*Styling for Rhubarb and Apple can*/
 #rhubarb-can {
   position: absolute;
-  z-index: 1;
-  height: 80%;
+  z-index: 1; /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
   width: 80%;
-  padding-left: 18%;
+  padding-left: 18%; /* Padding to position can in middle of splash Image*/
   margin-top: 8%;
 }
 
 /*Styling for Rhubarb and Apple can model-viewer*/
 #rhubarb-can model-viewer {
-  height: 100%;
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
   width: 100%;
 }

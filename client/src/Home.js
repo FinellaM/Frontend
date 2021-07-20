@@ -24,21 +24,21 @@ const Home = () => {
 
             <div className="row mt-5 mb-5">
                 <div className="col-12 text-center">
-                    <h1><strong>Find Your Flavour</strong></h1>
+                    <h1><strong>Find Your Flavour</strong></h1> {/* Section title */}
                 </div>
             </div>
            
             <div className="row m-auto">
                 <div className="col-12 col-md-6 text-center">
-                    {/* Peach and Passionfruit 3D Model Can */}
+                    {/* Peach and Passionfruit 3D Model Can. 3D model and texturing created by Group Mint. Design Reference: Feel Good Drinks. n.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
                     <div id="peach-can">
-                        <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+                        <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. */}
                     </div>
-                    <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="Peach and Passionfruit Splash"/>
+                    <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="Peach and Passionfruit Splash"/>{/* Splash image created by Group Mint */}
                 </div> 
                 <div className="col-12 col-md-6">
                     <div className="mt-4 text-center">
-                        <h2><strong>Peach & Passionfruit</strong></h2>
+                        <h2><strong>Peach & Passionfruit</strong></h2> {/* Sub-Section title */}
                     </div>
                     <div className="mt-4 text-center">
                         <h5>330ml</h5>
@@ -52,8 +52,8 @@ const Home = () => {
                         </p>
                     </div>
                     <div className="mt-2 text-center">
-                        <a type="button" className="btn btn-light m-3">View Details</a>
-                        <a type="button" className="btn btn-light m-3">Shop All</a>
+                        <a type="button" className="btn btn-light m-3">View Details</a> 
+                        <a type="button" className="btn btn-light m-3">Shop All</a> 
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ const Home = () => {
             <div className="row m-auto">
                 <div className="col-12 col-md-6 order-12 order-md-1">
                     <div className="mt-4 text-center">
-                        <h2><strong>Raspberry & Hibiscus</strong></h2>
+                        <h2><strong>Raspberry & Hibiscus</strong></h2> {/* Sub-Section title */}
                     </div>
                     <div className="mt-4 text-center">
                         <h5>330ml</h5>
@@ -83,26 +83,26 @@ const Home = () => {
 
 
                 <div className="col-12 col-md-6 order-1 order-md-12 text-center">
-                    {/* Raspberry and Hibiscus 3D Model Can */}
+                    {/* Raspberry and Hibiscus 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
                     <div id="raspberry-can">
-                        <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+                        <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. */}
                     </div>
-                    <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="Raspberry and Hibiscus Splash"/>
+                    <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="Raspberry and Hibiscus Splash"/> {/* Splash image created by Group Mint */}
                 </div>
             </div>
 
 
             <div className="row m-auto">
                 <div className="col-12 col-md-6 text-center">
-                    {/* Apple and Rhubarb 3D Model Can */}
+                    {/* Apple and Rhubarb 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
                     <div id="rhubarb-can">
-                        <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+                        <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>{/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. */}
                     </div>
-                    <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="Rhubarb and Apple Splash"/>
+                    <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="Rhubarb and Apple Splash"/> {/* Splash image created by Group Mint */}
                 </div>
                 <div className="col-12 col-md-6">
                     <div className="mt-4 text-center">
-                        <h2><strong>Rhubarb & Apple</strong></h2>
+                        <h2><strong>Rhubarb & Apple</strong></h2> {/* Sub-Section title */}
                     </div>
                     <div className="mt-4 text-center">
                         <h5>330ml</h5>
@@ -130,7 +130,7 @@ const Home = () => {
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-12 text-center mb-4">
-                                    <h2 className="card-title">Our Mission</h2>
+                                    <h2 className="card-title">Our Mission</h2> {/* Section title */}
                                 </div>
                                 <div className="col-12 text-center mb-5">
                                     <p className="card-subtitle"><strong>We are a purpose driven brand on a mission to lead change from within the drinks industry.</strong></p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
@@ -197,7 +197,7 @@ const Home = () => {
             <div className="row m-auto">
                 <div className="col-12">
                     <div className="mt-4 text-center">
-                        <h2><strong>Join Us On Instagram!</strong></h2>
+                        <h2><strong>Join Us On Instagram!</strong></h2>{/* Section title */}
                     </div>
                     <div className="mt-4 mb-4 text-center">
                         <h5>@feelgooddrinks</h5>
