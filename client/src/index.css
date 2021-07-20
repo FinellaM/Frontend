@@ -71,6 +71,10 @@ a.btn {
   width: 100%;
 }
 
+.planet-animation {
+  width: 65%;
+}
+
 
 /*
 Contact Page
@@ -83,7 +87,7 @@ Contact Page
 
 /*Add padding to the form*/
 .form {
-  padding: 50px;
+  padding: 15px;
 }
 
 /*Add padding to the form fields*/
@@ -127,35 +131,46 @@ Contact Page
 #peach-can {
   position: absolute;
   z-index: 1;
+  height: 80%;
+  width: 80%;
+  padding-left: 12%;
+
 
 }
 
 /*Styling for Peach and Passionfruit can model-viewer*/
 #peach-can model-viewer {
-  height: 450px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
 }
 
 /*Styling for Raspberry and Hibiscus can*/
 #raspberry-can {
   position: absolute;
   z-index: 1; 
+  height: 80%;
+  width: 80%;
+  padding-left: 18%;
 }
 
 /*Styling for Raspberry and Hibiscus can model-viewer*/
 #raspberry-can model-viewer {
-  height: 450px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
 }
 
 /*Styling for Rhubarb and Apple can*/
 #rhubarb-can {
   position: absolute;
   z-index: 1;
+  height: 80%;
+  width: 80%;
+  padding-left: 18%;
+  margin-top: 8%;
 }
 
 /*Styling for Rhubarb and Apple can model-viewer*/
 #rhubarb-can model-viewer {
-  height: 450px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
 }

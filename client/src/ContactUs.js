@@ -1,7 +1,8 @@
 const ContactUs = () => {
     return (
         <div className="container text-center">
-            <h1>Contact Us</h1>
+            <h1>Contact Us</h1><br></br>
+                <p>We always like to hear from customers or potential stockists, so if you'd like to get in contact with us, fill out the form below or use one of the alternate contact methods listed! </p>
                 <form className="form">
                     <label className="form-field">Full Name<span className="form-required">*</span></label><br></br>
                         <input name="full_name" type="text" className="form-input" required></input><br></br>

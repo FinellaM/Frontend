@@ -1,10 +1,11 @@
 const AboutUs = () => {
     return (
         <div className="container text-center">
-            <h1>About Us Page</h1>
+            <h1>About Us</h1>
+            {/* Entire Page's Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
             <div className="about-people-planet">
                 <h2>3% for People & Planet</h2>
-                    <p>At the beating heart of Feel Good is a mission to make this world a better place for everyone.</p>
+                    <p>At the beating heart of Feel Good is a mission to make this world a better place for everyone.</p> 
                     <p>We wanted to vreate a brand that could give back to people AND the planet. Giving people a better choice about how they consume. That's why we created the 3% for People & Planet Fund. We donate 3% of our sales to charities that support personal and planetary wellbeing. Now that feels good, doesn't it?</p>
                 <h5>#FeelGoodMoments</h5>
                     <p>We facilitate #FeelGoodMoments in partnerships with charities that align with our values of fostering communities, the environment and personal wellbering. The good news is we can help more people as Feel Good grows. Every can sold makes a difference.</p>

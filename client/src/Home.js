@@ -27,14 +27,14 @@ const Home = () => {
                     <h1><strong>Find Your Flavour</strong></h1>
                 </div>
             </div>
-            {/* Peach and Passionfruit 3D Model Can */}
-            <div id="peach-can">
-                <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
-            </div>
+           
             <div className="row m-auto">
                 <div className="col-12 col-md-6 text-center">
-                    <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="" />
-                    <img className="drag-drop-image" src="./click_and_drag_icon.png" alt="" width="100px"/> {/*Original Image Sources: Coquet, Adrien. N.d. "Arrow." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/arrow/1766473/.  AND Mokrane, Mourad. N.d. "Pointer." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/pointer/153265/. Image modified by Group Mint*/}
+                    {/* Peach and Passionfruit 3D Model Can */}
+                    <div id="peach-can">
+                        <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+                    </div>
+                    <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="Peach and Passionfruit Splash"/>
                 </div> 
                 <div className="col-12 col-md-6">
                     <div className="mt-4 text-center">
@@ -80,26 +80,25 @@ const Home = () => {
                         <a type="button" className="btn btn-light m-3">Shop All</a>
                     </div>
                 </div>
-                {/* Raspberry and Hibiscus 3D Model Can */}
-                <div id="raspberry-can">
-                <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
-                </div>
+
 
                 <div className="col-12 col-md-6 order-1 order-md-12 text-center">
-                    <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="" />
-                    <img className="drag-drop-image" src="./click_and_drag_icon.png" alt="" width="100px"/> {/* Original Image Sources: Coquet, Adrien. N.d. "Arrow." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/arrow/1766473/.  AND Mokrane, Mourad. N.d. "Pointer." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/pointer/153265/. Image modified by Group Mint*/}
+                    {/* Raspberry and Hibiscus 3D Model Can */}
+                    <div id="raspberry-can">
+                        <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+                    </div>
+                    <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="Raspberry and Hibiscus Splash"/>
                 </div>
             </div>
 
-            {/* Apple and Rhubarb 3D Model Can */}
-            <div id="rhubarb-can">
-            <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
-            </div>
 
             <div className="row m-auto">
                 <div className="col-12 col-md-6 text-center">
-                    <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="" />
-                    <img className="drag-drop-image" src="./click_and_drag_icon.png" alt="" width="100px"/> {/* Original Image Sources: Coquet, Adrien. N.d. "Arrow." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/arrow/1766473/.  AND Mokrane, Mourad. N.d. "Pointer." The Noun Project. Accessed June 18, 2021. https://thenounproject.com/term/pointer/153265/. Image modified by Group Mint*/}
+                    {/* Apple and Rhubarb 3D Model Can */}
+                    <div id="rhubarb-can">
+                        <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>
+                    </div>
+                    <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="Rhubarb and Apple Splash"/>
                 </div>
                 <div className="col-12 col-md-6">
                     <div className="mt-4 text-center">
@@ -163,13 +162,16 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className="col-6 text-center">
-                                    <img src="./people_and_planet.png" alt="" className="w-50" /> {/* Image Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet */}
+                                    {/*<img src="./people_and_planet.png" alt="People and Planet Logo" className="w-50" /> {/* Image Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet */}
+                                    <video className="planet-animation" autoPlay loop muted playsInline>
+                                    <source src="./people_planet.mp4" type="video/mp4" /> {/* Image Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. Animated by Group Mint*/}
+                                    </video>
                                 </div>
                                 <div className="col-12">
                                     <hr style={{ borderTop: '2px solid #b8b8b8' }} />
                                 </div>
                                 <div className="col-6 text-center">
-                                    <img src="./speech_bubble.png" alt="" className="w-50" /> {/* Original Image Source: John3. 2019. "Chat Oval Speech Bubbles Symbol Comments." Top PNG. https://toppng.com/chat-oval-speech-bubbles-symbol-comments-icon-chat-PNG-free-PNG-Images_234561. Image modified by Group Mint*/}
+                                    <img src="./speech_bubble_slim.png" alt="Speech Bubble" className="w-50"/> {/* Original Image Source: John3. 2019. "Chat Oval Speech Bubbles Symbol Comments." Top PNG. https://toppng.com/chat-oval-speech-bubbles-symbol-comments-icon-chat-PNG-free-PNG-Images_234561. Image modified by Group Mint*/}
                                 </div>
                                 <div className="col-6">
                                     <div className="row">

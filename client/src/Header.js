@@ -11,7 +11,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg bg-green">
                 <div className="col-8 col-sm-6 col-md-4">
                     <a className="logo" href="#">
-                        <img src="./feelgooddrinks_logo.png" alt="logo" style={{ height: '80px' }} />
+                        <img src="./feelgooddrinks_logo.png" alt="logo" style={{ height: '80px' }}/> {/* Feel Good Drinks. n.d. "Feel Good Drinks Logo." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/. */}
                     </a>
                 </div>
 
