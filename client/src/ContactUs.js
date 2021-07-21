@@ -20,10 +20,10 @@ const ContactUs = () => {
 
                 <div className="other-contact"> {/* Other contact information */}
                     <h2>Other ways to contact us</h2>
-                    <p>Email: contact@feelgooddrinks.com</p>
-                    <p>Phone: 987 654 321</p>
-                    <p>Fax: 987 654 312</p>
-                    <p>Address: Feel Good Drinks, Lyme Regis, Dorset DT7 3LS</p>
+                        <p>Email: contact@feelgooddrinks.com</p>
+                        <p>Phone: 987 654 321</p>
+                        <p>Fax: 987 654 312</p>
+                        <p>Address: Feel Good Drinks, Lyme Regis, Dorset DT7 3LS</p>
                 </div>
         </div>
     );

@@ -9,14 +9,14 @@ const Home = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
-                <div className="col-12 col-md-6 text-center">
+                <div className="col-8 col-md-6 text-center">
                     <div>
                         <div>
-                            Feel Good is a range of 100% natural, great tasting, fruitful sparkling waters in recyclable and plastic free packaging.
+                            <h4>Feel Good is a range of 100% natural, great tasting, fruitful sparkling waters in recyclable and plastic free packaging.</h4>
                         </div>
                         <div className="mt-5">
-                            <a type="button" className="btn btn-light m-3">Shop Now</a>
-                            <a type="button" className="btn btn-light m-3">About Us</a>
+                            <a type="button" className="btn btn-light m-3" href="/shop">Shop Now</a>
+                            <a type="button" className="btn btn-light m-3" href="/about-us">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -29,14 +29,14 @@ const Home = () => {
             </div>
            
             <div className="row m-auto">
-                <div className="col-12 col-md-6 text-center">
+                <div className="col-12 col-md-7 text-center">
                     {/* Peach and Passionfruit 3D Model Can. 3D model and texturing created by Group Mint. Design Reference: Feel Good Drinks. n.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
                     <div id="peach-can">
-                        <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. */}
+                        <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/ */}
                     </div>
                     <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="Peach and Passionfruit Splash"/>{/* Splash image created by Group Mint */}
                 </div> 
-                <div className="col-12 col-md-6">
+                <div className="col-12 col-md-5">
                     <div className="mt-4 text-center">
                         <h2><strong>Peach & Passionfruit</strong></h2> {/* Sub-Section title */}
                     </div>
@@ -53,14 +53,14 @@ const Home = () => {
                     </div>
                     <div className="mt-2 text-center">
                         <a type="button" className="btn btn-light m-3">View Details</a> 
-                        <a type="button" className="btn btn-light m-3">Shop All</a> 
+                        <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a> 
                     </div>
                 </div>
             </div>
 
 
             <div className="row m-auto">
-                <div className="col-12 col-md-6 order-12 order-md-1">
+                <div className="col-12 col-md-5 order-12 order-md-1">
                     <div className="mt-4 text-center">
                         <h2><strong>Raspberry & Hibiscus</strong></h2> {/* Sub-Section title */}
                     </div>
@@ -77,15 +77,15 @@ const Home = () => {
                     </div>
                     <div className="mt-2 text-center">
                         <a type="button" className="btn btn-light m-3">View Details</a>
-                        <a type="button" className="btn btn-light m-3">Shop All</a>
+                        <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
                     </div>
                 </div>
 
 
-                <div className="col-12 col-md-6 order-1 order-md-12 text-center">
+                <div className="col-12 col-md-7 order-1 order-md-12 text-center">
                     {/* Raspberry and Hibiscus 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
                     <div id="raspberry-can">
-                        <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. */}
+                        <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/*/}
                     </div>
                     <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="Raspberry and Hibiscus Splash"/> {/* Splash image created by Group Mint */}
                 </div>
@@ -93,14 +93,14 @@ const Home = () => {
 
 
             <div className="row m-auto">
-                <div className="col-12 col-md-6 text-center">
+                <div className="col-12 col-md-7 text-center">
                     {/* Apple and Rhubarb 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
                     <div id="rhubarb-can">
-                        <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>{/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. */}
+                        <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>{/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/ */}
                     </div>
                     <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="Rhubarb and Apple Splash"/> {/* Splash image created by Group Mint */}
                 </div>
-                <div className="col-12 col-md-6">
+                <div className="col-12 col-md-5">
                     <div className="mt-4 text-center">
                         <h2><strong>Rhubarb & Apple</strong></h2> {/* Sub-Section title */}
                     </div>
@@ -117,7 +117,7 @@ const Home = () => {
                     </div>
                     <div className="mt-2 text-center">
                         <a type="button" className="btn btn-light m-3">View Details</a>
-                        <a type="button" className="btn btn-light m-3">Shop All</a>
+                        <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@ const Home = () => {
                                     </video>
                                 </div>
                                 <div className="col-12">
-                                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
+                                    <hr style={{ borderTop: '2px solid #222222' }} />
                                 </div>
                                 <div className="col-6 text-center">
                                     <img src="./speech_bubble_slim.png" alt="Speech Bubble" className="w-50"/> {/* Original Image Source: John3. 2019. "Chat Oval Speech Bubbles Symbol Comments." Top PNG. https://toppng.com/chat-oval-speech-bubbles-symbol-comments-icon-chat-PNG-free-PNG-Images_234561. Image modified by Group Mint*/}
@@ -184,7 +184,7 @@ const Home = () => {
                                 </div>
                                 <div className="col-12">
                                     <div className="mt-2 text-center">
-                                        <a type="button" className="btn btn-light m-3">Find Out More</a>
+                                        <a type="button" className="btn btn-light m-3" href="/about-us">Find Out More</a>
                                     </div>
                                 </div>
                             </div>
@@ -208,16 +208,16 @@ const Home = () => {
                 <div className="col-8">
                     <div className="row text-center">
                         <div className="col-6 col-md-3">
-                            <img className="instagram-image mw-100" src="./logo192.png" alt="" />
+                            <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
                         </div>
                         <div className="col-6 col-md-3">
-                            <img className="instagram-image mw-100" src="./logo192.png" alt="" />
+                            <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
                         </div>
                         <div className="col-6 col-md-3">
-                            <img className="instagram-image mw-100" src="./logo192.png" alt="" />
+                            <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
                         </div>
                         <div className="col-6 col-md-3">
-                            <img className="instagram-image mw-100" src="./logo192.png" alt="" />
+                            <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
                         </div>
                     </div>
                 </div>

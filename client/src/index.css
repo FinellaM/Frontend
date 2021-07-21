@@ -1,6 +1,17 @@
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
 
 /* 
 Sidebar styling
@@ -64,7 +75,7 @@ nav p {
 }
 
 a.btn {
-  border: 1px solid rgb(75, 75, 75) !important;
+  border: 2px solid rgb(75, 75, 75) !important;
 }
 
 .splash-image {
@@ -128,6 +139,7 @@ Contact Page
 3D Cans
 */
 
+
 /*Styling for Peach and Passionfruit can*/
 #peach-can {
   position: absolute;
@@ -166,7 +178,7 @@ Contact Page
   z-index: 1; /* So that the model is above splash image*/
   height: 80%; /* Entire model-viewer area set to 80% of its column*/
   width: 80%;
-  padding-left: 18%; /* Padding to position can in middle of splash Image*/
+  padding-left: 16%; /* Padding to position can in middle of splash Image*/
   margin-top: 8%;
 }
 
