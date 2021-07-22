@@ -24,7 +24,7 @@ const Sidenav = () => {
             <Link to="/shop" className="nav-link" onClick={() => clickNav(1)}>Shop</Link>
             <Link to="/about-us" className="nav-link" onClick={() => clickNav(2)}>About Us</Link>
             <Link to="/contact-us" className="nav-link" onClick={() => clickNav(3)}>Contact Us</Link>
-            <Link to="/stockist" className="nav-link" onClick={() => clickNav(4)}>Stockist</Link>
+            <Link to="/stockist" className="nav-link" onClick={() => clickNav(4)}>Stockists</Link>
         </div>
     );
 }

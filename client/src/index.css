@@ -1,5 +1,15 @@
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 /* 
@@ -64,7 +74,7 @@ nav p {
 }
 
 a.btn {
-  border: 1px solid rgb(75, 75, 75) !important;
+  border: 2px solid rgb(75, 75, 75) !important;
 }
 
 .splash-image {
@@ -93,18 +103,103 @@ a.btn {
 .overlay-content {
   opacity: 0;
 }
-
-.img-magnifier-container {
-  position: relative;
+/* Styling for People and Planet animation on Homepage*/
+.planet-animation {
+  width: 65%;
 }
 
-.img-magnifier-glass {
+/*
+Contact Page
+*/
+
+/*Make required asterix on form red*/
+.form-required {
+  color: red;
+}
+
+/*Add padding to the form*/
+.form {
+  padding: 15px;
+}
+
+/*Add padding to the form fields*/
+.form-field {
+  padding-top: 30px;
+}
+
+/*Adjust size of form input fields*/
+.form-input {
+  width: 400px;
+  height: 50px;
+}
+
+/*Adjust message text area size*/
+.message-textarea {
+  width: 400px;
+  height: 100px;
+}
+
+/*Styling for file upload button*/
+.file-upload {
+  margin-top: 30px;
+}
+
+/*Styling for submit button*/
+.form-submit {
+  margin-top: 30px;
+}
+
+/*Styling for other contact information*/
+.other-contact {
+  margin-top: 50px;
+}
+
+/*
+3D Cans
+*/
+
+/*Styling for Peach and Passionfruit can*/
+#peach-can {
   position: absolute;
-  border: 3px solid #000;
-  border-radius: 5%;
-  cursor: none;
-  /*Set the size of the magnifier glass:*/
-  width: 200px;
-  height: 200px;
-  opacity: 0;
+  z-index: 1; /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
+  width: 80%;
+  padding-left: 12%; /* Padding to position can in middle of splash Image*/
+}
+
+/*Styling for Peach and Passionfruit can model-viewer*/
+#peach-can model-viewer {
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
+  width: 100%;
+}
+
+/*Styling for Raspberry and Hibiscus can*/
+#raspberry-can {
+  position: absolute;
+  z-index: 1;  /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
+  width: 80%;
+  padding-left: 18%; /* Padding to position can in middle of splash Image*/
+}
+
+/*Styling for Raspberry and Hibiscus can model-viewer*/
+#raspberry-can model-viewer {
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
+  width: 100%;
+}
+
+/*Styling for Rhubarb and Apple can*/
+#rhubarb-can {
+  position: absolute;
+  z-index: 1; /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
+  width: 80%;
+  padding-left: 16%; /* Padding to position can in middle of splash Image*/
+  margin-top: 8%;
+}
+
+/*Styling for Rhubarb and Apple can model-viewer*/
+#rhubarb-can model-viewer {
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
+  width: 100%;
 }
