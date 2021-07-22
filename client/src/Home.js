@@ -2,14 +2,13 @@ const Home = () => {
     return (
         <div className="container-fluid">
             <div className="row align-items-center" style={{
-                backgroundColor: '#cec9ff',
                 backgroundImage: 'url("./hero_img.png")',
                 height: '100vmin',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
-                <div className="col-12 col-md-6 text-center">
+                <div className="col-12 col-lg-6 text-center">
                     <div>
                         <div>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -29,11 +28,11 @@ const Home = () => {
             </div>
 
             <div className="row m-auto">
-                <div className="col-12 col-md-6 text-center">
+                <div className="col-12 col-lg-6 text-center">
                     <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="" />
                     <img className="drag-drop-image" src="./click_and_drag_icon.png" alt="" width="100px"/>
                 </div>
-                <div className="col-12 col-md-6">
+                <div className="col-12 col-lg-6">
                     <div className="mt-4 text-center">
                         <h2><strong>Peach and Passion Fruit</strong></h2>
                     </div>
@@ -56,7 +55,7 @@ const Home = () => {
             </div>
 
             <div className="row m-auto">
-                <div className="col-12 col-md-6 order-12 order-md-1">
+                <div className="col-12 col-lg-6 order-12 order-lg-1">
                     <div className="mt-4 text-center">
                         <h2><strong>Peach and Passion Fruit</strong></h2>
                     </div>
@@ -76,18 +75,18 @@ const Home = () => {
                         <a type="button" className="btn btn-light m-3">Shop All</a>
                     </div>
                 </div>
-                <div className="col-12 col-md-6 order-1 order-md-12 text-center">
+                <div className="col-12 col-lg-6 order-1 order-lg-12 text-center">
                     <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="" />
                     <img className="drag-drop-image" src="./click_and_drag_icon.png" alt="" width="100px"/>
                 </div>
             </div>
 
             <div className="row m-auto">
-                <div className="col-12 col-md-6 text-center">
+                <div className="col-12 col-lg-6 text-center">
                     <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="" />
                     <img className="drag-drop-image" src="./click_and_drag_icon.png" alt="" width="100px"/>
                 </div>
-                <div className="col-12 col-md-6">
+                <div className="col-12 col-lg-6">
                     <div className="mt-4 text-center">
                         <h2><strong>Peach and Passion Fruit</strong></h2>
                     </div>
@@ -116,19 +115,19 @@ const Home = () => {
                     }}>
                         <div className="card-body">
                             <div className="row">
-                                <div className="col-12 text-center mb-4">
+                                <div className="col-12 text-center mb-4 order-1 order-lg-1">
                                     <h2 className="card-title">Our Mission</h2>
                                 </div>
-                                <div className="col-12 text-center mb-5">
+                                <div className="col-12 text-center mb-5 order-2 order-lg-2">
                                     <p className="card-subtitle"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</strong></p>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-12 col-lg-6 order-4 order-lg-3">
                                     <div className="row align-items-center mb-5">
                                         <div className="col-12" style={{ display: '-webkit-box' }}>
                                             <div className="row align-items-center">
                                                 <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
                                             </div>
-                                            <p className="card-text ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <p className="card-text ml-5 mr-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                         </div>
                                     </div>
                                     <div className="row align-items-center mb-5">
@@ -136,7 +135,7 @@ const Home = () => {
                                             <div className="row align-items-center">
                                                 <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
                                             </div>
-                                            <p className="card-text ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <p className="card-text ml-5 mr-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                         </div>
                                     </div>
                                     <div className="row align-items-center mb-5">
@@ -144,20 +143,20 @@ const Home = () => {
                                             <div className="row align-items-center">
                                                 <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
                                             </div>
-                                            <p className="card-text ml-5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <p className="card-text ml-5 mr-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-6 text-center">
+                                <div className="col-12 col-lg-6 text-center mb-5 order-3 order-lg-4">
                                     <img src="./people_and_planet.png" alt="" className="w-50" />
                                 </div>
-                                <div className="col-12">
+                                <div className="col-12 order-5 order-lg-5">
                                     <hr style={{ borderTop: '2px solid #b8b8b8' }} />
                                 </div>
-                                <div className="col-6 text-center">
+                                <div className="col-12 col-lg-6 text-center order-6 order-lg-6">
                                     <img src="./speech_bubble.png" alt="" className="w-50" />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-12 col-lg-6 order-7 order-lg-7">
                                     <div className="row">
                                         <div className="col-12 text-center mb-3 mt-3">
                                             <p className="card-subtitle"><strong>Lorem ipsum dolor sit amet,</strong></p>
@@ -167,7 +166,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-12">
+                                <div className="col-12 order-8 order-lg-8">
                                     <div className="mt-2 text-center">
                                         <a type="button" className="btn btn-light m-3">Find Out More</a>
                                     </div>
@@ -192,16 +191,16 @@ const Home = () => {
                 </div>
                 <div className="col-8">
                     <div className="row text-center">
-                        <div className="col-6 col-md-3">
+                        <div className="col-6 col-lg-3">
                             <img className="instagram-image mw-100" src="./logo192.png" alt="" />
                         </div>
-                        <div className="col-6 col-md-3">
+                        <div className="col-6 col-lg-3">
                             <img className="instagram-image mw-100" src="./logo192.png" alt="" />
                         </div>
-                        <div className="col-6 col-md-3">
+                        <div className="col-6 col-lg-3">
                             <img className="instagram-image mw-100" src="./logo192.png" alt="" />
                         </div>
-                        <div className="col-6 col-md-3">
+                        <div className="col-6 col-lg-3">
                             <img className="instagram-image mw-100" src="./logo192.png" alt="" />
                         </div>
                     </div>

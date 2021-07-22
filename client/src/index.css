@@ -23,7 +23,7 @@ header {
   position: fixed; /* Stay in place */
   z-index: 15; /* Stay on top */
   top: 0; /* Stay at the top */
-  background-color: #c9deff;
+  background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -32,7 +32,7 @@ header {
 
 /* Style the burger menu */
 nav .btn {
-  color: white;
+  color: black;
   font-size: larger;
 }
 
@@ -41,13 +41,13 @@ nav .btn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: white;
+  color: black;
   display: block;
   transition: 0.3s;
 }
 
 nav p {
-  color: white;
+  color: black;
 }
 
 /* Position and style the close button (top right corner) */
@@ -60,7 +60,7 @@ nav p {
 }
 
 .sidenav a:hover {
-  color: #212529;
+  color: #e7e7e7;
 }
 
 a.btn {
@@ -69,4 +69,42 @@ a.btn {
 
 .splash-image {
   width: 100%;
+}
+
+.shop-product-image {
+  transition: transform .2s; /* Animation */
+}
+
+.overlay {
+  transition: .2s;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  cursor: pointer;
+  background:rgba(255, 126, 244, 0);
+}
+
+.overlay:hover {
+  background:rgba(255, 126, 244, 0.6);
+}
+
+.overlay-content {
+  opacity: 0;
+}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 5%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+  opacity: 0;
 }
