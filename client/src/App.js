@@ -1,13 +1,20 @@
-import logo from './logo.svg';
-import Header from './Header';
+import Header from './components//Header';
 import Home from './Home';
-import Sidenav from './Sidenav';
+import Sidenav from './components/Sidenav';
 import Shop from './Shop';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Stockist from './Stockist';
 import Cart from './Cart';
+import Footer from './components/fgd-footer';
+import AppleRhuharb from './productAppleRhuharb';
+import Mixed from './productMixed';
+import PeachyPassion from './productPeachPassion';
+import RaspberryHib from './productRaspberryHibiscus';
+import '@shoelace-style/shoelace/dist/themes/base.css';
+import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+setBasePath('./../dist/shoelace');
 
 function App() {
   return (
@@ -23,6 +30,18 @@ function App() {
             <Route exact path="/shop">
               <Shop />
             </Route>
+            <Route exact path="/product-appleRhuharb">
+              <AppleRhuharb />
+            </Route>
+            <Route exact path="/product-Mixed">
+              <Mixed />
+            </Route>
+            <Route exact path="/product-peachPassionfruit">
+              <PeachyPassion />
+            </Route>
+            <Route exact path="/product-raspberryHibiscus">
+              <RaspberryHib />
+            </Route>
             <Route exact path="/about-us">
               <AboutUs />
             </Route>
@@ -37,6 +56,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );

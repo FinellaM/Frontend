@@ -1,0 +1,106 @@
+footer{
+    background-color: #f3c5bf;
+    width: 100%;
+}
+
+#socials{
+    display: flex;
+    margin-bottom: 1.5em;
+    justify-content: center;
+}
+  
+.socialBtn{
+    margin-right: 0.5em;
+    margin-top: 1.5em;
+}
+
+#footerInfo{
+    width: 100%;
+    display: flex;
+}
+
+#footerCopyright{
+    width: calc(40% - 2em);
+    margin-left: 2em;
+    text-align: center;
+}
+
+#footerNav{
+    margin-left: calc(45% - 1em);
+}
+
+#footerLink{
+    display: flex;
+    justify-content: center;
+}
+
+#footerLink a {
+    margin-right: 0.8em;
+    margin-bottom: 1.25em;
+    color: black;
+}
+
+#footerNav a {
+    color: black;
+}
+/* Changed this so it only effects footer not P of whole page */
+
+#footerCopyright p {
+    font-size: x-small;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+    #footerCopyright{
+        width: 30%;
+        margin-left: 2em;
+    }
+
+    #footerNav {
+        width: calc(30% - 2em);
+        margin-left: calc(50% - 2em);
+    }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+    #footerCopyright {
+        width: calc(30% - 2em);
+        margin-left: 2em;
+    }
+
+    #footerNav {
+        margin-left: calc(45.5% - 0.5em);
+    }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+    #socials {
+        margin-bottom: 0.75em;
+    }
+
+    #footerCopyright {
+        width: 100%;
+        margin-left: 1em;
+    }
+
+    #footerLink a {
+        margin-left: 0.8em;
+    }
+
+    #footerCopyright {
+        width: calc(50% - 2em);
+        margin: 0 1em;
+    }
+
+    #footerCopyright p {
+        margin-bottom: 0.25em;
+    }
+
+    #footerNav {
+        width: calc(50% - 1em);
+        margin: 0;
+    }
+
+}
