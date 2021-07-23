@@ -44,6 +44,7 @@ footer{
     color: black;
 }
 /* Changed this so it only effects footer not P of whole page */
+
 #footerCopyright p {
     font-size: x-small;
 }

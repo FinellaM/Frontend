@@ -1,15 +1,14 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
 }
 
-h1, h2, h3{
+h1, h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
-h4, h5, h6{
+h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -35,7 +34,7 @@ header {
   position: fixed; /* Stay in place */
   z-index: 15; /* Stay on top */
   top: 0; /* Stay at the top */
-  background-color: #c9deff;
+  background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -44,7 +43,7 @@ header {
 
 /* Style the burger menu */
 nav .btn {
-  color: white;
+  color: black;
   font-size: larger;
 }
 
@@ -53,13 +52,13 @@ nav .btn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: white;
+  color: black;
   display: block;
   transition: 0.3s;
 }
 
 nav p {
-  color: white;
+  color: black;
 }
 
 /* Position and style the close button (top right corner) */
@@ -72,13 +71,136 @@ nav p {
 }
 
 .sidenav a:hover {
-  color: #212529;
+  color: #e7e7e7;
 }
 
 a.btn {
-  border: 1px solid rgb(75, 75, 75) !important;
+  border: 2px solid rgb(75, 75, 75) !important;
 }
 
 .splash-image {
+  width: 100%;
+}
+
+.shop-product-image {
+  transition: transform .2s; /* Animation */
+}
+
+.overlay {
+  transition: .2s;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  cursor: pointer;
+  background:rgba(255, 126, 244, 0);
+}
+
+.overlay:hover {
+  background:rgba(255, 126, 244, 0.6);
+}
+
+.overlay-content {
+  opacity: 0;
+}
+/* Styling for People and Planet animation on Homepage*/
+.planet-animation {
+  width: 65%;
+}
+
+/*
+Contact Page
+*/
+
+/*Make required asterix on form red*/
+.form-required {
+  color: red;
+}
+
+/*Add padding to the form*/
+.form {
+  padding: 15px;
+}
+
+/*Add padding to the form fields*/
+.form-field {
+  padding-top: 30px;
+}
+
+/*Adjust size of form input fields*/
+.form-input {
+  width: 400px;
+  height: 50px;
+}
+
+/*Adjust message text area size*/
+.message-textarea {
+  width: 400px;
+  height: 100px;
+}
+
+/*Styling for file upload button*/
+.file-upload {
+  margin-top: 30px;
+}
+
+/*Styling for submit button*/
+.form-submit {
+  margin-top: 30px;
+}
+
+/*Styling for other contact information*/
+.other-contact {
+  margin-top: 50px;
+}
+
+/*
+3D Cans
+*/
+
+/*Styling for Peach and Passionfruit can*/
+#peach-can {
+  position: absolute;
+  z-index: 1; /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
+  width: 80%;
+  padding-left: 12%; /* Padding to position can in middle of splash Image*/
+}
+
+/*Styling for Peach and Passionfruit can model-viewer*/
+#peach-can model-viewer {
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
+  width: 100%;
+}
+
+/*Styling for Raspberry and Hibiscus can*/
+#raspberry-can {
+  position: absolute;
+  z-index: 1;  /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
+  width: 80%;
+  padding-left: 18%; /* Padding to position can in middle of splash Image*/
+}
+
+/*Styling for Raspberry and Hibiscus can model-viewer*/
+#raspberry-can model-viewer {
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
+  width: 100%;
+}
+
+/*Styling for Rhubarb and Apple can*/
+#rhubarb-can {
+  position: absolute;
+  z-index: 1; /* So that the model is above splash image*/
+  height: 80%; /* Entire model-viewer area set to 80% of its column*/
+  width: 80%;
+  padding-left: 16%; /* Padding to position can in middle of splash Image*/
+  margin-top: 8%;
+}
+
+/*Styling for Rhubarb and Apple can model-viewer*/
+#rhubarb-can model-viewer {
+  height: 100%; /* Can itself takes up 100% of model-viewer*/
   width: 100%;
 }
