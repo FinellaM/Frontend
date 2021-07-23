@@ -6,12 +6,12 @@ const Header = () => {
     }
 
     return (
-        <header className="mb-0" style={{ backgroundColor: '#c9deff' }}>
+        <header className="mb-0" style={{ backgroundColor: 'white' }}>
 
             <nav className="navbar navbar-expand-lg bg-green">
                 <div className="col-8 col-sm-6 col-md-4">
-                    <a className="logo" href="/">
-                        <img src="./feelgooddrinks_logo.png" alt="logo" style={{ height: '80px' }}/> {/* Feel Good Drinks. n.d. "Feel Good Drinks Logo." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/. */}
+                    <a className="logo" href="#">
+                        <img src="./feelgooddrinks_logo.png" alt="logo" style={{ height: '50px' }} />
                     </a>
                 </div>
 

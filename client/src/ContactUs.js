@@ -1,4 +1,12 @@
+import { useState, useEffect } from "react";
+
 const ContactUs = () => {
+
+    useEffect(() => {
+        // Put your Javascript code here...
+        
+    }, []);
+
     return (
         <div className="container text-center">
             <h1>Contact Us</h1><br></br> {/* Page title */}

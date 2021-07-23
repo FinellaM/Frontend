@@ -6,14 +6,14 @@ const AboutUs = () => {
             <div className="about-people-planet">
                 <h2>3% for People & Planet</h2> {/* Page section title */}
                 <div className="text-left">
-                    <p>At the beating heart of Feel Good is a mission to make this world a better place for everyone.</p> 
+                    <p>At the beating heart of Feel Good is a mission to make this world a better place for everyone.</p>
                     <p>We wanted to vreate a brand that could give back to people AND the planet. Giving people a better choice about how they consume. That's why we created the 3% for People & Planet Fund. We donate 3% of our sales to charities that support personal and planetary wellbeing. Now that feels good, doesn't it?</p>
-                <h5>#FeelGoodMoments</h5>
+                    <h5>#FeelGoodMoments</h5>
                     <p>We facilitate #FeelGoodMoments in partnerships with charities that align with our values of fostering communities, the environment and personal wellbering. The good news is we can help more people as Feel Good grows. Every can sold makes a difference.</p>
                     <p>Feel Good employees get involved too. Every year they each work 4 days at the charities we have partnered with on #DoGoodMoments.</p>
                     <br></br>
                     <p><strong>So far this year the 3% People & Planet fund has donated over £10k to charity and we are excited to introduce you to the people we have been working with...</strong></p>
-            </div>
+                </div>
             </div>
             <div className="about-sea">
                 <h2>Sea</h2> {/* Sub section title */}
@@ -41,25 +41,25 @@ const AboutUs = () => {
                 <h2>The Man Behind The Brand</h2> {/* Page section title */}
                 <div className="text-left">
                     <p className="text-center"><strong>We all have feel good moments. Mine is being in the sea. Wether it's swimming, surfing or sailing, either on my own or with my family and friends, it's exactly where I want to be.</strong></p>
-                <div>
-                    <p>I was lucky that I knew this from an early age having moved to the Gower when I was 9. Living by the coast became an essential part of my wellbeing and so, at the age of 21, I chose to put the sea permanently at the centre of my world when I moved to West Dorset. It was one of the best decisions I ever made and has kept a balance throughout my life.</p>
-                    <p>Getting in the water allows me to challenge myself in a variety of conditions and, by being present in the moment, it gives me space to think - often influencing some of life's big decisions. Like launching a purpossful brand, Feel Good Drinks.</p>
-                </div>
+                    <div>
+                        <p>I was lucky that I knew this from an early age having moved to the Gower when I was 9. Living by the coast became an essential part of my wellbeing and so, at the age of 21, I chose to put the sea permanently at the centre of my world when I moved to West Dorset. It was one of the best decisions I ever made and has kept a balance throughout my life.</p>
+                        <p>Getting in the water allows me to challenge myself in a variety of conditions and, by being present in the moment, it gives me space to think - often influencing some of life's big decisions. Like launching a purpossful brand, Feel Good Drinks.</p>
+                    </div>
                     <p className="text-center"><strong>Feel Good drinks are a range of 100% natural, great tasting, fruity sparkling waters that contain no nasty additives, added sugars or sweetners, making them a healthy choice for all.</strong></p>
-                <div>
-                    <p>So far so good but it's not enough to just think about what is inside the can, we must consider the can itself and the wider impact these products have on our environment. In our production of this drink we have wholeheartedly committed to becoming climate positive this year (2021) and net zero by 2023. In fact, we have already achieved the former and been awarded sustainability certification from the internationally revered Planet Mark. I am bursting with pride at the pioneering strides we are taking. And here's another reason why.</p>
-                </div>
+                    <div>
+                        <p>So far so good but it's not enough to just think about what is inside the can, we must consider the can itself and the wider impact these products have on our environment. In our production of this drink we have wholeheartedly committed to becoming climate positive this year (2021) and net zero by 2023. In fact, we have already achieved the former and been awarded sustainability certification from the internationally revered Planet Mark. I am bursting with pride at the pioneering strides we are taking. And here's another reason why.</p>
+                    </div>
                     <p className="text-center"><strong>We have established The Feel Good 3% People Planet Fund. It's out own way of giving back.</strong></p>
 
-                <div>
-                    <p>The fun donates to, and partners with, charities that support personal and planetary wellbeing. We work with likeminded initiatives who are as committed to the natural world as we are. We all know how precarious our planet's future is, how hard it is to protect and restore it, but we can have a positive impact - as custodians of the land, parents and consumers. With each choice we can make a difference and here at Feel Good we have the opportunity to support others with those choices too. That makes me very happy.</p>
-                    <p>So what's your feel good moment? We would love to know. Come and join us on our epic journey and let's share our discoveries.</p>
-                </div>
-                <div className="text-center">
-                    <p><strong>Ed</strong></p>
-                    <p>The Man Behind The Brand</p>
-                    <p>#DoGood #BeGood #FeelGood #FeelGoodMoments</p>
-                </div>
+                    <div>
+                        <p>The fun donates to, and partners with, charities that support personal and planetary wellbeing. We work with likeminded initiatives who are as committed to the natural world as we are. We all know how precarious our planet's future is, how hard it is to protect and restore it, but we can have a positive impact - as custodians of the land, parents and consumers. With each choice we can make a difference and here at Feel Good we have the opportunity to support others with those choices too. That makes me very happy.</p>
+                        <p>So what's your feel good moment? We would love to know. Come and join us on our epic journey and let's share our discoveries.</p>
+                    </div>
+                    <div className="text-center">
+                        <p><strong>Ed</strong></p>
+                        <p>The Man Behind The Brand</p>
+                        <p>#DoGood #BeGood #FeelGood #FeelGoodMoments</p>
+                    </div>
                 </div>
 
             </div>
@@ -78,5 +78,5 @@ const AboutUs = () => {
         </div>
     );
 }
- 
+
 export default AboutUs;
