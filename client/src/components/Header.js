@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Header = () => {
 
     const openNav = () => {
@@ -10,9 +12,9 @@ const Header = () => {
 
             <nav className="navbar navbar-expand-lg bg-green">
                 <div className="col-8 col-sm-6 col-md-4">
-                    <a className="logo" href="/">
+                    <Link to="/" className="logo">
                         <img src="./feelgooddrinks_logo.png" alt="logo" style={{ height: '50px' }} />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="col text-right">
