@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const ProductList = ({ product }) => {
     // Show the rollover effect every time the mouse is hovering over the specified area
     const showRolloverEffect = (e, id) => {
@@ -33,7 +35,7 @@ const ProductList = ({ product }) => {
                                         <a type="button" className="btn btn-light m-3">Add to Cart</a>
                                     </div>
                                     <div>
-                                        <a type="button" className="btn btn-light m-3">View Details</a>
+                                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
                                     </div>
                                 </div>
                             </div>
