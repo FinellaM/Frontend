@@ -7,7 +7,7 @@ const Shop = () => {
 
     // Fetch the product list from the backend, and set the splash image for every card
     useEffect(() => {
-        fetch('/product')
+        fetch('/api/product')
             .then(res => {
                 return res.json();
             })
