@@ -1,0 +1,213 @@
+/* General About Us settings */
+.about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+    margin-top: 2em;
+}
+
+.article{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.artText-right, .artText-left {
+    width: calc(70% - 2em);
+    padding: 3.5em 0;
+}
+
+.artText-left {
+    margin-right: 2em;
+}
+
+.artText-right {
+    margin-left: 2em;
+}
+
+.pic-left, .pic-right {
+    width: 30%;
+    object-fit: contain;
+}
+
+.vidColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Accolates portion of About Us page*/
+.imageAccolateDuo {
+    width: calc(50% - 1em);
+    object-fit: contain;
+    margin: 0 0.5em;
+}
+
+.imageAccolatesTri{
+    margin: 0 0.25em;
+    width: calc(33.33% - 00.5em);
+    object-fit: contain;
+}
+
+.aboutUsAccolatesDuo, .aboutUsAccolates-tri{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+}
+
+/*Titles----------------------------*/
+#aboutComms-Title, #aboutEarth-Title, #aboutSea-Title{
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-position: center;
+}
+
+#aboutSea-Title{
+    padding: 0.25em 0;
+    width: 20%;
+    margin:2em 40% 2em;
+}
+
+#aboutEarth-Title{
+    padding: 0.25em 0;
+    width: 20%;
+    margin:2em 40% 2em;
+}
+
+#aboutComms-Title{
+    padding: 0.35em 0;
+    width: 30%;
+    margin: 2em 35% 2em;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+    /* General About Us settings */
+    .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+        margin-top: 1.5em;
+    }
+
+    .artText-right, .artText-left {
+        width: calc(60% - 1em);
+        padding: 2.25em 0;
+    }
+    
+    .artText-left {
+        margin-right: 1em;
+    }
+    
+    .artText-right {
+        margin-left: 1em;
+    }
+    
+    .pic-left, .pic-right {
+        width: 40%;
+    }
+    
+    /*Titles----------------------------*/
+    #aboutSea-Title{
+        padding: 0.5em 0;
+    }
+
+    #aboutEarth-Title{
+        padding: 0.5em 0;
+    }
+
+    #aboutComms-Title{
+        padding: 0.5em 0;
+        width: 36%;
+        margin: 2em 32% 2em;
+    }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+    /* General About Us settings */
+    .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+        margin-top: 1.25em;
+    }
+
+    .artText-right, .artText-left {
+        width: calc(50% - 0.5em);
+        padding: 2.25em 0;
+    }
+    
+    .artText-left {
+        margin-right: 0.5em;
+    }
+    
+    .artText-right {
+        margin-left: 0.5em;
+    }
+    
+    .pic-left, .pic-right {
+        width: 50%;
+    }
+    
+    /*Titles----------------------------*/
+
+    #aboutComms-Title{
+        padding: 0.5em 0;
+        width: 40%;
+        margin: 2em 30% 2em;
+    }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+    /* General About us stylings--------------*/
+    .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+        margin-top: 1em;
+    }
+
+    .article{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artText-right, .artText-left {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 0.25em;
+    }
+
+    .pic-left, .pic-right {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1em;
+    }
+
+    /* Accolates portion of About Us page*/
+    .imageAccolateDuo {
+        width: calc(100% - 0.5em);
+        margin: 0;
+    }
+
+    .imageAccolatesTri{
+        width: calc(100% - 0.5em);
+        margin: 0;
+    }
+
+    .aboutUsAccolatesDuo, .aboutUsAccolates-tri{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.25em;
+    }
+
+   /*Titles-----------------------------------------------------*/
+   #aboutSea-Title{
+        padding: 0.4em 0;
+        width: 30%;
+        margin:2em 35% 2em;
+    }
+
+    #aboutEarth-Title{
+        padding: 0.4em 0;
+        width: 30%;
+        margin:2em 35% 2em;
+    }
+
+    #aboutComms-Title{
+        padding: 0.35em 0;
+        width: 70%;
+        margin: 2em 15% 2em;
+    }
+
+}
