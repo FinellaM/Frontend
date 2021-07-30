@@ -1,4 +1,23 @@
+import { useState, useEffect } from "react"; 
+
 const Home = () => {
+
+    useEffect(()=>{
+
+        const gsap = window.gsap
+
+        gsap.to(".dot", {x: 0}); /* moves to this position on x-axis */
+    
+        gsap.from('.dot', { y: 750 }); /* from this spot on y-axis*/
+        
+        var tl = gsap.timeline({repeat: 30, repeatDelay: 1});
+        
+        //add 3 tweens that will play in direct succession.
+        tl.to(".numberone", {duration: 1, opacity: 0, x: 0, y: 20});
+        tl.to(".numbertwo", {duration: 1,  opacity: 0, x: 0, scale: 0.2, y: 20});
+        tl.to(".numberthree", {duration: 1,  opacity: 0, x: 0, scale: 2, y: 20});
+    }, []);
+
     return (
         <div className="container-fluid">
             <div className="row align-items-center" style={{
@@ -187,18 +206,40 @@ const Home = () => {
                         <h5>@feelgooddrinks</h5>
                     </div>
                 </div>
-                <div className="col-2">
-
-                </div>
+                    <div className="col-2">
+                        <div class="bubbleone"></div>
+                        <div class="bubbletwo"></div>
+                    </div>
                 <div className="col-8">
+
+               
+                
+               
+              
+                
+               
+                
+             <div >
+
+        <div class="dot numberone" ></div>
+        <div class="dot numbertwo"></div>
+       
+    </div>
+
+    
+              
                     <div className="row text-center">
+
                         <div className="col-6 col-md-3">
+                       
                             <img className="instagram-image mw-100" src="./logo192.png" alt="" />
                         </div>
                         <div className="col-6 col-md-3">
+                            
                             <img className="instagram-image mw-100" src="./logo192.png" alt="" />
                         </div>
                         <div className="col-6 col-md-3">
+                        <div class="bubblethree"></div>
                             <img className="instagram-image mw-100" src="./logo192.png" alt="" />
                         </div>
                         <div className="col-6 col-md-3">
@@ -207,7 +248,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-2">
-
+                <div class="dot numberthree"></div>
                 </div>
             </div>
         </div>
