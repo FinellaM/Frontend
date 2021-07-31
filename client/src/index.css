@@ -85,54 +85,46 @@ a.btn {
 .bubbletwo {
 	height: 100px;
     width: 100px;
-    background-color: pink;
+    background-color: white;
     border-radius: 50%; /*makes shape from a square into a circle*/
     display: inline-block; /* horizontal instead of vertical*/
     margin: 100px;/*  space in between circles*/
-    border: 20px pink;
+    border: 5px solid pink;
     z-index: -1;
 }
 
 .bubblethree {
 	height: 75px;
     width: 75px;
-    background-color: pink;
+    background-color: white;
     border-radius: 50%; /*makes shape from a square into a circle*/
     display: inline-block; /* horizontal instead of vertical*/
     margin: 100px;/*  space in between circles*/
-    border: 2px pink;
+    border: 10px solid pink;
 	  position: absolute;
     z-index:  -1;
 }
 
-.dot {
-  height: 50px;
-  width: 50px;
-  background-color: pink;
-  border-radius: 50%; /*makes shape from a square into a circle*/
-  display: inline-block; /* horizontal instead of vertical*/
-  margin: 100px;/*  space in between circles*/
-  border: 2px pink;
-}
+
 
 .numberthree {
   height: 150px;
   width: 150px;
-  background-color: pink;
+  background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
   margin: 100px;/*  space in between circles*/
-  border: 3px solid pink;
+  border: 5px solid pink;
 }
 
 .numberone {
   height: 150px;
   width: 150px;
-  background-color: pink;
+  background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
   margin: 100px;/*  space in between circles*/
-  border: 2px solid pink;
+  border: 10px solid pink;
 }
 
 .numbertwo {
@@ -142,5 +134,5 @@ a.btn {
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
   margin: 100px;/*  space in between circles*/
-  border: 2px solid pink;
+  border: 5px solid pink;
 }
