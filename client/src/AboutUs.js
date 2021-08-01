@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <div className="container-fluid text-center">
             <div className="text-left align-items-start">
-                <h1 style={{paddingBottom:'0.25em', borderBottom: '4px solid black'}}>About Us</h1> {/* Page title */}
+                <h1 style={{paddingBottom:'0.25em', borderBottom: '4px solid #222222'}}>About Us</h1> {/* Page title */}
             </div>
 
             <div className="row m-auto align-items-center text-left">
@@ -22,25 +22,27 @@ const AboutUs = () => {
                     </div>
                 </div>
                 <div className="about-sea">
-                    <div id="aboutSea-Title" style={{
+                    <div id="aboutSea-Title" className="text-center" style={{
                         backgroundImage: 'url("./sea_swish.png")',
                     }}>
                         <h2>Sea</h2> {/* Sub section title */}
                     </div> 
                     <div className="article">
-                        <div className="col-xl-4 col-md-3">
-                            <div className="vidColumn">
-                                <img src="./seagrass_logo.png" alt="Project Seagrass illustration"/>
-                                <video autoPlay loop muted playsInline>
-                                    <source src="./sea_animation.mp4" type="video/mp4" />
-                                </video>
+                        <div className="row">
+                            <div className="col-xl-4 col-md-6 col-sm-1">
+                                <div className="vidColumn">
+                                    <img src="./seagrass_logo.png" alt="Project Seagrass illustration"/>
+                                    <video autoPlay loop muted playsInline className="col">
+                                        <source src="./sea_animation.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>           
+                            
+                            <div className="col-xl-8 col-md-6 align-self-center">
+                                <p><strong>Project Seagrass</strong> is a brilliant conservation initiative to restore lost ecosystems that absorb high levels of carbon. They are the forefront of societal change to enable the recognition, recovery and resilience of seagrass ecosystems globally - a crucial planetary life support. Marine conservation is a subject very close to Feel Good leader Ed Woolner's heart and one of his main objectives is to offset carbon via ocean and sea protection to restore ocean biodiversity and promote blue health. So this is a very special partnership.</p>
+                                <p>Feel Good are joining forces with Project Seagrass to assist in their ocean marine restoration including programmes to rewild seagrass, invite them to speak directly to our community and financially contribute to a short film they have commission for the G7.</p>
                             </div>
-                        </div>           
-                        
-                        <div className="col-xl-8 col-lg-6 col-md-4 align-self-center">
-                            <p><strong>Project Seagrass</strong> is a brilliant conservation initiative to restore lost ecosystems that absorb high levels of carbon. They are the forefront of societal change to enable the recognition, recovery and resilience of seagrass ecosystems globally - a crucial planetary life support. Marine conservation is a subject very close to Feel Good leader Ed Woolner's heart and one of his main objectives is to offset carbon via ocean and sea protection to restore ocean biodiversity and promote blue health. So this is a very special partnership.</p>
-                            <p>Feel Good are joining forces with Project Seagrass to assist in their ocean marine restoration including programmes to rewild seagrass, invite them to speak directly to our community and financially contribute to a short film they have commission for the G7.</p>
-                        </div>
+                        </div>                        
                     </div>
                                 
                 </div>
@@ -51,18 +53,21 @@ const AboutUs = () => {
                         <h2>Earth</h2> {/* sub section title*/}
                     </div> 
                     <div className="article">
-                        <div className="col-xl-8 col-lg-7 col-md-5 align-self-center">
-                            <p><strong>Planet Mark</strong> is a sustainability certification for every type of organisation which recognises continuous improvement, encourages action and builds an empoweres community of like-minded individuals making a world of difference. At Feel Good we are delighted to be part of this movement.</p>
-                            <p>We have already committed to a net zero planet through our certification, will continue to build awareness of the challenges we face with climate change and will collaborate on events around G7 and COP26.</p>
-                        </div>
-                        <div className="col-xl-4 col-lg-3 col-md-3">
-                            <div className="vidColumn">
-                                <img src="./planet_mark_logo.png" alt="Project Seagrass illustration"/>
-                                <video autoPlay loop muted playsInline>
-                                    <source src="./earth_animation.mp4" type="video/mp4" />
-                                </video>
+                        <div className="row">
+                            <div className="col-xl-8  col-md-7 align-self-center">
+                                <p><strong>Planet Mark</strong> is a sustainability certification for every type of organisation which recognises continuous improvement, encourages action and builds an empoweres community of like-minded individuals making a world of difference. At Feel Good we are delighted to be part of this movement.</p>
+                                <p>We have already committed to a net zero planet through our certification, will continue to build awareness of the challenges we face with climate change and will collaborate on events around G7 and COP26.</p>
                             </div>
-                        </div>    
+                            <div className="col-xl-4 col-md-5">
+                                <div className="vidColumn">
+                                    <img src="./planet_mark_logo.png" alt="Project Seagrass illustration"/>
+                                    <video autoPlay loop muted playsInline className="col">
+                                        <source src="./earth_animation.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                            
                     </div>              
                                     
                 </div>
@@ -73,21 +78,24 @@ const AboutUs = () => {
                         <h2>Communities</h2> {/* sub section title */}
                     </div>
                     <div className="article">
-                        <div className="col-lg-5 col-md-6">
-                            <div className="vidColumn">
-                                <img src="./wave_logo.png" alt="Project WAVE logo" />
-                                <img src="./communities_animation_placeholder.png" alt="Project WAVE" />
+                        <div className="row">
+                            <div className="col-lg-5 col-md-6 col-sm-3">
+                                <div className="vidColumn">
+                                    <img src="./wave_logo.png" alt="Project WAVE logo" />
+                                    <img src="./communities_animation_placeholder.png" alt="Project WAVE" />
+                                </div>
+                            </div>
+                            <div className="col-lg-7 col-md-6 gy-7 align-self-center">
+                                <p><strong>The Wave</strong> is the first inland-surfing destination of its kind, where people of all ages, backgrounds and abilities can experience the joy of surfing and its physical and mental health benefites. Our Feel Good leader Ed, who has been surfing since he was 8 years old, is passionate about the power of blue health. He believes everyone should have access to this type of activity. It's not just about surfing. It's about getting back to nature, improving health and well-being, connecting with other people and having a lot of fun in the process!</p>
+                                <p>Feel Good will be working with The Wave on their forthcoming social impact programme to help those who would not have the opportunity to experience surfing, will spread the word about the benefits of blue health and run a series of events and competitions.</p>
                             </div>
                         </div>
-                        <div className="col-lg-7 col-md-6 gy-7 align-self-center">
-                            <p><strong>The Wave</strong> is the first inland-surfing destination of its kind, where people of all ages, backgrounds and abilities can experience the joy of surfing and its physical and mental health benefites. Our Feel Good leader Ed, who has been surfing since he was 8 years old, is passionate about the power of blue health. He believes everyone should have access to this type of activity. It's not just about surfing. It's about getting back to nature, improving health and well-being, connecting with other people and having a lot of fun in the process!</p>
-                            <p>Feel Good will be working with The Wave on their forthcoming social impact programme to help those who would not have the opportunity to experience surfing, will spread the word about the benefits of blue health and run a series of events and competitions.</p>
-                        </div>
+                        
                     </div>
                     
                 </div>
-                <hr style={{ borderTop: '3px solid #222222' }} /> {/* Line to seperate page sections */}
-                <div className="man-behind-brand">
+
+                <div className="man-behind-brand" style={{ borderTop: '3px solid #222222' }}> {/* Line to seperate page sections */}
                     <h2 className="text-center">The Man Behind The Brand</h2> {/* Page section title */}
                     <div>
                         <p className="text-center"><strong>We all have feel good moments. Mine is being in the sea. Whether it's swimming, surfing or sailing, either on my own or with my family and friends, it's exactly where I want to be.</strong></p>
@@ -128,8 +136,8 @@ const AboutUs = () => {
                     </div>
 
                 </div>
-                <hr style={{ borderTop: '3px solid #222222' }} /> {/* Line to seperate page sections */}
-                <div className="so-feel-good">
+                
+                <div className="so-feel-good" style={{ borderTop: '3px solid #222222' }}> {/* Line to seperate page sections */}
 
                     <h2 className="text-center">So Far So Feel Good</h2> {/* Page section title */}
                     <div className="article">
