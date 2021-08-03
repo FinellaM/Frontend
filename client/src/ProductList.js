@@ -27,7 +27,7 @@ const ProductList = ({ product }) => {
                             overflow: 'hidden',
                             position: 'relative',
                         }}>
-                            <img src={product.images[0]} alt="" className="shop-product-image w-100" />
+                            <img src={`../${product.images[0]}`} alt="" className="shop-product-image w-100" />
 
                             <div className="row overlay w-100 h-100" onMouseEnter={(e) => showRolloverEffect(e, product._id)} onMouseLeave={(e) => hideRolloverEffect(e, product._id)}>
                                 <div className="overlay-content text-center">
@@ -35,16 +35,16 @@ const ProductList = ({ product }) => {
                                         <a type="button" className="btn btn-light m-3">Add to Cart</a>
                                     </div>
                                     <div>
-                                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
+                                        <Link to={`/product/${product._id}`} className="btn btn-light m-3">View Details</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-12 mt-3">
-                        <h4 className="card-text"><strong>{product.flavour}</strong></h4>
-                        <h5 className="card-text"><strong>{product.size + 'ml'}</strong></h5>
-                        <h4 className="card-text"><strong>{'From £ ' + product.price[0]}</strong></h4>
+                        <h5 className="card-text"><strong>{product.flavour}</strong></h5>
+                        <p className="card-text mb-1">{product.size + 'ml'}</p>
+                        <h5 className="card-text"><strong>{'From £ ' + product.price[0]}</strong></h5>
                     </div>
                 </div>
             </div>

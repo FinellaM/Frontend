@@ -15,7 +15,7 @@ const Shop = () => {
                 // console.log(data);
                 setProduct(data);
                 for (let x in data) {
-                    document.getElementsByClassName('splash-image')[x].style.backgroundImage = "url('./" + data[x].splashImage + "')";
+                    document.getElementsByClassName('splash-image')[x].style.backgroundImage = "url('../" + data[x].splashImage + "')";
                 }
             })
     }, []);
@@ -40,7 +40,9 @@ const Shop = () => {
 
                 </div>
                 <div className="col-10 col-lg-8">
-                    <div className="row">
+                    <div className="row" style={{
+                        textAlign: 'initial',
+                    }}>
                         {/* Loop all of the data from the backend and pass it to the Product List component */}
                         {product && product.map((p) => (
                             <div className="product col-12 col-lg-6 mt-3" id={p._id} key={p._id} style={{

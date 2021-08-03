@@ -15,6 +15,8 @@ const Sidenav = () => {
         document.getElementsByClassName("nav-link")[3].style.color = "black";
         document.getElementsByClassName("nav-link")[4].style.color = "black";
         document.getElementsByClassName("nav-link")[index].style.color = "#e7e7e7";
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("mySidenav").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
     }
 
     return (
