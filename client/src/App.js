@@ -14,6 +14,7 @@ import RaspberryHib from './productRaspberryHibiscus';
 import '@shoelace-style/shoelace/dist/themes/base.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ProductDetails from './ProductDetails';
 setBasePath('./../dist/shoelace');
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route exact path="/shop">
               <Shop />
+            </Route>
+            <Route exact path="/product/:id">
+              <ProductDetails />
             </Route>
             <Route exact path="/product-appleRhuharb">
               <AppleRhuharb />

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Home = () => {
     return (
         <div className="container-fluid">
@@ -52,7 +54,7 @@ const Home = () => {
                         </p>
                     </div>
                     <div className="mt-2 text-center">
-                        <a type="button" className="btn btn-light m-3">View Details</a>
+                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
                         <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
                     </div>
                 </div>
@@ -75,7 +77,7 @@ const Home = () => {
                         </p>
                     </div>
                     <div className="mt-2 text-center">
-                        <a type="button" className="btn btn-light m-3">View Details</a>
+                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
                         <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
                     </div>
                 </div>
@@ -113,7 +115,7 @@ const Home = () => {
                         </p>
                     </div>
                     <div className="mt-2 text-center">
-                        <a type="button" className="btn btn-light m-3">View Details</a>
+                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
                         <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
                     </div>
                 </div>

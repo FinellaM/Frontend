@@ -4,28 +4,32 @@ import SlCard from '@shoelace-style/react/dist/card';
 import SlRating from '@shoelace-style/react/dist/rating';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import './product.css'
+import { Link } from 'react-router-dom';
 setBasePath()
 
 const appleRhuharb = () => {
 
     return (
         <div className="container ">
-            <SlButton href="/shop" style={{textAlign: 'left!important',
+            <Link to="/shop">
+                <SlButton style={{
+                    textAlign: 'left!important',
                     marginTop: '1em',
                     marginBottom: '1em',
-                    }}>
-                        <i className="fa fa-arrow-left" style={{
-                            fontSize: '20px',
-                            marginRight:'0.5em',
-                        }}></i>
-                        Back
-            </SlButton>
+                }}>
+                    <i className="fa fa-arrow-left" style={{
+                        fontSize: '20px',
+                        marginRight: '0.5em',
+                    }}></i>
+                    Back
+                </SlButton>
+            </Link>
             <div className="text-center">
-                <div className="productBox">  
-                    
+                <div className="productBox">
+
                     <div className="productInfo">
                         <div className="productImages">
-                            <img src="./rhubarb_apple_shop.png" alt="rhubarb & apple can" className="productImg" style={{marginBottom: '1em'}}/>
+                            <img src="./rhubarb_apple_shop.png" alt="rhubarb & apple can" className="productImg" style={{ marginBottom: '1em' }} />
                             <div className="productImgCarosel">
                                 <img src="./rhubarb_apple_product_1.png" alt="can photo" className="productCaroselItem" />
                                 <img src="./rhubarb_apple_product_2.png" alt="can photo" className="productCaroselItem" />
@@ -39,10 +43,10 @@ const appleRhuharb = () => {
                             <h4>330ml</h4>
                             <SlRating readonly value="4.5" className="productRating"></SlRating>
                             <h3>£4.50</h3>
-                            <p>Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons 
-                                and the ideal choice to refresh you any day of the year. 
+                            <p>Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons
+                                and the ideal choice to refresh you any day of the year.
                                 Don't forget to chill it!. Stop, sip and give back.</p>
-                            
+
                             <div className="productOptions">
                                 <SlButton className="packoption">3 Pack</SlButton>
                                 <SlButton className="packoption">6 Pack</SlButton>
@@ -51,7 +55,7 @@ const appleRhuharb = () => {
                             <SlButton size="large">Add to Cart</SlButton>
 
                         </div>
-                    </div>                             
+                    </div>
                 </div>
                 <div className="productFacts">
                     <h3>Ingredients</h3>
@@ -93,7 +97,7 @@ const appleRhuharb = () => {
                             <h5 className="nutritAttribute">Sodium</h5>
                             <h5 className="nutritFact">0g</h5>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -119,10 +123,10 @@ const appleRhuharb = () => {
                             <h5>From £4.50 </h5>
                         </SlCard>
                     </div>
-                </div> 
-            </div> 
+                </div>
+            </div>
         </div>
     );
 }
- 
+
 export default appleRhuharb;
