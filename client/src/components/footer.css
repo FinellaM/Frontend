@@ -33,20 +33,16 @@ footer a{
     margin-left: calc(45% - 1em);
 }
 
-#footerLink{
-    display: flex;
-    justify-content: center;
-}
+
 
 #footerLink a {
-    margin-right: 0.8em;
-    margin-bottom: 1.25em;
     color: black;
 }
 
-#footerNav a {
-    color: black;
+#footerLink a:hover{
+    color: #e4690c;
 }
+
 
 /* RESPONSIVE - IPAD PRO Styling -------------------*/
 @media all and (max-width: 1024px){
@@ -85,7 +81,7 @@ footer a{
     }
 
     #footerLink a {
-        margin-left: 0.8em;
+        margin-right: 0.8em;
     }
 
     #footerCopyright {

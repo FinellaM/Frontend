@@ -18,6 +18,11 @@ img {
   object-fit: contain;
 }
 
+.link-dark:hover, .btn-light:hover {
+  color: #e4690c;
+}
+
+
 /* 
 Sidebar styling
 */
@@ -232,4 +237,17 @@ Contact Page
   width: 200px;
   height: 200px;
   opacity: 0;
+}
+
+/*Styling for Images of Stockist  Credits to Michael Mullany on Stack Overflow https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css*/
+.stockistImg{
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+/*Disable greyscale on hover*/
+.stockistImg:hover{
+  -webkit-filter: grayscale(0);
+  filter: none;
 }

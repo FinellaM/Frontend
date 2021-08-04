@@ -14,27 +14,27 @@ const  Footer = () => {
     return (
       <footer className="container-fluid">
           <div className="row justify-content-center mx-auto pt-4">
-            <button href={Facebook} className="btn btn-light btn-lg socialBtn" type="button"><i class="fa fa-facebook px-1"/></button>
+            <button href={Facebook} className="btn btn-light btn-lg socialBtn " type="button"><i class="fa fa-facebook px-1"/></button>
             <button href={Twitter} className="btn btn-light btn-lg socialBtn" type="button"><i class="fa fa-twitter"/></button>
             <button href={Instagram} className="btn btn-light btn-lg socialBtn" type="button"><i class="fa fa-instagram"/></button>
             <button href={Youtube} className="btn btn-light btn-lg socialBtn" type="button"><i class="fa fa-youtube"/></button>
             <button href={Linkedin} className="btn btn-light btn-lg socialBtn" type="button" style={{marginRight: 0,}}><i class="fa fa-linkedin"/></button>
           </div>
             <div className="row row mx-lg-5 mx-md-1">
-                <div className="col-lg-4 col-md-6 justify-content-start mt-2">
+                <div className="col-lg-4 col-md-6 col-7 justify-content-start mt-2">
                   <h3 className="text-center" style={{fontWeight: '600'}}>Copyright</h3>
                   <p>This website has been created as part of an assignment in an approved course of study for Curtin University and may contain copyrighted material not created by the author.
                   </p>
                   <p>No part of this work may be reproduced without concent of the original copyright owners. See code comments for references.</p>
                 </div>
-                <div className="col-md-2 justify-content-end offset-lg-6 offset-md-3">
-                  <Link to="/"><h2>Home</h2></Link>
-                  <Link to="/shop"><h2>Shop</h2></Link>
-                  <Link to="/aboutUs"><h2>About Us</h2></Link>
-                  <Link to="/contact"><h2>Contact</h2></Link>
+                <div className="col-md-2 col-1 justify-content-end offset-lg-6 offset-md-3 offset-sm-1 py-sm-4" id="footerLink">
+                  <Link to="/"><h4>Home</h4></Link>
+                  <Link to="/shop"><h4>Shop</h4></Link>
+                  <Link to="/aboutUs"><h4>About Us</h4></Link>
+                  <Link to="/contact"><h4>Contact</h4></Link>
                 </div>
             </div> 
-            <div className="row justify-content-center pb-3">
+            <div className="row justify-content-center pb-3"  >
               <a href="/privacy" className="link-dark">Privacy Policy</a>
               <a href="/termsConditions" className="mx-3 link-dark" style={{ borderStyle: 'solid',
                 borderWidth: '0 2px',
