@@ -3,6 +3,10 @@ footer{
     width: 100%;
 }
 
+footer a{
+    color: black;
+}
+
 #socials{
     display: flex;
     margin-bottom: 1.5em;
@@ -11,7 +15,7 @@ footer{
   
 .socialBtn{
     margin-right: 0.5em;
-    margin-top: 1.5em;
+    border-radius: 50%;
 }
 
 #footerInfo{
