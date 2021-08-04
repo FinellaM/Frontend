@@ -43,11 +43,6 @@ footer{
 #footerNav a {
     color: black;
 }
-/* Changed this so it only effects footer not P of whole page */
-
-#footerCopyright p {
-    font-size: x-small;
-}
 
 /* RESPONSIVE - IPAD PRO Styling -------------------*/
 @media all and (max-width: 1024px){

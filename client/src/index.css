@@ -12,6 +12,12 @@ h3, h4, h5 {
   font-weight: 500;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 /* 
 Sidebar styling
 */
