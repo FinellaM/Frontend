@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 const ProductList = ({ product }) => {
     // Show the rollover effect every time the mouse is hovering over the specified area
     const showRolloverEffect = (e, id) => {
-        e.target.previousElementSibling.style.transform = 'scale(1.3)';
-        e.target.children[0].style.opacity = '1';
-        document.getElementById(id).getElementsByClassName("splash-image")[0].style.opacity = '1';
+        if (e.target.previousElementSibling && e.target.children[0] && document.getElementById(id).getElementsByClassName("splash-image")[0]) {
+            e.target.previousElementSibling.style.transform = 'scale(1.3)';
+            e.target.children[0].style.opacity = '1';
+            document.getElementById(id).getElementsByClassName("splash-image")[0].style.opacity = '1';
+        }
     }
     // Hide the rollover effect every time the mouse is leaving the specified area
     const hideRolloverEffect = (e, id) => {
-        e.target.previousElementSibling.style.transform = 'scale(1)';
-        e.target.children[0].style.opacity = '0';
-        document.getElementById(id).getElementsByClassName("splash-image")[0].style.opacity = '0';
+        if (e.target.previousElementSibling && e.target.children[0] && document.getElementById(id).getElementsByClassName("splash-image")[0]) {
+            e.target.previousElementSibling.style.transform = 'scale(1)';
+            e.target.children[0].style.opacity = '0';
+            document.getElementById(id).getElementsByClassName("splash-image")[0].style.opacity = '0';
+        }
     }
 
     return (

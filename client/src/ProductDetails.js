@@ -251,7 +251,7 @@ const ProductDetails = () => {
                         <div className="nutritionalTable">
                             <div className="nutritAvTitle">
                                 <h5 className="nutritAttribute">Average Quantity</h5>
-                                <h5 className="nutritFact">Per 100ml</h5>
+                                <h5 className="nutritFact text-right">Per 100ml</h5>
                             </div>
                             <div className="nutritInfo">
                                 <h5 className="nutritAttribute">Energy</h5>
@@ -290,7 +290,7 @@ const ProductDetails = () => {
                                     .filter((product) => product._id !== id)
                                     .map((product) => (
                                         <div className="product col-12 col-lg-4 mt-0" id={product._id} key={product._id} style={{
-                                            padding: '2.5em',
+                                            padding: '1.5em',
                                         }}>
                                             <div className="splash-image" style={{
                                                 backgroundRepeat: 'no-repeat',
