@@ -27,11 +27,11 @@ const appleRhuharb = () => {
                         <div className="productImages">
                             <img src="./rhubarb_apple_shop.png" alt="rhubarb & apple can" className="productImg" style={{marginBottom: '1em'}}/>
                             <div className="productImgCarosel">
-                                <img src="./rhubarb_apple_product_1.png" alt="" className="productCaroselItem" />
-                                <img src="./rhubarb_apple_product_2.png" alt="" className="productCaroselItem" />
-                                <img src="./rhubarb_apple_product_3.png" alt="" className="productCaroselItem" />
-                                <img src="./rhubarb_apple_product_4.png" alt="" className="productCaroselItem" />
-                                <img src="./rhubarb_apple_product_5.png" alt="" className="productCaroselItem" style={{marginRight: 0}}/>
+                                <img src="./rhubarb_apple_product_1.png" alt="can photo" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_2.png" alt="can photo" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_3.png" alt="can photo" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_4.png" alt="can photo" className="productCaroselItem" />
+                                <img src="./rhubarb_apple_product_5.png" alt="can photo" className="productCaroselItem" style={{marginRight: 0}}/>
                             </div>
                         </div>
                         <div className="productDesc">
@@ -107,13 +107,13 @@ const appleRhuharb = () => {
                             <h5>From £4.50 </h5>
                         </SlCard>
                         <SlCard className="productCard">
-                            <img src="./peach_passionfruit_shop.png" alt="Peach & Passionfruit" slot="image"/>
+                            <img src="./peach_passionfruit_shop.png" alt="Peach & Passionfruit can" slot="image"/>
                             <h4>Peach & Passionfruit</h4>
                             <p>330ml</p>
                             <h5>From £4.50 </h5>
                         </SlCard>
                         <SlCard className="productCard">
-                            <img src="./raspberry_hibiscus_shop.png" alt="Raspberry & Hibiscus" slot="image"/>
+                            <img src="./raspberry_hibiscus_shop.png" alt="Raspberry & Hibiscus can" slot="image"/>
                             <h4>Raspberry & Hibiscus</h4>
                             <p>330ml</p>
                             <h5>From £4.50 </h5>
