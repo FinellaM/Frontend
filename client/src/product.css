@@ -49,16 +49,18 @@
 
 
 .nutritionalTable {
-    margin: 0;
     display: flex;
     flex-direction: column;
     box-sizing: content-box; 
     border: 1px solid black;
-    
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*--------Info about product---------**/
 .productFacts {
+    margin-top: 3em;
     margin-bottom: 1.75em;
 }
 
@@ -67,7 +69,7 @@
 }
 
 .nutritAttribute {
-    margin-right: 4em;
+    margin-right: 0.5em;
 }
 
 .nutritAvTitle {
@@ -77,6 +79,7 @@
     display: flex;
     flex-direction: row;
     padding:0.25em 0.125em; 
+    justify-content: space-between;
 }
 
 .nutritAvTitle h5 {
@@ -89,6 +92,7 @@
     border: 2px solid black;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 /*---------------------------More products section------------------------------*/

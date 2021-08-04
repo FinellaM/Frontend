@@ -20,10 +20,12 @@ const Header = () => {
                 <div className="col text-right">
                     <button className="btn">
                         <i className="fa fa-shopping-cart" style={{
-                            fontSize: '20px',
+                            fontSize: '30px', //Size for Cart icon
                         }}></i>
                     </button>
-                    <button className="btn" onClick={openNav}>
+                    <button className="btn" onClick={openNav} style={{
+                        fontSize: '30px', //Size for Sidenav icon
+                    }}>
                         &#9776;
                     </button>
                 </div>
