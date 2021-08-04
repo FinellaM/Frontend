@@ -25,7 +25,7 @@ const Shop = () => {
             {/* Header section for the Shop page */}
             <div className="row mt-4 align-items-center">
                 <div className="col-6 text-left">
-                    <h1>Shop Page</h1>
+                    <h1 className="pageTitle">Shop</h1>
                 </div>
                 <div className="col-6 text-right">
                     <a type="button" className="btn btn-light m-3">Find a Stockist</a>

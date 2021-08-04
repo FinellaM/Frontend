@@ -18,6 +18,14 @@ img {
   object-fit: contain;
 }
 
+.pageTitle {
+  margin-left: 15px;
+}
+
+a:hover {
+  color: #e4690c;
+}
+
 /* 
 Sidebar styling
 */
@@ -62,6 +70,7 @@ nav .btn {
   transition: 0.3s;
 }
 
+
 nav p {
   color: black;
 }
@@ -76,12 +85,13 @@ nav p {
 }
 
 .sidenav a:hover {
-  color: #e7e7e7;
+  color: #e4690c;
 }
 
 a.btn {
   border: 2px solid rgb(75, 75, 75) !important;
 }
+
 
 .splash-image {
   width: 100%;
@@ -232,4 +242,23 @@ Contact Page
   width: 200px;
   height: 200px;
   opacity: 0;
+}
+
+/*
+Privacy Policy Styling
+*/
+
+.privacy-content {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.indent {
+  margin-left: 40px;
+}
+
+.privacySection {
+  margin-bottom: 60px;
 }
