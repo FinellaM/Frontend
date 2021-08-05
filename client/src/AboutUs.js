@@ -75,8 +75,23 @@ const AboutUs = () => {
             <div className="text-left">
                 <p><strong>At Feel Good each decision we make is a big one because, before we think about the product, we think about the planet and the people. We are at the start of our sustainability journey and are constantly looking to improve our impact as we progress.</strong></p>
             </div>
+
+            {/* <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                <div class="col-4"></div>
+                <div class="col-5"></div>
+                <div class="col-6"></div>
+            </div> */}
         </div>
+    
+   
+    
     );
+
+
+
 }
 
 export default AboutUs;

@@ -204,3 +204,90 @@ Contact Page
   height: 100%; /* Can itself takes up 100% of model-viewer*/
   width: 100%;
 }
+
+/* Home page bubbles behind Instagram */
+
+.bubbleone {
+	height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50%; /*makes shape from a square into a circle*/
+    display: inline-block; /* horizontal instead of vertical*/
+    margin: 100px;/*  space in between circles*/
+    border: 3px solid pink;
+    z-index: -1;
+}
+
+.bubbletwo {
+	height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%; /*makes shape from a square into a circle*/
+    display: inline-block; /* horizontal instead of vertical*/
+    margin: 100px;/*  space in between circles*/
+    border: 5px solid pink;
+    z-index: -1;
+}
+
+.bubblethree {
+	height: 75px;
+    width: 75px;
+    background-color: white;
+    border-radius: 50%; /*makes shape from a square into a circle*/
+    display: inline-block; /* horizontal instead of vertical*/
+    margin: 100px;/*  space in between circles*/
+    border: 10px solid pink;
+	  position: absolute;
+    z-index:  -1;
+}
+
+
+
+.numberthree {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+}
+
+.numberone {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 10px solid pink;
+}
+
+.numbertwo {
+  height: 100px;
+  width: 100px;
+  background-color:white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+}
+
+/* AboutUs page infographics */
+
+/* * {
+  box-sizing: border-box;
+}
+
+.col-1 {width: 16.7%;}
+.col-2 {width: 33.33%;}
+.col-3 {width: 50%;}
+.col-4 {width: 66.73%;}
+.col-5 {width: 83.43%;}
+.col-6 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+} */
