@@ -124,9 +124,27 @@ a.btn {
   width: 65%;
 }
 
+.home-container {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insta-container {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
 /*
 Contact Page
 */
+
+.contact-container {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
 
 /*Make required asterix on form red*/
 .form-required {
@@ -168,11 +186,16 @@ Contact Page
 /*Styling for other contact information*/
 .other-contact {
   margin-top: 50px;
+  margin-bottom: 70px;
 }
 
 /*
 3D Cans
 */
+
+.drink-section {
+  padding-bottom: 50px;
+}
 
 /*Styling for Peach and Passionfruit can*/
 #peach-can {
@@ -249,10 +272,11 @@ Privacy Policy Styling
 */
 
 .privacy-content {
-  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
 }
 
 .indent {
@@ -260,5 +284,37 @@ Privacy Policy Styling
 }
 
 .privacySection {
-  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+/*
+Terms and Conditions Styling
+*/
+
+.terms-section {
+  margin-top: 40px;
+}
+
+.terms-content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+/*
+Shipping and Returns Stling
+*/
+
+.shipping-section {
+  margin-top: 40px;
+}
+
+.shipping-content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
 }

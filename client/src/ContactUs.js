@@ -8,9 +8,18 @@ const ContactUs = () => {
     }, []);
 
     return (
-        <div className="container text-center">
-            <h1>Contact Us</h1><br></br> {/* Page title */}
-                <p>We always like to hear from customers or potential stockists, so if you'd like to get in contact with us, fill out the form below or use one of the alternate contact methods listed! </p>
+        <div className="container-fluid">
+             <div className="row mt-4 align-items-center">
+                <div className="col-12 text-left">
+                    <h1 className="pageTitle">Contact Us</h1>
+                </div>
+                <div className="col-12 p-0">
+                    <hr style={{ borderTop: '2px solid black' }} />
+                </div>
+            </div>
+            <div className="row contact-container text-center">
+                <div className="col-lg-8 col-md-9 col-sm-12">
+                <p className="">We always like to hear from customers or potential stockists, so if you'd like to get in contact with us, fill out the form below or use one of the alternate contact methods listed! </p>
                 <form className="form">
                     <label className="form-field">Full Name<span className="form-required">*</span></label><br></br> {/* Label for Name form field with styled asterix to visually show required fields */}
                         <input name="full_name" type="text" className="form-input" required></input><br></br> {/* Text input field for Name, set to required */}
@@ -32,6 +41,8 @@ const ContactUs = () => {
                         <p>Phone: <a href="tel:987-654-4210">987 654 3210</a></p>
                         <p>Fax: 987 654 3121</p>
                         <p>Address: Feel Good Drinks, Lyme Regis, Dorset DT7 3LS</p>
+                </div>
+                </div>
                 </div>
         </div>
     );

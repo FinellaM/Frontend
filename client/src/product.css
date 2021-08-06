@@ -1,4 +1,17 @@
 /*-----Product Picture & Description---------*/
+
+.product {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-container {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .productInfo{
     display: flex;
     flex-direction: row;
@@ -49,14 +62,15 @@
 
 
 .nutritionalTable {
-    display: flex;
     flex-direction: column;
     box-sizing: content-box; 
     border: 1px solid black;
-    width: 70%;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+    padding: 0;
 }
+
 
 /*--------Info about product---------**/
 .productFacts {
