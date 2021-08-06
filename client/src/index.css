@@ -18,6 +18,14 @@ img {
   object-fit: contain;
 }
 
+.pageTitle {
+  margin-left: 15px;
+}
+
+a:hover {
+  color: #e4690c;
+}
+
 .link-dark:hover, .btn-light:hover {
   color: #e4690c;
 }
@@ -67,6 +75,7 @@ nav .btn {
   transition: 0.3s;
 }
 
+
 nav p {
   color: black;
 }
@@ -81,12 +90,13 @@ nav p {
 }
 
 .sidenav a:hover {
-  color: #e7e7e7;
+  color: #e4690c;
 }
 
 a.btn {
   border: 2px solid rgb(75, 75, 75) !important;
 }
+
 
 .splash-image {
   width: 100%;
@@ -119,9 +129,27 @@ a.btn {
   width: 65%;
 }
 
+.home-container {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insta-container {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
 /*
 Contact Page
 */
+
+.contact-container {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
 
 /*Make required asterix on form red*/
 .form-required {
@@ -163,11 +191,16 @@ Contact Page
 /*Styling for other contact information*/
 .other-contact {
   margin-top: 50px;
+  margin-bottom: 70px;
 }
 
 /*
 3D Cans
 */
+
+.drink-section {
+  padding-bottom: 50px;
+}
 
 /*Styling for Peach and Passionfruit can*/
 #peach-can {
@@ -237,6 +270,58 @@ Contact Page
   width: 200px;
   height: 200px;
   opacity: 0;
+}
+
+/*
+Privacy Policy Styling
+*/
+
+.privacy-content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.indent {
+  margin-left: 40px;
+}
+
+.privacySection {
+  margin-top: 40px;
+}
+
+/*
+Terms and Conditions Styling
+*/
+
+.terms-section {
+  margin-top: 40px;
+}
+
+.terms-content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+/*
+Shipping and Returns Stling
+*/
+
+.shipping-section {
+  margin-top: 40px;
+}
+
+.shipping-content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
 }
 
 /*Styling for Images of Stockist  Credits to Michael Mullany on Stack Overflow https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css*/

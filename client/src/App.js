@@ -6,6 +6,9 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Stockist from './Stockist';
 import Cart from './Cart';
+import Privacy from './PrivacyPolicy';
+import Terms from './TermsConditions';
+import Shipping from './ShippingReturns';
 import Footer from './components/fgd-footer';
 import AppleRhuharb from './productAppleRhuharb';
 import Mixed from './productMixed';
@@ -57,6 +60,15 @@ function App() {
             </Route>
             <Route exact path="/cart">
               <Cart />
+            </Route>
+            <Route exact path="/privacy-policy">
+              <Privacy />
+            </Route>
+            <Route exact path="/terms-conditions">
+              <Terms />
+            </Route>
+            <Route exact path="/shipping-returns">
+              <Shipping />
             </Route>
           </Switch>
         </div>
