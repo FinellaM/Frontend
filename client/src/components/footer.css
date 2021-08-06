@@ -3,6 +3,10 @@ footer{
     width: 100%;
 }
 
+footer a{
+    color: black;
+}
+
 #socials{
     display: flex;
     margin-bottom: 1.5em;
@@ -11,7 +15,7 @@ footer{
   
 .socialBtn{
     margin-right: 0.5em;
-    margin-top: 1.5em;
+    border-radius: 50%;
 }
 
 .socialBtn i {
@@ -50,14 +54,13 @@ footer{
 }
 
 #footerLink a {
-    margin-right: 0.8em;
-    margin-bottom: 1.25em;
     color: black;
 }
 
-#footerNav a {
-    color: black;
+#footerLink a:hover{
+    color: #e4690c;
 }
+
 
 /* RESPONSIVE - IPAD PRO Styling -------------------*/
 @media all and (max-width: 1024px){
@@ -97,7 +100,7 @@ footer{
     }
 
     #footerLink a {
-        margin-left: 0.8em;
+        margin-right: 0.8em;
     }
 
     #footerCopyright {
