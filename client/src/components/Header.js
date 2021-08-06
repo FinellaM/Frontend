@@ -19,11 +19,11 @@ const Header = () => {
 
                 <div className="col text-right">
                     <button className="btn">
-                        <i className="fa fa-shopping-cart" style={{
+                        <i className="fa fa-shopping-cart cart-icon" style={{
                             fontSize: '30px', //Size for Cart icon
                         }}></i>
                     </button>
-                    <button className="btn" onClick={openNav} style={{
+                    <button className="btn nav-icon" onClick={openNav} style={{
                         fontSize: '30px', //Size for Sidenav icon
                     }}>
                         &#9776;
