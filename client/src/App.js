@@ -6,6 +6,9 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Stockist from './Stockist';
 import Cart from './Cart';
+import Privacy from './PrivacyPolicy';
+import Terms from './TermsConditions';
+import Shipping from './ShippingReturns';
 import Footer from './components/fgd-footer';
 import AppleRhuharb from './productAppleRhuharb';
 import Mixed from './productMixed';
@@ -14,6 +17,7 @@ import RaspberryHib from './productRaspberryHibiscus';
 import '@shoelace-style/shoelace/dist/themes/base.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ProductDetails from './ProductDetails';
 setBasePath('./../dist/shoelace');
 
 function App() {
@@ -29,6 +33,9 @@ function App() {
             </Route>
             <Route exact path="/shop">
               <Shop />
+            </Route>
+            <Route exact path="/product/:id">
+              <ProductDetails />
             </Route>
             <Route exact path="/product-appleRhuharb">
               <AppleRhuharb />
@@ -53,6 +60,15 @@ function App() {
             </Route>
             <Route exact path="/cart">
               <Cart />
+            </Route>
+            <Route exact path="/privacy-policy">
+              <Privacy />
+            </Route>
+            <Route exact path="/terms-conditions">
+              <Terms />
+            </Route>
+            <Route exact path="/shipping-returns">
+              <Shipping />
             </Route>
           </Switch>
         </div>

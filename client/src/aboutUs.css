@@ -1,0 +1,204 @@
+/* General About Us settings */
+.about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+    margin-top: 2.25em;
+    margin-bottom: 1.5em;
+}
+
+/*.about-people-planet p, .man-behind-brand p, .so-feel-good p, .about-sea p, .about-earth p, .about-communities p {
+    font-size: x-large;
+}*/
+
+.about-people-planet, .about-sea, .about-earth, .about-communities, .man-behind-brand, .so-feel-good {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 1.5em;
+    
+}
+
+.article{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1.75em;
+}
+
+
+.vidColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.planet-logo {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.wave-logo {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Titles----------------------------*/
+#aboutComms-Title, #aboutEarth-Title, #aboutSea-Title{
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-position: center;
+}
+
+#aboutSea-Title{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#aboutEarth-Title{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#aboutComms-Title{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+    /* General About Us settings */
+    .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+        margin-top: 1.5em;
+    }
+
+    .about-people-planet, .about-sea, .about-earth, .about-communities, .man-behind-brand, .so-feel-good {
+        margin: 0 2em;
+    }
+
+    
+    /*Titles----------------------------*/
+    #aboutSea-Title{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+
+    #aboutEarth-Title{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    #aboutComms-Title{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+    /* General About Us settings */
+    .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+        margin-top: 1.25em;
+    }
+
+    .about-people-planet p, .man-behind-brand p, .so-feel-good p, .about-sea p, .about-earth p, .about-communities p {
+        font-size: initial;
+    }
+    
+    /*Titles----------------------------*/
+    #aboutSea-Title {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+
+    #aboutEarth-Title {
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    #aboutComms-Title{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+    /* General About us stylings--------------*/
+    .about-people-planet,.about-sea,.about-earth,.about-communities, .man-behind-brand, .so-feel-good{
+        margin: 0 0.5em;
+       
+    }
+
+    .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+        margin-top: 1em;
+    }
+
+    .article{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+   /*Titles-----------------------------------------------------*/
+   #aboutSea-Title{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+
+    #aboutEarth-Title{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    #aboutComms-Title{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+
+}
