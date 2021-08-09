@@ -194,20 +194,20 @@ const Home = () => {
 
 
                         <div className="row">
-                            <iframe className="col-lg-3 col-md-4 col-sm-6" src="https://www.instagram.com/p/CQ0TmwBriQQ/embed/" frameBorder="0" title="Instagram Photo"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQ0TmwBriQQ/embed/" frameBorder="0" title="Instagram Photo"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
                             </iframe>
-                            <iframe className="col-lg-3 col-md-4 col-sm-6" src="https://www.instagram.com/p/CQOUTyRraQf/embed/" frameBorder="0" title="Insta test"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQOUTyRraQf/embed/" frameBorder="0" title="Insta test"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
                             </iframe>
-                            <iframe className="col-lg-3 col-md-4 col-sm-6" src="https://www.instagram.com/p/CKyeur3lyx3/embed/" frameBorder="0" title="Instagram testing"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CKyeur3lyx3/embed/" frameBorder="0" title="Instagram testing"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
                             </iframe>
-                            <iframe className="col-lg-3 col-md-4 col-sm-6" src="https://www.instagram.com/p/CCopon9B3ze/embed/" frameBorder="0" title="Insta title"> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CCopon9B3ze/embed/" frameBorder="0" title="Insta title"> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
                             </iframe>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
 
-        </div>
 
     );
 }
