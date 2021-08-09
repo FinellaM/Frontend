@@ -12,12 +12,41 @@ const Home = () => {
 
         gsap.from(".dot", { y: 750 }); /* from this spot on y-axis*/
 
+        // add timeline 
         var tl = gsap.timeline({ repeat: 30, repeatDelay: 1 });
-
+      
         //add 3 tweens that will play in direct succession.
-        tl.to(".numberone", { duration: 1, opacity: 0, x: 0, y: 20 });
-        tl.to(".numbertwo", { duration: 1, opacity: 0, x: 0, scale: 0.2, y: 20 });
-        tl.to(".numberthree", { duration: 1, opacity: 0, x: 0, scale: 2, y: 20 });
+        tl.to(".numberone", { duration: 0.5, opacity: 0, x: 0, y: 20 });
+        tl.to(".numbertwo", { duration: 0.5, opacity: 0, x: 0, scale: 0.2, y: 20 });
+        tl.to(".numberthree", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
+        tl.to(".numberfour", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
+        tl.to(".numberfive", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
+        tl.to(".numbersix", { duration: 0.5, opacity: 0, x: 0, y: 20 });
+
+        // animation for class circle objects
+        let object = {
+            el: '.circle',
+            duration: 6
+          }
+          
+          gsap.fromTo(object.el, object.duration, {
+            opacity: 2,
+            y: '+=10',
+            scale: 1.5,
+            // transformOrigin: 'center'
+          }, {
+            opacity: 1,
+            y: '-2000', //  moving to this position on y-axis
+            scale: -0.5, // decreasing in size
+            stagger: {
+              each: object.duration / document.querySelectorAll(object.el).length, 
+              repeat: -1
+            }
+          }); 
+
+      
+
+
     }, []);
 
     return (
@@ -214,15 +243,27 @@ const Home = () => {
                     <div className="col-2">
                         <div class="bubbleone"></div>
                         <div class="bubbletwo"></div>
+
+                        <div class="circles">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+
                     </div>
                     <div className="col-8">
 
                         <div >
                             <div class="dot numberone" ></div>
+                            <div class="dot numberfive" ></div>
                             <div class="dot numbertwo"></div>
+
                         </div>
 
                         <div className="row text-center">
+
+                            
                             <div className="col-6 col-lg-3">
                                 <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
                             </div>
@@ -230,9 +271,16 @@ const Home = () => {
                                 <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
                             </div>
                             <div className="col-6 col-lg-3">
+                                
+                                <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
+                               
+                            </div>
+                            <div class="dot numbersix" ></div>
+                            
+
+                            <div className="col-7 col-lg-3">
                                 <div class="bubblethree"></div>
-                                <img className="instagram-image mw-100" src="./man_behind_brand.png" alt="" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/.  */}
-                            </div>
+                                </div>
                         </div>
                         <div className="col-2">
                         </div>
@@ -254,8 +302,20 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="col-2">
+  
                         <div class="dot numberthree"></div>
+                        <div class="dot numberfour"></div>
 
+                        <div class="circles">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
                     </div>
                 </div>
             </div>
