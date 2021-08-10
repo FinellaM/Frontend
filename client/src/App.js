@@ -5,7 +5,7 @@ import Shop from './Shop';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import Stockist from './Stockist';
-import Cart from './Cart';
+import Cart from './components/Cart';
 import Footer from './components/fgd-footer';
 import AppleRhuharb from './productAppleRhuharb';
 import Mixed from './productMixed';
@@ -15,14 +15,18 @@ import '@shoelace-style/shoelace/dist/themes/base.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProductDetails from './ProductDetails';
+import { useState, useEffect } from "react";
 setBasePath('./../dist/shoelace');
 
 function App() {
+  const [cart, setCart] = useState([]);
+
   return (
     <Router>
       <div className="App">
         <Header />
         <Sidenav />
+        <Cart cart={cart} />
         <div className="content">
           <Switch>
             <Route exact path="/">
@@ -32,7 +36,7 @@ function App() {
               <Shop />
             </Route>
             <Route exact path="/product/:id">
-              <ProductDetails />
+              <ProductDetails setCart={setCart} cart={cart} />
             </Route>
             <Route exact path="/product-appleRhuharb">
               <AppleRhuharb />

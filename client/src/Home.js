@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom';
+import { InView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 const Home = () => {
+    const variants = {
+        initial: {
+            opacity: 0,
+            y: 40,
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+        },
+    };
+
     return (
         <div className="container-fluid">
             <div className="row align-items-center" style={{
                 backgroundColor: '#cec9ff',
-                backgroundImage: 'url("./hero_img.png")',// Original Image Source: Feel Good Drinks (@feelgooddrinks). 2020. “BUY NOW 10% OFF.” Instagram Photo, August 3, 2020. https://www.instagram.com/p/CDbO_EUHymK/.  Image modified by Group Mint.
+                backgroundImage: 'url("./hero_img.png")', // Original Image Source: Feel Good Drinks (@feelgooddrinks). 2020. “BUY NOW 10% OFF.” Instagram Photo, August 3, 2020. https://www.instagram.com/p/CDbO_EUHymK/.  Image modified by Group Mint.
                 height: '100vmin',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -30,96 +43,129 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="row m-auto">
-                <div className="col-12 col-lg-6 text-center">
-                    {/* Peach and Passionfruit 3D Model Can. 3D model and texturing created by Group Mint. Design Reference: Feel Good Drinks. n.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
-                    <div id="peach-can">
-                        <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/ */}
-                    </div>
-                    <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="Peach and Passionfruit Splash" />{/* Splash image created by Group Mint */}
-                </div>
-                <div className="col-12 col-lg-6">
-                    <div className="mt-4 text-center">
-                        <h2><strong>Peach & Passionfruit</strong></h2> {/* Sub-Section title */}
-                    </div>
-                    <div className="mt-4 text-center">
-                        <h5>330ml</h5>
-                    </div>
-                    <div className="mt-4 text-center">
-                        <h4><strong>From £4.50</strong></h4>
-                    </div>
-                    <div className="mt-4 text-justify">
-                        <p>
-                            We added a squeeze of real apple juice, natural peach & passionfruit flavours and a touch of maca to our British sparkling water to make a tongue-tingling drink you can enjoy anywhere; the perfect non-alcoholic pick-me-up! Stop, sip and give back. {/* Text Source: Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml. */}
-                        </p>
-                    </div>
-                    <div className="mt-2 text-center">
-                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
-                        <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
-                    </div>
-                </div>
-            </div>
+            <InView triggerOnce threshold={0.25}>
+                {({ ref, inView }) => (
+                    <motion.div
+                        variants={variants}
+                        initial="initial"
+                        animate={inView ? 'show' : undefined}
+                        transition={{ duration: 1 }}
+                        ref={ref}
+                        className="row m-auto"
+                    >
+                        <div className="col-12 col-lg-6 text-center">
+                            {/* Peach and Passionfruit 3D Model Can. 3D model and texturing created by Group Mint. Design Reference: Feel Good Drinks. n.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
+                            <div id="peach-can">
+                                <model-viewer src="./3d_models/peach_passionfruit/peach_passionfruit.gltf" alt="Peach and Passionfruit 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/ */}
+                            </div>
+                            <img className="splash-image mw-100" src="./peach_and_passionfruit_splash.png" alt="Peach and Passionfruit Splash" />{/* Splash image created by Group Mint */}
+                        </div>
+                        <div className="col-12 col-lg-6">
+                            <div className="mt-4 text-center">
+                                <h2><strong>Peach & Passionfruit</strong></h2> {/* Sub-Section title */}
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h5>330ml</h5>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h4><strong>From £4.50</strong></h4>
+                            </div>
+                            <div className="mt-4 text-justify">
+                                <p>
+                                    We added a squeeze of real apple juice, natural peach & passionfruit flavours and a touch of maca to our British sparkling water to make a tongue-tingling drink you can enjoy anywhere; the perfect non-alcoholic pick-me-up! Stop, sip and give back. {/* Text Source: Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml. */}
+                                </p>
+                            </div>
+                            <div className="mt-2 text-center">
+                                <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
+                                <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </InView>
 
-            <div className="row m-auto">
-                <div className="col-12 col-lg-6 order-12 order-lg-1">
-                    <div className="mt-4 text-center">
-                        <h2><strong>Raspberry & Hibiscus</strong></h2> {/* Sub-Section title */}
-                    </div>
-                    <div className="mt-4 text-center">
-                        <h5>330ml</h5>
-                    </div>
-                    <div className="mt-4 text-center">
-                        <h4><strong>From £4.50</strong></h4>
-                    </div>
-                    <div className="mt-4 text-justify">
-                        <p>
-                            Natural raspberry flavour, a squeeze of real apple juice plus a touch of hibiscus and ginseng is added to our British sparkling water, to create a delicious fruitful alternative to sugary carbonated drinks. Stop, sip and give back. {/* Text Source: Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml. */}
-                        </p>
-                    </div>
-                    <div className="mt-2 text-center">
-                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
-                        <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
-                    </div>
-                </div>
+            <InView triggerOnce threshold={0.25}>
+                {({ ref, inView }) => (
+                    <motion.div
+                        variants={variants}
+                        initial="initial"
+                        animate={inView ? 'show' : undefined}
+                        transition={{ duration: 0.5 }}
+                        ref={ref}
+                        className="row m-auto"
+                    >
+                        <div className="col-12 col-lg-6 order-12 order-lg-1">
+                            <div className="mt-4 text-center">
+                                <h2><strong>Raspberry & Hibiscus</strong></h2> {/* Sub-Section title */}
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h5>330ml</h5>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h4><strong>From £4.50</strong></h4>
+                            </div>
+                            <div className="mt-4 text-justify">
+                                <p>
+                                    Natural raspberry flavour, a squeeze of real apple juice plus a touch of hibiscus and ginseng is added to our British sparkling water, to create a delicious fruitful alternative to sugary carbonated drinks. Stop, sip and give back. {/* Text Source: Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml. */}
+                                </p>
+                            </div>
+                            <div className="mt-2 text-center">
+                                <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
+                                <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
+                            </div>
+                        </div>
 
-                <div className="col-12 col-lg-6 order-1 order-lg-12 text-center">
-                    {/* Raspberry and Hibiscus 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
-                    <div id="raspberry-can">
-                        <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/*/}
-                    </div>
-                    <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="Raspberry and Hibiscus Splash" /> {/* Splash image created by Group Mint */}
-                </div>
-            </div>
+                        <div className="col-12 col-lg-6 order-1 order-lg-12 text-center">
+                            {/* Raspberry and Hibiscus 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
+                            <div id="raspberry-can">
+                                <model-viewer src="./3d_models/raspberry_hibiscus/raspberry_hibiscus.gltf" alt="Raspberry and Hibiscus 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer> {/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/*/}
+                            </div>
+                            <img className="splash-image" src="./raspberry_and_hibiscus_splash.png" alt="Raspberry and Hibiscus Splash" /> {/* Splash image created by Group Mint */}
+                        </div>
+                    </motion.div>
+                )}
+            </InView>
 
-            <div className="row m-auto">
-                <div className="col-12 col-lg-6 text-center">
-                    {/* Apple and Rhubarb 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
-                    <div id="rhubarb-can">
-                        <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>{/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/ */}
-                    </div>
-                    <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="Rhubarb and Apple Splash" /> {/* Splash image created by Group Mint */}
-                </div>
-                <div className="col-12 col-lg-6">
-                    <div className="mt-4 text-center">
-                        <h2><strong>Rhubarb & Apple</strong></h2> {/* Sub-Section title */}
-                    </div>
-                    <div className="mt-4 text-center">
-                        <h5>330ml</h5>
-                    </div>
-                    <div className="mt-4 text-center">
-                        <h4><strong>From £4.50</strong></h4>
-                    </div>
-                    <div className="mt-4 text-justify">
-                        <p>
-                            Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons and the ideal choice to refresh you any day of the year. Don't forget to chill it! Stop, sip and give back. {/* Text Source: Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml. */}
-                        </p>
-                    </div>
-                    <div className="mt-2 text-center">
-                        <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
-                        <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
-                    </div>
-                </div>
-            </div>
+            <InView triggerOnce threshold={0.25}>
+                {({ ref, inView }) => (
+                    <motion.div
+                        variants={variants}
+                        initial="initial"
+                        animate={inView ? 'show' : undefined}
+                        transition={{ duration: 0.5 }}
+                        ref={ref}
+                        className="row m-auto"
+                    >
+                        <div className="col-12 col-lg-6 text-center">
+                            {/* Apple and Rhubarb 3D Model Can. 3D model and texturing created by Group Mint. Design reference: Feel Good Drinks. n.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/pages/our-flavours. */}
+                            <div id="rhubarb-can">
+                                <model-viewer src="./3d_models/rhubarb_apple/rhubarb_apple.gltf" alt="Rhubarb and Apple 3D Can" auto-rotate camera-controls ar environment-image="neutral"></model-viewer>{/* Model-viewer loading the 3D model, with auto rotate, camera controls (allow user to rotate can) and ar enabled. Background set to neutral for best environment. Implemented with the help of this tutorial: Mutua, Chris. 2021. "How to Insert 3D Objects into a Webpage using HTML and CSS." Section. https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/ */}
+                            </div>
+                            <img className="splash-image" src="./rhubarb_and_apple_splash.png" alt="Rhubarb and Apple Splash" /> {/* Splash image created by Group Mint */}
+                        </div>
+                        <div className="col-12 col-lg-6">
+                            <div className="mt-4 text-center">
+                                <h2><strong>Rhubarb & Apple</strong></h2> {/* Sub-Section title */}
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h5>330ml</h5>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <h4><strong>From £4.50</strong></h4>
+                            </div>
+                            <div className="mt-4 text-justify">
+                                <p>
+                                    Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons and the ideal choice to refresh you any day of the year. Don't forget to chill it! Stop, sip and give back. {/* Text Source: Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml. */}
+                                </p>
+                            </div>
+                            <div className="mt-2 text-center">
+                                <Link to="/product-appleRhuharb" className="btn btn-light m-3">View Details</Link>
+                                <a type="button" className="btn btn-light m-3" href="/shop">Shop All</a>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </InView>
 
             <div className="row m-auto">
                 <div className="col-12">
