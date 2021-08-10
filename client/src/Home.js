@@ -1,6 +1,47 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
 const Home = () => {
+    useEffect(() => {
+        const gsap = window.gsap;
+
+        gsap.to(".dot", { x: 0 }); /* moves to this position on x-axis */
+
+        gsap.from(".dot", { y: 750 }); /* from this spot on y-axis*/
+
+        // add timeline 
+        var tl = gsap.timeline({ repeat: 30, repeatDelay: 1 });
+
+        //add 3 tweens that will play in direct succession.
+        tl.to(".numberone", { duration: 0.5, opacity: 0, x: 0, y: 20 });
+        tl.to(".numbertwo", { duration: 0.5, opacity: 0, x: 0, scale: 0.2, y: 20 });
+        tl.to(".numberthree", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
+        tl.to(".numberfour", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
+        tl.to(".numberfive", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
+        tl.to(".numbersix", { duration: 0.5, opacity: 0, x: 0, y: 20 });
+
+        // animation for class circle objects
+        let object = {
+            el: '.circle',
+            duration: 6
+        }
+
+        gsap.fromTo(object.el, object.duration, {
+            opacity: 2,
+            y: '+=10',
+            scale: 1.5,
+            // transformOrigin: 'center'
+        }, {
+            opacity: 1,
+            y: '-2000', //  moving to this position on y-axis
+            scale: -0.5, // decreasing in size
+            stagger: {
+                each: object.duration / document.querySelectorAll(object.el).length,
+                repeat: -1
+            }
+        });
+    }, []);
+
     return (
         <div className="container-fluid">
             <div className="row align-items-center" style={{
@@ -190,25 +231,55 @@ const Home = () => {
                                 <a className="insta-link" href="https://www.instagram.com/feelgooddrinks" target="_blank" rel="noreferrer"><h4>@feelgooddrinks</h4></a>
                             </div>
                         </div>
-
-
-
-                        <div className="row">
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQ0TmwBriQQ/embed/" frameBorder="0" title="Instagram Photo"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
-                            </iframe>
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQOUTyRraQf/embed/" frameBorder="0" title="Insta test"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
-                            </iframe>
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CKyeur3lyx3/embed/" frameBorder="0" title="Instagram testing"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
-                            </iframe>
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CCopon9B3ze/embed/" frameBorder="0" title="Insta title"> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
-                            </iframe>
+                        <div className="col-2">
+                            <div class="bubbleone"></div>
+                            <div class="bubbletwo"></div>
+                            <div class="circles">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
                         </div>
-                    </div>
+                        <div className="col-8">
+                            <div >
+                                <div class="dot numberone" ></div>
+                                <div class="dot numberfive" ></div>
+                                <div class="dot numbertwo"></div>
+                            </div>
+                            <div className="row">
+                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQ0TmwBriQQ/embed/" frameBorder="0" title="Instagram Photo"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                                </iframe>
+                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQOUTyRraQf/embed/" frameBorder="0" title="Insta test"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                                </iframe>
+                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CKyeur3lyx3/embed/" frameBorder="0" title="Instagram testing"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                                </iframe>
+                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CCopon9B3ze/embed/" frameBorder="0" title="Insta title"> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                                </iframe>
+                                <div class="dot numbersix" ></div>
+                                <div className="col-7 col-lg-3">
+                                    <div class="bubblethree"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-2">
+                            <div class="dot numberthree"></div>
+                            <div class="dot numberfour"></div>
+                            <div class="circles">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
+        </div>
     );
 }
 

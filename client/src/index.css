@@ -433,3 +433,117 @@ Stockist Styling
   font-size: x-large;
   width: 200px;
 }
+
+/* Home page bubbles behind Instagram */
+.bubbleone {
+	height: 300px;
+  width: 300px;
+  background-color: white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 3px solid pink;
+  z-index: -1;
+}
+
+.bubbletwo {
+	height: 100px;
+  width: 100px;
+  background-color: white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+  z-index: -1;
+}
+
+.bubblethree {
+	height: 75px;
+  width: 75px;
+  background-color: white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin-left: 1000px;/*  space in between circles*/
+  border: 5px solid pink;
+	position: absolute;
+  z-index:  -1;
+}
+
+.numberthree {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+}
+
+.numberone {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 10px solid pink;
+}
+
+.numbertwo {
+  height: 100px;
+  width: 100px;
+  background-color:white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+}
+
+.numberfour {
+  height: 100px;
+  width: 100px;
+  background-color:white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+}
+
+.numberfive {
+  height: 75px;
+  width: 75px;
+  background-color:white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+}
+
+.numbersix {
+  height: 75px;
+  width: 75px;
+  background-color:white;
+  border-radius: 50%; /*makes shape from a square into a circle*/
+  display: inline-block; /* horizontal instead of vertical*/
+  margin: 100px;/*  space in between circles*/
+  border: 5px solid pink;
+}
+
+.circles {
+  width: 200px; /* sets position on x-axis */
+  height: 200px;
+  position: relative;
+  z-index: -1;
+}
+
+.circle {
+  opacity: 0;
+  width: 50px;
+  border-radius: 100%;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  margin: auto;
+  border: 3px solid pink;
+}
