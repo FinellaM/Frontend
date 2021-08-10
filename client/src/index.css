@@ -1,3 +1,7 @@
+/*
+Universal Styling
+*/
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -28,8 +32,17 @@ a:hover {
 
 .link-dark:hover, .btn-light:hover {
   color: #e4690c;
+  border: 2px solid #e4690c !important;
+  background-color: white;
 }
 
+.nav-icon:hover {
+  color: #e4690c;
+}
+
+.cart-icon:hover {
+  color: #e4690c;
+}
 
 /* 
 Sidebar styling
@@ -97,6 +110,9 @@ a.btn {
   border: 2px solid rgb(75, 75, 75) !important;
 }
 
+/*
+Shop Styling
+*/
 
 .splash-image {
   width: 100%;
@@ -104,6 +120,10 @@ a.btn {
 
 .shop-product-image {
   transition: transform .2s; /* Animation */
+}
+
+.shop-container {
+  padding-bottom: 50px;
 }
 
 .overlay {
@@ -124,6 +144,11 @@ a.btn {
 .overlay-content {
   opacity: 0;
 }
+
+/*
+Homepage Styling
+*/
+
 /* Styling for People and Planet animation on Homepage*/
 .planet-animation {
   width: 65%;
@@ -136,12 +161,24 @@ a.btn {
 }
 
 .insta-container {
-  padding-bottom: 50px;
   padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  margin-bottom: 20px;
+}
+
+
+.insta-link {
+  color: black;
 }
 
 /*
-Contact Page
+Contact Page Styling
 */
 
 .contact-container {
@@ -149,6 +186,17 @@ Contact Page
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  padding-top: 50px;
+}
+
+.contact-desc {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*Make required asterix on form red*/
@@ -164,17 +212,17 @@ Contact Page
 /*Add padding to the form fields*/
 .form-field {
   padding-top: 30px;
+  text-align: left;
+  display: inline-block;
 }
 
 /*Adjust size of form input fields*/
 .form-input {
-  width: 400px;
   height: 50px;
 }
 
 /*Adjust message text area size*/
 .message-textarea {
-  width: 400px;
   height: 100px;
 }
 
@@ -186,12 +234,17 @@ Contact Page
 /*Styling for submit button*/
 .form-submit {
   margin-top: 30px;
+  border: 2px solid black;
+  font-size: larger;
 }
 
 /*Styling for other contact information*/
 .other-contact {
   margin-top: 50px;
   margin-bottom: 70px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*
@@ -209,6 +262,11 @@ Contact Page
   height: 80%; /* Entire model-viewer area set to 80% of its column*/
   width: 80%;
   padding-left: 12%; /* Padding to position can in middle of splash Image*/
+  transition: all .2s ease-in-out;
+}
+
+#peach-can:hover {
+  transform: scale(1.2);
 }
 
 /*Styling for Peach and Passionfruit can model-viewer*/
@@ -224,6 +282,11 @@ Contact Page
   height: 80%; /* Entire model-viewer area set to 80% of its column*/
   width: 80%;
   padding-left: 18%; /* Padding to position can in middle of splash Image*/
+  transition: all .2s ease-in-out;
+}
+
+#raspberry-can:hover {
+  transform: scale(1.2);
 }
 
 /*Styling for Raspberry and Hibiscus can model-viewer*/
@@ -240,6 +303,11 @@ Contact Page
   width: 80%;
   padding-left: 16%; /* Padding to position can in middle of splash Image*/
   margin-top: 8%;
+  transition: all .2s ease-in-out;
+}
+
+#rhubarb-can:hover {
+  transform: scale(1.2);
 }
 
 /*Styling for Rhubarb and Apple can model-viewer*/
@@ -247,6 +315,10 @@ Contact Page
   height: 100%; /* Can itself takes up 100% of model-viewer*/
   width: 100%;
 }
+
+/*
+Product Styling
+*/
 
 .productCaroselItem {
   cursor: pointer;
@@ -324,15 +396,40 @@ Shipping and Returns Stling
   justify-content: center;
 }
 
+/*
+Stockist Styling
+*/ 
+
 /*Styling for Images of Stockist  Credits to Michael Mullany on Stack Overflow https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css*/
 .stockistImg{
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  transition: all .2s ease-in-out;
+  padding-bottom: 30px;
 }
 
 /*Disable greyscale on hover*/
 .stockistImg:hover{
   -webkit-filter: grayscale(0);
   filter: none;
+  transform: scale(1.1);
+
+}
+
+.stock-container {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stock-btn-cont {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+.stock-btn {
+  font-size: x-large;
+  width: 200px;
 }

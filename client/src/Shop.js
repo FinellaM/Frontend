@@ -23,7 +23,7 @@ const Shop = () => {
     }, []);
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid shop-container">
             {/* Header section for the Shop page */}
             <div className="row mt-4 align-items-center">
                 <div className="col-6 text-left">

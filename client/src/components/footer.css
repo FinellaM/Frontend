@@ -11,11 +11,16 @@ footer a{
     display: flex;
     margin-bottom: 1.5em;
     justify-content: center;
+    padding-top: 10px;
 }
   
 .socialBtn{
     margin-right: 0.5em;
     border-radius: 50%;
+}
+
+.social-btn:hover {
+    color: #e4690c;
 }
 
 .socialBtn i {
@@ -50,6 +55,9 @@ footer a{
 #footerLink{
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
+    font-size: small;
+    text-decoration: underline;
 
 }
 
