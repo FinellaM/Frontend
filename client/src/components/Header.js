@@ -16,7 +16,7 @@ const Header = () => {
         <header className="mb-0" style={{ backgroundColor: 'white' }}>
 
             <nav className="navbar navbar-expand-lg bg-green">
-                <div className="col-8 col-sm-6 col-md-4">
+                <div className="col-6 col-sm-6 col-md-4">
                     <Link to="/" className="logo">
                         <img src={"../feelgooddrinks_logo.png"} alt="logo" style={{ height: '50px' }} />
                     </Link>
@@ -24,11 +24,13 @@ const Header = () => {
 
                 <div className="col text-right">
                     <button className="btn">
-                        <i className="fa fa-shopping-cart" onClick={openCart} style={{
-                            fontSize: '20px',
+                        <i className="fa fa-shopping-cart cart-icon" onClick={openCart} style={{
+                            fontSize: '30px', //Size for Cart icon
                         }}></i>
                     </button>
-                    <button className="btn" onClick={openNav}>
+                    <button className="btn nav-icon" onClick={openNav} style={{
+                        fontSize: '30px', //Size for Sidenav icon
+                    }}>
                         &#9776;
                     </button>
                 </div>

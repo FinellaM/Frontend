@@ -298,7 +298,9 @@ const ProductDetails = ({ cart, setCart }) => {
 
     return (
         (product && nutrition && relatedProduct) && (
-            <div className="container ">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-12 col-xl-9 col-lg-10 col-md-12 col-sm-12 product-container">
                 <Link to="/shop">
                     <SlButton style={{
                         textAlign: 'left !important',
@@ -353,7 +355,7 @@ const ProductDetails = ({ cart, setCart }) => {
                     <div className="productFacts">
                         <h3>Nutritional Information</h3>
                         {nutrition.map((n, index) => (
-                            <div className="nutritionalTable" id={n._id} key={n._id}>
+                            <div className="nutritionalTable col-lg-6 col-md-8 col-sm-8 col-8" id={n._id} key={n._id}>
                                 <div className="nutritAvTitle">
                                     <h5 className="nutritAttribute">Average Quantity</h5>
                                     <h5 className="nutritFact text-right">Per 100ml</h5>
@@ -394,7 +396,7 @@ const ProductDetails = ({ cart, setCart }) => {
                                 relatedProduct && relatedProduct
                                     .filter((product) => product._id !== id)
                                     .map((product) => (
-                                        <div className="product col-12 col-lg-4 mt-0" id={product._id} key={product._id} style={{
+                                        <div className="product col-12 col-lg-4 col-md-4 col-sm-8 mt-0" id={product._id} key={product._id} style={{
                                             padding: '1.5em',
                                         }}>
                                             <div className="splash-image" style={{
@@ -417,8 +419,38 @@ const ProductDetails = ({ cart, setCart }) => {
                                     ))
                             }
                         </div>
+                        </div>
+                        {/* All information pulled from the backend, see following comments for references*/}
+                        {/* Mixed Pack: */}
+                            {/* Feel Good Drinks. N.d. "[Cans on pastel background]." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/. */}
+                            {/* Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml.  */}
+                            {/* Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml.   */}
+                            {/* Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2020. “Save 30% on all the Feel Good flavours until October 27th!” Instagram Photo, October 9, 2020. https://www.instagram.com/p/CGFxR_NHoCg/.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. “NEWSFLASH! Find your flavour!” Instagram Photo, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/ */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2020. “BUY NOW 10% OFF.” Instagram Photo, August 3, 2020. https://www.instagram.com/p/CDbO_EUHymK/.  */}
+                        {/* Peach & Passionfruit: */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH." Instagram Photo, March 3, 2021. https://www.instagram.com/p/CL7KBoJlScq/.  */}
+                            {/* Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml.   */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. “At the beating heart of Feel Good is a mission to make this world a better place for everyone.” Instagram Photo, July 9, 2021. https://www.instagram.com/p/CRGG2XCL0SN/.  */}
+                            {/* Sjöström, Oliver. 2018. “Men running toward beach.” Unsplash. https://unsplash.com/photos/1mtPJuiteRI.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. “We added a squeeze of real apple juice, natural peach & passionfruit flavours and a touch of maca to our British sparkling water.” Instagram Photo, April 21, 2021. https://www.instagram.com/p/CN5Pzzcrge_/.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2020. “Stop, sip and revive.” Instagram Photo, April 23, 2020. https://www.instagram.com/p/B_U2McfFSUB/.  */}
+                        {/* Raspberry & Hibiscus: */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH." Instagram Photo, March 3, 2021. https://www.instagram.com/p/CL7KBoJlScq/.  */}
+                            {/* Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2020. “At the heart of Feel Good is a mission to make this world a better place for everyone.” Instagram Photo, October 31, 2020. https://www.instagram.com/p/CHAIqumrJB5/.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. “Natural raspberry flavour, a squeeze of real apple juice plus a touch of hibiscus and ginseng is added to our British sparkling water.” Instagram Photo, February 11, 2021. https://www.instagram.com/p/CLJregYFMe9/.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. “£4 OFF.” Instagram Photo, April 29, 2021. https://www.instagram.com/p/CHAIqumrJB5/.  */}
+                        {/* Rhubarb & Apple */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH." Instagram Photo, March 3, 2021. https://www.instagram.com/p/CL7KBoJlScq/.  */}
+                            {/* Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml.  */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. “3% of every can of Feel Good you buy goes back to charities.” Instagram Photo, April 28, 2021. https://www.instagram.com/p/COLSphirTrw/. */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. “3% of every can of Feel Good you buy goes back to charities.” Instagram Photo, April 28, 2021. https://www.instagram.com/p/COLSphirTrw/. */}
+                            {/* Feel Good Drinks (@feelgooddrinks). 2021. "When we make time for the things in life that make is Feel Good, everything else will follow." Instagram photo, March 24, 2021. https://www.instagram.com/p/CMxTUtALlt4/.  */}
                     </div>
-                </div>
+                    </div>
+                    </div>
             </div>
         )
     );
