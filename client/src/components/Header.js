@@ -7,6 +7,11 @@ const Header = () => {
         document.getElementById("mySidenav").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
     }
 
+    const openCart = () => {
+        document.getElementById("myCart").style.width = "300px";
+        document.getElementById("myCart").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
+    }
+
     return (
         <header className="mb-0" style={{ backgroundColor: 'white' }}>
 
@@ -19,7 +24,7 @@ const Header = () => {
 
                 <div className="col text-right">
                     <button className="btn">
-                        <i className="fa fa-shopping-cart cart-icon" style={{
+                        <i className="fa fa-shopping-cart cart-icon" onClick={openCart} style={{
                             fontSize: '30px', //Size for Cart icon
                         }}></i>
                     </button>

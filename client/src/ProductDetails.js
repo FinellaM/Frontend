@@ -8,7 +8,7 @@ import './product.css'
 import { Link } from 'react-router-dom';
 import ProductList from "./ProductList";
 
-const ProductDetails = () => {
+const ProductDetails = ({ cart, setCart }) => {
     const { id } = useParams();
 
     // Constant for storing product list
@@ -18,6 +18,8 @@ const ProductDetails = () => {
 
     const [relatedProduct, setRelatedProduct] = useState(null);
 
+    const [cartState, setCartState] = useState({ id: "", flavour: "", pack: "", price: 0, thumbnail: "" });
+
     // Fetch the product list from the backend, and set the splash image for every card
     useEffect(() => {
         window.scroll({
@@ -25,21 +27,22 @@ const ProductDetails = () => {
             left: 0,
             behavior: 'smooth'
         });
-        
+
         fetch(`/product/${id}`)
             .then(res => {
                 return res.json();
             })
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setProduct(data);
 
-                fetch(`/nutrition/${data.nutrition[0]}`)
+                if (data.nutrition.length !== 1) {
+                    fetch(`/nutrition`)
                     .then(res => {
                         return res.json();
                     })
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         setNutrition(data);
 
                         fetch(`/product`)
@@ -47,7 +50,7 @@ const ProductDetails = () => {
                                 return res.json();
                             })
                             .then(data => {
-                                console.log(data.filter((product) => product._id !== id));
+                                // console.log(data.filter((product) => product._id !== id));
                                 setRelatedProduct(data.filter((product) => product._id !== id));
 
                                 for (let x in data.filter((product) => product._id !== id)) {
@@ -122,6 +125,95 @@ const ProductDetails = () => {
                                 magnify("productImg", 1.5);
                             })
                     })
+                } else {
+                    fetch(`/nutrition/${data.nutrition[0]}`)
+                    .then(res => {
+                        return res.json();
+                    })
+                    .then(data => {
+                        // console.log([data]);
+                        setNutrition([data]);
+
+                        fetch(`/product`)
+                            .then(res => {
+                                return res.json();
+                            })
+                            .then(data => {
+                                setRelatedProduct(data.filter((product) => product._id !== id));
+
+                                for (let x in data.filter((product) => product._id !== id)) {
+                                    document.getElementsByClassName('splash-image')[x].style.backgroundImage = "url('../" + data[x].splashImage + "')";
+                                }
+
+                                if (document.getElementsByClassName("img-magnifier-glass")[0]) {
+                                    document.getElementsByClassName("img-magnifier-glass")[0].remove();
+                                }
+
+                                function magnify(imgID, zoom) {
+                                    var img, glass, w, h, bw;
+                                    img = document.getElementById(imgID);
+                                    /*create magnifier glass:*/
+                                    glass = document.createElement("DIV");
+                                    glass.setAttribute("class", "img-magnifier-glass");
+                                    /*insert magnifier glass:*/
+                                    img.parentElement.insertBefore(glass, img);
+                                    /*set background properties for the magnifier glass:*/
+                                    glass.style.backgroundImage = "url('" + img.src + "')";
+                                    glass.style.backgroundRepeat = "no-repeat";
+                                    glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+                                    bw = 3;
+                                    w = glass.offsetWidth / 2;
+                                    h = glass.offsetHeight / 2;
+                                    /*execute a function when someone moves the magnifier glass over the image:*/
+                                    glass.addEventListener("mousemove", moveMagnifier);
+                                    img.addEventListener("mousemove", moveMagnifier);
+                                    glass.addEventListener("mouseleave", removeMagnifier);
+                                    /*and also for touch screens:*/
+                                    glass.addEventListener("touchmove", moveMagnifier);
+                                    img.addEventListener("touchmove", moveMagnifier);
+                                    function removeMagnifier(e) {
+                                        e.target.style.opacity = "0";
+                                    }
+                                    function moveMagnifier(e) {
+                                        var pos, x, y;
+                                        /*prevent any other actions that may occur when moving over the image*/
+                                        e.preventDefault();
+                                        e.target.style.opacity = "1";
+                                        /*get the cursor's x and y positions:*/
+                                        pos = getCursorPos(e);
+                                        x = pos.x;
+                                        y = pos.y;
+                                        /*prevent the magnifier glass from being positioned outside the image:*/
+                                        if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
+                                        if (x < w / zoom) { x = w / zoom; }
+                                        if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
+                                        if (y < h / zoom) { y = h / zoom; }
+                                        /*set the position of the magnifier glass:*/
+                                        glass.style.left = (x - w) + "px";
+                                        glass.style.top = (y - h) + "px";
+                                        /*display what the magnifier glass "sees":*/
+                                        glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+                                    }
+                                    function getCursorPos(e) {
+                                        var a, x = 0, y = 0;
+                                        e = e || window.event;
+                                        /*get the x and y positions of the image:*/
+                                        a = img.getBoundingClientRect();
+                                        /*calculate the cursor's x and y coordinates, relative to the image:*/
+                                        x = e.pageX - a.left;
+                                        y = e.pageY - a.top;
+                                        /*consider any page scrolling:*/
+                                        x = x - window.pageXOffset;
+                                        y = y - window.pageYOffset;
+                                        return { x: x, y: y };
+                                    }
+                                }
+
+                                /*Initiate Magnify Function with the id of the image, and the strength of the magnifier glass:*/
+                                magnify("productImg", 1.5);
+                            })
+                    })
+                }
             })
     }, [id]);
 
@@ -194,6 +286,16 @@ const ProductDetails = () => {
         magnify("productImg", 1.5);
     }
 
+    const setPack = (pack, price) => {
+        const currentCartState = { id: id, flavour: product.flavour, pack: pack, price: price, thumbnail: product.images[0] };
+        setCartState(currentCartState);
+    }
+
+    const addCart = (cartState) => {
+        console.log(cartState);
+        setCart([...cart, cartState]);
+    }
+
     return (
         (product && nutrition && relatedProduct) && (
             <div className="container-fluid">
@@ -235,53 +337,54 @@ const ProductDetails = () => {
                                 <p>{product.description}</p>
 
                                 <div className="productOptions">
-                                    <SlButton className="packoption">3 Pack</SlButton>
-                                    <SlButton className="packoption">6 Pack</SlButton>
-                                    <SlButton>12 Pack</SlButton>
+                                    <SlButton className="packoption" onClick={() => setPack(3, product.price[0])}>3 Pack</SlButton>
+                                    <SlButton className="packoption" onClick={() => setPack(6, product.price[1])}>6 Pack</SlButton>
+                                    <SlButton onClick={() => setPack(12, product.price[2])}>12 Pack</SlButton>
                                 </div>
-                                <SlButton size="large">Add to Cart</SlButton>
+                                <SlButton size="large" onClick={() => addCart(cartState)}>Add to Cart</SlButton>
 
                             </div>
                         </div>
                     </div>
                     <div className="productFacts">
                         <h3>Ingredients</h3>
-                        <p>{nutrition.ingredients}</p>
+                        {nutrition.map((n, index) => (
+                            <p id={n._id} key={n._id}>{n.ingredients}</p>
+                        ))}
                     </div>
                     <div className="productFacts">
                         <h3>Nutritional Information</h3>
-                        <div className="row">
-                        <div className="nutritionalTable col-lg-6 col-md-8 col-sm-8 col-8">
-                            <div className="nutritAvTitle">
-                                <h5 className="nutritAttribute">Average Quantity</h5>
-                                <h5 className="nutritFact">Per 100ml</h5>
-                            </div>
-                            <div className="nutritInfo">
-                                <h5 className="nutritAttribute">Energy</h5>
-                                <h5 className="nutritFact">{`${nutrition.energy[0]}/${nutrition.energy[1]}`}</h5>
-                            </div>
-                            <div className="nutritInfo">
-                                <h5 className="nutritAttribute">Fat</h5>
-                                <h5 className="nutritFact">{`${nutrition.fat}g`}</h5>
-                            </div>
-                            <div className="nutritInfo">
-                                <h5 className="nutritAttribute">Carbohydrates</h5>
-                                <h5 className="nutritFact">{`${nutrition.carbohydrateTotal}g`}</h5>
-                            </div>
-                            <div className="nutritInfo">
-                                <h5 className="nutritAttribute">~ Sugar</h5>
-                                <h5 className="nutritFact">{`${nutrition.carbohydrateSugar[0]}g`}</h5>
-                            </div>
-                            <div className="nutritInfo">
-                                <h5 className="nutritAttribute">Protein</h5>
-                                <h5 className="nutritFact">{`${nutrition.protein}g`}</h5>
-                            </div><div className="nutritInfo">
-                                <h5 className="nutritAttribute">Sodium</h5>
-                                <h5 className="nutritFact">{`${nutrition.salt}g`}</h5>
+                        {nutrition.map((n, index) => (
+                            <div className="nutritionalTable col-lg-6 col-md-8 col-sm-8 col-8" id={n._id} key={n._id}>
+                                <div className="nutritAvTitle">
+                                    <h5 className="nutritAttribute">Average Quantity</h5>
+                                    <h5 className="nutritFact text-right">Per 100ml</h5>
+                                </div>
+                                <div className="nutritInfo">
+                                    <h5 className="nutritAttribute">Energy</h5>
+                                    <h5 className="nutritFact">{`${n.energy[0]}/${n.energy[1]}`}</h5>
+                                </div>
+                                <div className="nutritInfo">
+                                    <h5 className="nutritAttribute">Fat</h5>
+                                    <h5 className="nutritFact">{`${n.fat}g`}</h5>
+                                </div>
+                                <div className="nutritInfo">
+                                    <h5 className="nutritAttribute">Carbohydrates</h5>
+                                    <h5 className="nutritFact">{`${n.carbohydrateTotal}g`}</h5>
+                                </div>
+                                <div className="nutritInfo">
+                                    <h5 className="nutritAttribute">~ Sugar</h5>
+                                    <h5 className="nutritFact">{`${n.carbohydrateSugar[0]}g`}</h5>
+                                </div>
+                                <div className="nutritInfo">
+                                    <h5 className="nutritAttribute">Protein</h5>
+                                    <h5 className="nutritFact">{`${n.protein}g`}</h5>
+                                </div><div className="nutritInfo">
+                                    <h5 className="nutritAttribute">Sodium</h5>
+                                    <h5 className="nutritFact">{`${n.salt}g`}</h5>
                                 </div>
                             </div>
-
-                        </div>
+                        ))}
                     </div>
 
                     <div className="productFacts">

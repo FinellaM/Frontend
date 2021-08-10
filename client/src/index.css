@@ -59,7 +59,7 @@ header {
 }
 
 /* The side navigation menu */
-.sidenav {
+.sidenav, .cart {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -79,7 +79,7 @@ nav .btn {
 }
 
 /* The navigation menu links */
-.sidenav a {
+.sidenav a, .cart a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -94,7 +94,7 @@ nav p {
 }
 
 /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+.sidenav .closebtn, .cart .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -102,8 +102,8 @@ nav p {
   margin-left: 50px;
 }
 
-.sidenav a:hover {
-  color: #e4690c;
+.sidenav a:hover, .cart a:hover {
+  color: #e7e7e7;
 }
 
 a.btn {
