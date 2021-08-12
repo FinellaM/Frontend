@@ -547,3 +547,9 @@ Stockist Styling
   margin: auto;
   border: 3px solid pink;
 }
+
+/* make bubbles responsive */
+
+.bubble-container {
+  border: none;
+}

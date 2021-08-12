@@ -39,7 +39,28 @@ const Home = () => {
                 each: object.duration / document.querySelectorAll(object.el).length,
                 repeat: -1
             }
+
+            
         });
+
+        // let innerWidth = 'something'
+
+        // const anim = gsap.to('.div1', {
+        //     x: () => innerWidth,
+        //     xPercent: -100,
+        //     repeat: -1,
+        //     duration: 3
+        //   });
+          
+          
+          
+          
+          
+          
+        //   window.addEventListener('resize', () => { 
+        //     anim.pause(0).invalidate().play();
+        //   });
+        
     }, []);
 
     return (
@@ -222,6 +243,8 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                    
+                    <div class='bubble-container'>
                     <div className="row m-auto insta-container">
                         <div className="col-12">
                             <div className="mt-4 text-center">
@@ -277,6 +300,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                    1</div>
                 </div>
             </div>
         </div>
