@@ -56,8 +56,8 @@ const Footer = () => {
         <div id="footerNav">
           <Link to="/"><h5>Home</h5></Link>
           <Link to="/shop"><h5>Shop</h5></Link>
-          <Link to="/aboutUs"><h5>About Us</h5></Link>
-          <Link to="/contact"><h5>Contact</h5></Link>
+          <Link to="/about-us"><h5>About Us</h5></Link>
+          <Link to="/contact-us"><h5>Contact Us</h5></Link>
         </div>
       </div>
       <div id="footerLink" className="row justify-content-center">

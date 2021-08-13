@@ -1,8 +1,17 @@
 import { Link } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
+import { useState, useEffect } from "react";
 
 const Home = () => {
+
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+    }, []);
+
     const variants = {
         initial: {
             opacity: 0,
@@ -30,8 +39,8 @@ const Home = () => {
                             <h4>Feel Good is a range of 100% natural, great tasting, fruitful sparkling waters in recyclable and plastic free packaging.</h4>
                         </div>
                         <div className="mt-5">
-                            <a type="button" className="custom-btn btn-3 m-3" href="/shop"><span>Shop Now</span></a>
-                            <a type="button" className="custom-btn btn-3 m-3" href="/about-us"><span>About Us</span></a>
+                            <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop Now</span></Link>
+                            <Link to="/about-us" className="custom-btn btn-3 m-3"><span>About Us</span></Link>
                         </div>
                     </div>
                 </div>
@@ -75,7 +84,7 @@ const Home = () => {
                                         <p>We added a squeeze of real apple juice, natural peach & passionfruit flavours and a touch of maca to our British sparkling water to make a tongue-tingling drink you can enjoy anywhere; the perfect non-alcoholic pick-me-up! Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
-                                        <Link to="/product-appleRhuharb" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
+                                        <Link to="/product/60ecb9f24bf2f02fcb044074" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
                                         <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop All</span></Link>
                                     </div>
                                 </div>
@@ -107,7 +116,7 @@ const Home = () => {
                                         <p> Natural raspberry flavour, a squeeze of real apple juice plus a touch of hibiscus and ginseng is added to our British sparkling water, to create a delicious fruitful alternative to sugary carbonated drinks. Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
-                                        <Link to="/product-appleRhuharb" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
+                                        <Link to="/product/60ecb6704bf2f02fcb04406f" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
                                         <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop All</span></Link>
                                     </div>
                                 </div>
@@ -153,7 +162,7 @@ const Home = () => {
                                         <p>Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons and the ideal choice to refresh you any day of the year. Don't forget to chill it! Stop, sip and give back. </p> {/* Text Source: Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
-                                        <Link to="/product-appleRhuharb" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
+                                        <Link to="/product/60ecba154bf2f02fcb044075" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
                                         <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop All</span></Link>
                                     </div>
                                 </div>

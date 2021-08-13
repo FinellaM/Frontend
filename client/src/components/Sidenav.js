@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 
-const Sidenav = () => {
+const Sidenav = ({ windowListener }) => {
 
     const closeNav = (e) => {
         e.preventDefault();
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("mySidenav").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
     }
-    
+
     const clickNav = (index) => {
         document.getElementsByClassName("nav-link")[0].style.color = "black";
         document.getElementsByClassName("nav-link")[1].style.color = "black";
@@ -35,5 +35,5 @@ const Sidenav = () => {
         </div>
     );
 }
- 
+
 export default Sidenav;

@@ -450,6 +450,16 @@ Stockist Styling
   width: 200px;
 }
 
+@keyframes example {
+  0%   {transform:scale(1);}
+  50%  {transform:scale(1.5);}
+  100% {transform:scale(1);}
+}
+
+.cart-badge {
+  animation: example 1s;
+}
+
 /* Custom Button Animation Test ---- Adapted from: Yuhomyan. n.d. "Black&White Button." Codepen. Accessed August 9, 2021. https://codepen.io/yuhomyan/pen/LYNVVNO.*/
 
 .btn-bigger {
