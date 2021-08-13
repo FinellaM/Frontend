@@ -15,7 +15,7 @@ const Shop = () => {
             left: 0,
         });
 
-        fetch('/product')
+        fetch('/api/product')
             .then(res => {
                 return res.json();
             })
