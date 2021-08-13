@@ -28,7 +28,7 @@ const ProductDetails = ({ cart, setCart }) => {
             left: 0,
         });
 
-        fetch(`/product/${id}`)
+        fetch(`/api/product/${id}`)
             .then(res => {
                 return res.json();
             })
@@ -37,7 +37,7 @@ const ProductDetails = ({ cart, setCart }) => {
                 setProduct(data);
 
                 if (data.nutrition.length !== 1) {
-                    fetch(`/nutrition`)
+                    fetch(`/api/nutrition`)
                         .then(res => {
                             return res.json();
                         })
@@ -45,7 +45,7 @@ const ProductDetails = ({ cart, setCart }) => {
                             // console.log(data);
                             setNutrition(data);
 
-                            fetch(`/product`)
+                            fetch(`/api/product`)
                                 .then(res => {
                                     return res.json();
                                 })
@@ -126,7 +126,7 @@ const ProductDetails = ({ cart, setCart }) => {
                                 })
                         })
                 } else {
-                    fetch(`/nutrition/${data.nutrition[0]}`)
+                    fetch(`/api/nutrition/${data.nutrition[0]}`)
                         .then(res => {
                             return res.json();
                         })
@@ -134,7 +134,7 @@ const ProductDetails = ({ cart, setCart }) => {
                             // console.log([data]);
                             setNutrition([data]);
 
-                            fetch(`/product`)
+                            fetch(`/api/product`)
                                 .then(res => {
                                     return res.json();
                                 })
