@@ -31,7 +31,7 @@ const Header = ({ cart, windowListener }) => {
                             fontSize: '30px', //Size for Cart icon
                         }}></i>
                         <span id="cart-badge" style={{
-                            backgroundColor: '#797979',
+                            backgroundColor: '#e4690c',
                             position: 'absolute',
                             top: '2px',
                             left: '33px',
