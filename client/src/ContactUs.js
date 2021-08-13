@@ -3,11 +3,7 @@ import { useState, useEffect } from "react";
 const ContactUs = () => {
 
     useEffect(() => {
-        
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
+        // Put your Javascript code here...
 
     }, []);
 

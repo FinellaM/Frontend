@@ -9,13 +9,7 @@ const Shop = () => {
 
     // Fetch the product list from the backend, and set the splash image for every card
     useEffect(() => {
-        
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
-
-        fetch('/api/product')
+        fetch('/product')
             .then(res => {
                 return res.json();
             })
@@ -42,7 +36,7 @@ const Shop = () => {
                     <hr style={{ borderTop: '2px solid #b8b8b8' }} />
                 </div>
             </div>
-
+            
             {/* Product list section */}
             <div className="row align-items-center">
                 <div className="col-1 col-lg-2">

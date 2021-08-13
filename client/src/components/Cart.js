@@ -1,26 +1,13 @@
 import { Link } from 'react-router-dom';
 import SlButton from '@shoelace-style/react/dist/button';
-import { useState, useEffect } from "react";
 
 const Cart = ({ cart }) => {
-
-    const [totalPrice, setTotalPrice] = useState(0);
 
     const closeCart = (e) => {
         e.preventDefault();
         document.getElementById("myCart").style.width = "0";
         document.getElementById("myCart").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
     }
-
-    useEffect(() => {
-
-        var price = 0;
-        
-        for (let x in cart) {
-            setTotalPrice(price += cart[x].price);
-        }
-
-    }, [cart]);
 
     return (
         <div id="myCart" className="cart">
@@ -30,12 +17,13 @@ const Cart = ({ cart }) => {
                     padding: '2em',
                 }}>
                     {cart.length === 0 && <Link to="/" style={{
-                        padding: '0px',
-                        marginTop: '1em',
+                        paddingLeft: '8px',
                     }}>
                         <SlButton style={{
                             width: '100%',
                             textAlign: 'left !important',
+                            marginTop: '1em',
+                            marginBottom: '1em',
                         }} disabled>
                             <i className="fa fa-shopping-cart" style={{
                                 fontSize: '20px',
@@ -63,19 +51,14 @@ const Cart = ({ cart }) => {
                             </div>
                         </div>
                     ))}
-
-                    {cart.length !== 0 && <div className="mt-4">
-                        <p>{`Total Price : ${totalPrice}`}</p>
-                    </div>
-                    }
-
                     {cart.length !== 0 && <Link to="/" style={{
-                        padding: '0px',
-                        marginTop: '1em',
+                        paddingLeft: '8px',
                     }}>
                         <SlButton style={{
                             width: '100%',
                             textAlign: 'left !important',
+                            marginTop: '1em',
+                            marginBottom: '1em',
                         }}>
                             <i className="fa fa-shopping-cart" style={{
                                 fontSize: '20px',

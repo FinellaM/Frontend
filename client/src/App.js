@@ -18,26 +18,12 @@ import { useState, useEffect } from "react";
 setBasePath('./../dist/shoelace');
 
 function App() {
-
-  const windowListener = (e) => {
-    if (document.getElementById('mySidenav').contains(e.target) || document.getElementById('myCart').contains(e.target) || document.getElementById('menu-icon').contains(e.target) || document.getElementById('cart-icon').contains(e.target)) {
-      // Clicked in box
-
-    } else {
-      // Clicked outside the box
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("mySidenav").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
-      document.getElementById("myCart").style.width = "0";
-      document.getElementById("myCart").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
-    }
-  }
-
   const [cart, setCart] = useState([]);
 
   return (
     <Router>
       <div className="App">
-        <Header cart={cart} windowListener={windowListener} />
+        <Header />
         <Sidenav />
         <Cart cart={cart} />
         <div className="content">
