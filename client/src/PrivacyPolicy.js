@@ -7,7 +7,7 @@ const Privacy = () => {
                     <h1 className="pageTitle">Privacy Policy</h1>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid black' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
                 </div>
             </div>
             <div className="row text-left align-items-center privacy-content">
