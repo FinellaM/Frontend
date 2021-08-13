@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 
-const Header = () => {
-
+const Header = ({ cart, windowListener }) => {
     const openNav = () => {
         document.getElementById("mySidenav").style.width = "300px";
         document.getElementById("mySidenav").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
+
+        window.addEventListener('click', windowListener);
     }
 
     const openCart = () => {
@@ -23,12 +24,24 @@ const Header = () => {
                 </div>
 
                 <div className="col text-right">
-                    <button className="btn">
+                    <button className="btn" id="cart-icon" style={{
+                        position: 'relative',
+                    }}>
                         <i className="fa fa-shopping-cart cart-icon" onClick={openCart} style={{
                             fontSize: '30px', //Size for Cart icon
                         }}></i>
+                        <span id="cart-badge" style={{
+                            backgroundColor: '#797979',
+                            position: 'absolute',
+                            top: '2px',
+                            left: '33px',
+                            padding: '0px 5px',
+                            borderRadius: '5px',
+                            fontSize: '10px',
+                            color: 'white',
+                        }}>{cart.length}</span>
                     </button>
-                    <button className="btn nav-icon" onClick={openNav} style={{
+                    <button className="btn nav-icon" id="menu-icon" onClick={openNav} style={{
                         fontSize: '30px', //Size for Sidenav icon
                     }}>
                         &#9776;

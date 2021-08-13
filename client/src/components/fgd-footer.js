@@ -41,13 +41,13 @@ const Footer = () => {
         <div id="footerNav">
           <Link to="/"><h5>Home</h5></Link>
           <Link to="/shop"><h5>Shop</h5></Link>
-          <Link to="/aboutUs"><h5>About Us</h5></Link>
-          <Link to="/contact"><h5>Contact</h5></Link>
+          <Link to="/about-us"><h5>About Us</h5></Link>
+          <Link to="/contact-us"><h5>Contact Us</h5></Link>
         </div>
       </div>
       <div id="footerLink" className="row justify-content-center">
         <Link to="/privacy-policy">Privacy Policy</Link>
-        <Link to="/terms-conditions" className="mx-3" style={{ borderStyle: 'solid', borderWidth: '0 1px', padding: '0 0.75em'}}>Terms and Conditions</Link>
+        <Link to="/terms-conditions" className="mx-3" style={{ borderStyle: 'solid', borderWidth: '0 1px', padding: '0 0.75em' }}>Terms and Conditions</Link>
         <Link to="/shipping-Returns">Shipping and Returns</Link>
       </div>
     </footer>
