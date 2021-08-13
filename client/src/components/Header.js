@@ -11,6 +11,8 @@ const Header = ({ cart, windowListener }) => {
     const openCart = () => {
         document.getElementById("myCart").style.width = "300px";
         document.getElementById("myCart").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
+
+        window.addEventListener('click', windowListener);
     }
 
     return (
