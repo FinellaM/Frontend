@@ -14,7 +14,7 @@ const ContactUs = () => {
                     <h1 className="pageTitle">Contact Us</h1>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid black' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
                 </div>
             </div>
             <div className="row contact-container text-center">
@@ -41,10 +41,10 @@ const ContactUs = () => {
                         <div className="other-contact col-9"> {/* Other contact information */}
                             <h2>Other ways to contact us</h2><br></br>
                             <div className="text-left">
-                            <p>Email: <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p>
-                            <p>Phone: <a href="tel:987-654-4210">987 654 3210</a></p>
-                            <p>Fax: 987 654 3121</p>
-                            <p>Address: Feel Good Drinks, Lyme Regis, Dorset DT7 3LS</p>
+                                <p>Email: <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p>
+                                <p>Phone: <a href="tel:987-654-4210">987 654 3210</a></p>
+                                <p>Fax: 987 654 3121</p>
+                                <p>Address: Feel Good Drinks, Lyme Regis, Dorset DT7 3LS</p>
                             </div>
                         </div>
                     </div>

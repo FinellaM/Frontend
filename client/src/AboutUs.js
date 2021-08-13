@@ -8,7 +8,7 @@ const AboutUs = () => {
                     <h1 className="pageTitle">About Us</h1>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid black' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
                 </div>
             </div>
 
@@ -18,7 +18,7 @@ const AboutUs = () => {
                     <h2 className="text-center">3% for People & Planet</h2> {/* Page section title */}
                     <div >
                         <p>At the beating heart of Feel Good is a mission to make this world a better place for everyone.</p>
-                        <p>We wanted to vreate a brand that could give back to people AND the planet. Giving people a better choice about how they consume. That's why we created the 3% for People & Planet Fund. We donate 3% of our sales to charities that support personal and planetary wellbeing. Now that feels good, doesn't it?</p>
+                        <p>We wanted to create a brand that could give back to people AND the planet. Giving people a better choice about how they consume. That's why we created the 3% for People & Planet Fund. We donate 3% of our sales to charities that support personal and planetary wellbeing. Now that feels good, doesn't it?</p>
                         <h5>#FeelGoodMoments</h5>
                         <p style={{ marginBottom: '0.125em' }}>We facilitate #FeelGoodMoments in partnerships with charities that align with our values of fostering communities, the environment and personal wellbering. The good news is we can help more people as Feel Good grows. Every can sold makes a difference.</p>
                         <p style={{ marginBottom: '0.125em' }}>Feel Good employees get involved too. Every year they each work 4 days at the charities we have partnered with on #DoGoodMoments.</p>
