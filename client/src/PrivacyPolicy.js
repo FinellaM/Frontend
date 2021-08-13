@@ -1,4 +1,16 @@
+import { useState, useEffect } from "react";
+
 const Privacy = () => {
+
+    useEffect(() => {
+
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+
+    }, []);
+
     return (
         <div className="container-fluid">
             {/* Header section for the Privacy Policy page */}
