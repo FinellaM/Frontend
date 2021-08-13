@@ -28,7 +28,7 @@ const ProductDetails = ({ cart, setCart }) => {
             behavior: 'smooth'
         });
 
-        fetch(`/api/product/${id}`)
+        fetch(`/product/${id}`)
             .then(res => {
                 return res.json();
             })
