@@ -3,81 +3,119 @@ footer{
     width: 100%;
 }
 
-#socials{
+footer a{
+    color: black;
+}
+
+.socials{
     display: flex;
-    margin-bottom: 1.5em;
+    padding-bottom: 5px;
     justify-content: center;
 }
   
 .socialBtn{
     margin-right: 0.5em;
-    margin-top: 1.5em;
+    border-radius: 50%;
 }
 
+.socialBtn:hover {
+    color: white;
+}
+
+.socialBtn i {
+    margin-top: 0.3em;
+    color: black;
+}
+
+
 #footerInfo{
-    width: 100%;
+    width: 80%;
     display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footerCopyright{
-    width: calc(40% - 2em);
+    width: 50%;
     margin-left: 2em;
-    text-align: center;
+    text-align: left;
+    padding-bottom: 5px;
 }
-
-#footerNav{
-    margin-left: calc(45% - 1em);
-}
-
-#footerLink{
-    display: flex;
-    justify-content: center;
-}
-
-#footerLink a {
-    margin-right: 0.8em;
-    margin-bottom: 1.25em;
-    color: black;
-}
-
-#footerNav a {
-    color: black;
-}
-/* Changed this so it only effects footer not P of whole page */
 
 #footerCopyright p {
     font-size: x-small;
 }
 
+#footerCopyright h3 {
+    font-size: large;
+}
+
+#footerNav{
+    text-align: right;
+    padding-right: 30px;
+    float: right !important;
+    margin-left: auto;
+}
+
+#footerLink{
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+#footerLink a {
+    color: black;
+}
+
+#footerLink a:hover{
+    color: #e4690c;
+}
+
+.link-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: underline;
+}
+
 /* RESPONSIVE - IPAD PRO Styling -------------------*/
 @media all and (max-width: 1024px){
+    #footerInfo{
+        width: 90%;
+    }
+
     #footerCopyright{
-        width: 30%;
+        width: 50%;
         margin-left: 2em;
     }
 
     #footerNav {
         width: calc(30% - 2em);
-        margin-left: calc(50% - 2em);
+        
     }
 }
 
 /* RESPONSIVE - TABLET Styling -------------------*/
 @media all and (max-width: 768px){
     #footerCopyright {
-        width: calc(30% - 2em);
+        width: 50%;
         margin-left: 2em;
     }
 
     #footerNav {
-        margin-left: calc(45.5% - 0.5em);
+        
+        width: auto;
     }
 }
 
 /* RESPONSIVE - MOBILE Styling -------------------*/
 @media all and (max-width: 425px){
-    #socials {
-        margin-bottom: 0.75em;
+
+    #footerInfo{
+        width: 100%;
     }
 
     #footerCopyright {
@@ -86,7 +124,7 @@ footer{
     }
 
     #footerLink a {
-        margin-left: 0.8em;
+        margin-right: 0.8em;
     }
 
     #footerCopyright {
@@ -102,5 +140,116 @@ footer{
         width: calc(50% - 1em);
         margin: 0;
     }
+     #footerLink {
+         width: 80%;
+     }
 
 }
+
+/*Footer Socials ----------- Adapted from: Said, Abdelrhman. n.d. "Social Media Icons with Popups (HTML + Pure CSS Only." Codepen. Accessed August 9, 2021. https://codepen.io/abdelrhmansaid/pen/OJRNOpQ.*/
+  
+.social-link:hover {
+    color: white;
+}
+.wrapper{
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+  .wrapper .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding-top: 5px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .icon:hover a {
+      color: white;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+  }
+  
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background-color: #0a66c2;
+    color: #ffffff;
+  }
+  
+  .wrapper .youtube:hover,
+  .wrapper .youtube:hover .tooltip,
+  .wrapper .youtube:hover .tooltip::before {
+    background-color: #de463b;
+    color: #ffffff;
+  }
+  
+  
