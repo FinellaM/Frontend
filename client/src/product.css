@@ -38,6 +38,10 @@
     margin-right: 1em;
 }
 
+.productDesc {
+    padding-left: 30px;
+}
+
 .productDesc h4 {
     margin-bottom: 0;
 }

@@ -10,10 +10,6 @@ import Privacy from './PrivacyPolicy';
 import Terms from './TermsConditions';
 import Shipping from './ShippingReturns';
 import Footer from './components/fgd-footer';
-import AppleRhuharb from './productAppleRhuharb';
-import Mixed from './productMixed';
-import PeachyPassion from './productPeachPassion';
-import RaspberryHib from './productRaspberryHibiscus';
 import '@shoelace-style/shoelace/dist/themes/base.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -54,18 +50,6 @@ function App() {
             </Route>
             <Route exact path="/product/:id">
               <ProductDetails setCart={setCart} cart={cart} />
-            </Route>
-            <Route exact path="/product-appleRhuharb">
-              <AppleRhuharb />
-            </Route>
-            <Route exact path="/product-Mixed">
-              <Mixed />
-            </Route>
-            <Route exact path="/product-peachPassionfruit">
-              <PeachyPassion />
-            </Route>
-            <Route exact path="/product-raspberryHibiscus">
-              <RaspberryHib />
             </Route>
             <Route exact path="/about-us">
               <AboutUs />

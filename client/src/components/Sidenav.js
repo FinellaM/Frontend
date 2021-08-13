@@ -14,9 +14,14 @@ const Sidenav = ({ windowListener }) => {
         document.getElementsByClassName("nav-link")[2].style.color = "black";
         document.getElementsByClassName("nav-link")[3].style.color = "black";
         document.getElementsByClassName("nav-link")[4].style.color = "black";
-        document.getElementsByClassName("nav-link")[index].style.color = "#e7e7e7";
+        document.getElementsByClassName("nav-link")[index].style.color = "#e4690c";
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("mySidenav").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
+
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
     }
 
     return (

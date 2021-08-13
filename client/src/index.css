@@ -44,6 +44,7 @@ a:hover {
   color: #e4690c;
 }
 
+
 /* 
 Sidebar styling
 */
@@ -103,7 +104,7 @@ nav p {
 }
 
 .sidenav a:hover, .cart a:hover {
-  color: #e7e7e7;
+  color: #e4690c;
 }
 
 a.btn {
@@ -149,6 +150,20 @@ Shop Styling
 Homepage Styling
 */
 
+.hero-text {
+  padding-left: 50px;
+}
+
+@media all and (max-width: 425px){
+  .hero-text h4 {
+    font-size: 5vw;
+  }
+
+  .hero-text {
+    padding-left: 20px;
+  }
+}
+
 /* Styling for People and Planet animation on Homepage*/
 .planet-animation {
   width: 65%;
@@ -168,10 +183,11 @@ Homepage Styling
   margin-right: auto;
 }
 
-iframe {
-  margin-bottom: 20px;
+.insta-imgs {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 .insta-link {
   color: black;
@@ -443,4 +459,100 @@ Stockist Styling
 .cart-badge {
   animation: example 1s;
 }
+
+/* Custom Button Animation Test ---- Adapted from: Yuhomyan. n.d. "Black&White Button." Codepen. Accessed August 9, 2021. https://codepen.io/yuhomyan/pen/LYNVVNO.*/
+
+.btn-bigger {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.custom-btn {
+  width: 110px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 1px solid grey;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-btn:hover {
+  border: #e4690c;
+  text-decoration: none; 
+}
+
+.custom-btn span {
+  color: #000;
+}
+
+.custom-btn span:hover {
+  text-decoration: none;
+  color: #e4690c;
+}
+
+.btn-3 {
+  line-height: 39px;
+  padding: 0;
+}
+.btn-3:hover{
+  background-color: white;
+  color: #e4690c;
+}
+.btn-3 span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e4690c;
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #e4690c;
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
 

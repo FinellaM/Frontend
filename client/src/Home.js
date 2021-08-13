@@ -33,14 +33,14 @@ const Home = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
-                <div className="col-8 col-lg-6 col-md-6 col-sm-6 text-center">
+                <div className="col-9 col-lg-6 col-md-6 col-sm-7 text-center hero-text">
                     <div>
                         <div>
                             <h4>Feel Good is a range of 100% natural, great tasting, fruitful sparkling waters in recyclable and plastic free packaging.</h4>
                         </div>
                         <div className="mt-5">
-                            <Link to="/shop" className="btn btn-light m-3">Shop Now</Link>
-                            <Link to="/about-us" className="btn btn-light m-3">About Us</Link>
+                            <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop Now</span></Link>
+                            <Link to="/about-us" className="custom-btn btn-3 m-3"><span>About Us</span></Link>
                         </div>
                     </div>
                 </div>
@@ -84,8 +84,8 @@ const Home = () => {
                                         <p>We added a squeeze of real apple juice, natural peach & passionfruit flavours and a touch of maca to our British sparkling water to make a tongue-tingling drink you can enjoy anywhere; the perfect non-alcoholic pick-me-up! Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
-                                        <Link to="/product/60ecb9f24bf2f02fcb044074" className="btn btn-light m-3">View Details</Link>
-                                        <Link to="/shop" className="btn btn-light m-3">Shop All</Link>
+                                        <Link to="/product/60ecb9f24bf2f02fcb044074" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
+                                        <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop All</span></Link>
                                     </div>
                                 </div>
                             </motion.div>
@@ -116,8 +116,8 @@ const Home = () => {
                                         <p> Natural raspberry flavour, a squeeze of real apple juice plus a touch of hibiscus and ginseng is added to our British sparkling water, to create a delicious fruitful alternative to sugary carbonated drinks. Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
-                                        <Link to="/product/60ecb6704bf2f02fcb04406f" className="btn btn-light m-3">View Details</Link>
-                                        <Link to="/shop" className="btn btn-light m-3">Shop All</Link>
+                                        <Link to="/product/60ecb6704bf2f02fcb04406f" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
+                                        <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop All</span></Link>
                                     </div>
                                 </div>
                                 <div className="col-12 col-lg-7 col-md-7 order-1 order-lg-12 text-center">
@@ -162,14 +162,14 @@ const Home = () => {
                                         <p>Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons and the ideal choice to refresh you any day of the year. Don't forget to chill it! Stop, sip and give back. </p> {/* Text Source: Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
-                                        <Link to="/product/60ecba154bf2f02fcb044075" className="btn btn-light m-3">View Details</Link>
-                                        <Link to="/shop" className="btn btn-light m-3">Shop All</Link>
+                                        <Link to="/product/60ecba154bf2f02fcb044075" className="custom-btn btn-3 m-3"><span>View Details</span></Link>
+                                        <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop All</span></Link>
                                     </div>
                                 </div>
                             </motion.div>
                         )}
                     </InView>
-                    
+
                     <div className="row m-auto">
                         <div className="col-12">
                             <div className="card m-auto col-12 col-lg-10 col-md-12 col-sm-12" style={{
@@ -249,15 +249,31 @@ const Home = () => {
                                 <a className="insta-link" href="https://www.instagram.com/feelgooddrinks" target="_blank" rel="noreferrer"><h4>@feelgooddrinks</h4></a>
                             </div>
                         </div>
-                        <div className="row">
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQ0TmwBriQQ/embed/" frameBorder="0" title="Instagram Photo"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
-                            </iframe>
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQOUTyRraQf/embed/" frameBorder="0" title="Insta test"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
-                            </iframe>
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CKyeur3lyx3/embed/" frameBorder="0" title="Instagram testing"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
-                            </iframe>
-                            <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CCopon9B3ze/embed/" frameBorder="0" title="Insta title"> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
-                            </iframe>
+                        <div className="row insta-imgs">
+                            <blockquote className="instagram-media" data-instgrm-version="7">
+                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
                         </div>
                     </div>
                 </div>
