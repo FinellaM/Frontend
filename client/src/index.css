@@ -161,15 +161,19 @@ Homepage Styling
 }
 
 .insta-container {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-iframe {
-  margin-bottom: 20px;
+.insta-imgs {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  padding-top: 50px;
 }
 
 
@@ -435,6 +439,16 @@ Stockist Styling
 }
 
 /* Home page bubbles behind Instagram */
+
+.bubble-container {
+  position: absolute;
+}
+
+.bubble-container2 {
+  position: absolute;
+  float: right;
+  bottom: 0;
+}
 .bubbleone {
 	height: 300px;
   width: 300px;
@@ -534,6 +548,14 @@ Stockist Styling
   height: 200px;
   position: relative;
   z-index: -1;
+}
+
+.circles2 {
+  width: 200px; /* sets position on x-axis */
+  height: 200px;
+  position: relative;
+  z-index: -1;
+  float: right;
 }
 
 .circle {

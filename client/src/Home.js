@@ -254,49 +254,77 @@ const Home = () => {
                                 <a className="insta-link" href="https://www.instagram.com/feelgooddrinks" target="_blank" rel="noreferrer"><h4>@feelgooddrinks</h4></a>
                             </div>
                         </div>
-                        <div className="col-2">
-                            <div class="bubbleone"></div>
-                            <div class="bubbletwo"></div>
-                            <div class="circles">
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
+                        <div className="row bubble-container">
+                            <div className="col-6">
+                                <div class="bubbleone"></div>
+                                <div class="bubbletwo"></div>
+                                <div class="circles">
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-8">
-                            <div >
-                                <div class="dot numberone" ></div>
-                                <div class="dot numberfive" ></div>
-                                <div class="dot numbertwo"></div>
-                            </div>
-                            <div className="row">
-                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQ0TmwBriQQ/embed/" frameBorder="0" title="Instagram Photo"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
-                                </iframe>
-                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CQOUTyRraQf/embed/" frameBorder="0" title="Insta test"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
-                                </iframe>
-                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CKyeur3lyx3/embed/" frameBorder="0" title="Instagram testing"> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
-                                </iframe>
-                                <iframe className="col-lg-3 col-md-3 col-sm-6 col-6" src="https://www.instagram.com/p/CCopon9B3ze/embed/" frameBorder="0" title="Insta title"> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
-                                </iframe>
-                                <div class="dot numbersix" ></div>
-                                <div className="col-7 col-lg-3">
-                                    <div class="bubblethree"></div>
+                            <div className="col-6">
+                                <div>
+                                    <div class="dot numberone" ></div>
+                                    <div class="dot numberfive" ></div>
+                                    <div class="dot numbertwo"></div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-2">
-                            <div class="dot numberthree"></div>
-                            <div class="dot numberfour"></div>
-                            <div class="circles">
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
+                        <div className="row insta-imgs">
+                            <blockquote className="instagram-media" data-instgrm-version="7">
+                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                            <blockquote className="instagram-media" data-instgrm-version="7" >
+                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                            </blockquote>
+                            <div style={{ width: '10px', }}></div>
+                        </div>
+
+                        <div className="row bubble-container2">
+                            <div className="col-12">
+                                <div class="dot numbersix" ></div>
+                                <div class="dot numberthree"></div>
+                                <div class="dot numberfour"></div>
+                                <div class="circles">
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
+                                <div class="circles2">
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
