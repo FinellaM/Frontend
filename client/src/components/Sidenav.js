@@ -17,11 +17,6 @@ const Sidenav = () => {
         document.getElementsByClassName("nav-link")[index].style.color = "#e4690c";
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("mySidenav").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
-
-        window.scroll({
-            top: 0,
-            left: 0,
-        });
     }
 
     return (

@@ -1,6 +1,17 @@
 import './aboutUs.css';
+import { useState, useEffect } from "react";
 
 const AboutUs = () => {
+
+    useEffect(() => {
+
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+
+    }, []);
+
     return (
         <div className="container-fluid">
             <div className="row mt-4 align-items-center">

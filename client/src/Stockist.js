@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
 const Stockist = () => {
+
+    useEffect(() => {
+
+        window.scroll({
+            top: 0,
+            left: 0,
+        });
+
+    }, []);
+
     return (
         <div className="container-fluid text-center">
             {/* Header section for the Stockists page */}
