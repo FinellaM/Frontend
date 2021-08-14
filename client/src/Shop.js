@@ -36,7 +36,7 @@ const Shop = () => {
                     <h1 className="pageTitle">Shop</h1>
                 </div>
                 <div className="col-6 text-right">
-                    <Link to="/stockist" className="btn btn-light m-3">Find a Stockist</Link>
+                    <Link to="/stockist" className="custom-btn-wide btn-4 m-3 text-center"><span>Find a Stockist</span></Link>
                 </div>
                 <div className="col-12 p-0">
                     <hr style={{ borderTop: '2px solid #b8b8b8' }} />

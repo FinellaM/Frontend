@@ -232,7 +232,7 @@ const Home = () => {
                                         </div>
                                         <div className="col-12 order-8 order-lg-8">
                                             <div className="mt-2 text-center">
-                                                <Link to="/about-us" className="btn btn-light m-3">Find Out More</Link>
+                                                <Link to="/about-us" className="custom-btn-wide btn-4 m-3"><span>Find Out More</span></Link>
                                             </div>
                                         </div>
                                     </div>

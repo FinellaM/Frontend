@@ -70,7 +70,7 @@ const Stockist = () => {
                 <div className="col-12 text-center mb-5">
                     <h3 className="mb-3 mt-5"><strong>Want to stock our product?</strong></h3><br></br>
                     <div className="col-6 stock-btn-cont">
-                        <Link to="/contact-us" className="btn btn-light m-3 stock-btn">Contact Us</Link>
+                        <Link to="/contact-us" className="custom-btn-widest btn-5 m-3 stock-btn"><span>Contact Us</span></Link>
                     </div>
                 </div>
             </div>
