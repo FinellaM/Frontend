@@ -9,12 +9,21 @@ const Home = () => {
 
         gsap.from(".dot", { y: 750 }); /* from this spot on y-axis*/
 
+gsap.fromTo(".bubbleone", {scale: 1},
+        {scale: 0.1, duration:2,  repeat: -1})
+
+        gsap.fromTo(".bubbletwo", {scale: 1},
+        {scale: 1.5, duration:2,  repeat: -1})
+
+        gsap.fromTo(".bubblethree", {scale: 1},
+        {scale: 1.5, duration:2,  repeat: -1})
+
         // add timeline 
-        var tl = gsap.timeline({ repeat: 30, repeatDelay: 1 });
+        var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
         //add 3 tweens that will play in direct succession.
-        tl.to(".numberone", { duration: 0.5, opacity: 0, x: 0, y: 20 });
-        tl.to(".numbertwo", { duration: 0.5, opacity: 0, x: 0, scale: 0.2, y: 20 });
+        tl.to(".numberone", { duration: 1, opacity: 0.5, x: 0, y: 20 });
+        tl.to(".numbertwo", { duration: 1, opacity: 0, x: 0, scale: 0.2, y: 20 });
         tl.to(".numberthree", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
         tl.to(".numberfour", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
         tl.to(".numberfive", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });

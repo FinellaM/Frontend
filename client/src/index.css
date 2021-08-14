@@ -466,9 +466,10 @@ Stockist Styling
   background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
-  margin: 100px;/*  space in between circles*/
+  margin-top: 150px;
   border: 5px solid pink;
   z-index: -1;
+  margin-right: 500px;
 }
 
 .bubblethree {
@@ -489,7 +490,7 @@ Stockist Styling
   background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
-  margin: 100px;/*  space in between circles*/
+  margin-right: 500px;
   border: 5px solid pink;
 }
 
@@ -499,8 +500,9 @@ Stockist Styling
   background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
-  margin: 100px;/*  space in between circles*/
-  border: 10px solid pink;
+  margin-top: 250px;/*  space in between circles*/
+  border: 5px solid pink;
+  margin-left: 750px;
 }
 
 .numbertwo {
@@ -509,8 +511,9 @@ Stockist Styling
   background-color:white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
-  margin: 100px;/*  space in between circles*/
+  margin-top: 100px;
   border: 5px solid pink;
+  margin-bottom: 300px;
 }
 
 .numberfour {
@@ -524,12 +527,12 @@ Stockist Styling
 }
 
 .numberfive {
-  height: 75px;
-  width: 75px;
+  height: 50px;
+  width: 50px;
   background-color:white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
-  margin: 100px;/*  space in between circles*/
+  margin-bottom: 200px;
   border: 5px solid pink;
 }
 
