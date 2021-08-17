@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import '@shoelace-style/shoelace/dist/themes/base.css';
 import '@shoelace-style/shoelace/dist/components/icon/icon.js';
 import SlRating from '@shoelace-style/react/dist/rating';
-import './product.css'
 import { Link } from 'react-router-dom';
 import ProductList from "./ProductList";
 

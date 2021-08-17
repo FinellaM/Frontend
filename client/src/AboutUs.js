@@ -1,4 +1,3 @@
-import './aboutUs.css';
 import { useEffect } from "react";
 
 const AboutUs = () => {

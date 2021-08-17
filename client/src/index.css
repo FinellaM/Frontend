@@ -1,5 +1,5 @@
 /*
-Universal Styling
+Universal Styling -------------------------------------------------------------------
 */
 
 body {
@@ -46,7 +46,7 @@ a:hover {
 
 
 /* 
-Sidebar styling
+Sidebar styling -------------------------------------------------------------------
 */
 
 /* Make the menu fixed to the top of the page */
@@ -89,7 +89,6 @@ nav .btn {
   transition: 0.3s;
 }
 
-
 nav p {
   color: black;
 }
@@ -103,6 +102,7 @@ nav p {
   margin-left: 50px;
 }
 
+/* Hover colour for cart and sidenav links*/
 .sidenav a:hover, .cart a:hover {
   color: #e4690c;
 }
@@ -112,48 +112,29 @@ a.btn {
 }
 
 /*
-Shop Styling
+Cart Styling -------------------------------------------------------------------
 */
 
-.splash-image {
-  width: 100%;
+/* Animation for cart icon number */
+@keyframes example {
+  0%   {transform:scale(1);}
+  50%  {transform:scale(1.5);}
+  100% {transform:scale(1);}
 }
 
-.shop-product-image {
-  transition: transform .2s; /* Animation */
-}
-
-.shop-container {
-  padding-bottom: 50px;
-}
-
-.overlay {
-  transition: .2s;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0px;
-  left: 15px;
-  cursor: pointer;
-  background:rgba(255, 126, 244, 0);
-}
-
-.overlay:hover {
-  background:#ffdad5af;
-}
-
-.overlay-content {
-  opacity: 0;
+.cart-badge {
+  animation: example 1s;
 }
 
 /*
-Homepage Styling
+Homepage Styling -------------------------------------------------------------------
 */
 
 .hero-text {
   padding-left: 50px;
 }
 
+/* Hero image text for mobile */
 @media all and (max-width: 425px){
   .hero-text h4 {
     font-size: 5vw;
@@ -169,12 +150,14 @@ Homepage Styling
   width: 65%;
 }
 
+/* Container around whole of homepage body (excluding hero image section)*/
 .home-container {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Container around instagram section */
 .insta-container {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -183,6 +166,7 @@ Homepage Styling
   margin-right: auto;
 }
 
+/* Container around instagram images*/
 .insta-imgs {
   justify-content: center;
   margin-left: auto;
@@ -193,10 +177,315 @@ Homepage Styling
   color: black;
 }
 
+
 /*
-Contact Page Styling
+Shop Styling -------------------------------------------------------------------
 */
 
+.splash-image {
+  width: 100%;
+}
+
+.shop-product-image {
+  transition: transform .2s; /* Animation */
+}
+
+.shop-container {
+  padding-bottom: 50px;
+}
+
+/* overlay for products in shop*/
+.overlay {
+  transition: .2s;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  cursor: pointer;
+  background:rgba(255, 126, 244, 0);
+}
+
+/* Overlay colour */
+.overlay:hover {
+  background:#ffdad5af;
+}
+
+.overlay-content {
+  opacity: 0;
+}
+
+/*
+Product Styling -------------------------------------------------------------------
+*/
+
+/*-----Product Picture & Description-----*/
+.product {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-container {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productInfo{
+  display: flex;
+  flex-direction: row;
+}
+
+.productImages, .productDesc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productImages img{
+  margin-right: 1em;
+}
+
+.productImgCarosel {    
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+
+.productImgCarosel img {
+  width: calc(20% - 1em);
+}
+
+.productDesc h4 {
+  margin-bottom: 0;
+}
+
+.productDesc {
+  padding: 20px;
+}
+
+.nutritFact {
+  text-align: right;
+  display: flex;
+}
+
+.productRating {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  --symbol-color-active: #e4690c;
+  --symbol-spacing: 3px;
+}
+
+.productOptions {
+  margin-bottom: 1em;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.packoption {
+  margin-right: 1em;
+}
+
+.nutritionalTable {
+  flex-direction: column;
+  box-sizing: content-box; 
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding: 0;
+}
+
+.back-btn {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/*--------Info about product---------**/
+.productFacts {
+  margin-top: 3em;
+  margin-bottom: 1.75em;
+}
+
+.productFacts h3 {
+  margin-bottom: 1em;  
+}
+
+.nutritAttribute {
+  margin-right: 0.5em;
+}
+
+.nutritAvTitle {
+  background-color: #e1e1e1;
+  box-sizing: content-box; 
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  padding:0.25em 0.125em; 
+  justify-content: space-between;
+}
+
+.nutritAvTitle h5 {
+  font-weight: 600;
+}
+
+.nutritInfo {
+  padding: 0.25em 0.5em 0;
+  box-sizing: content-box; 
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Hover effect for secondary product photos*/
+.productCaroselItem {
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.productCaroselItem:hover {
+  transform: scale(1.1);
+}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+/* Magnifier for product images */
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 5%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+/*-----Cross Sell  section------*/
+
+.productCard {
+  width: calc(33.33% - 2.25em);
+  margin-right: 2.25em;
+  text-align: left;
+}
+
+.productCard img, .productCard h4, .productCard h5, .productCard p {
+  margin-bottom: 0;
+  
+}
+
+.productCard h4, .productCard h5 {
+  font-weight: 600;
+}
+
+.productCard img {
+  padding: 1.5em 1.5em 0
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+
+  .productInfo {
+      flex-direction: column;
+  }
+
+  .productImages{
+      width: 60%;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .productDesc{
+      width: 80%;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .productOptions{
+      display: flex;
+      flex-direction: row;
+  }
+
+  .productInfo{
+      margin-bottom: 1em;
+  }
+
+}
+
+@media all and (max-width: 582px){
+  
+  /*------Product Picture & Description------*/
+  .packoption {
+      margin-bottom: 0.5em;
+      margin-right: 0;
+  }
+
+  .productOptions {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+
+  /*-----Product Picture & Description------*/
+      .productInfo {
+          flex-direction: column;
+      }
+
+      .productImages{
+          width: 100%;
+      }
+
+      .productDesc{
+          width: 100%;
+      }
+
+      .productOptions{
+          display: flex;
+          flex-direction: column;
+      }
+
+      .packoption {
+          margin-right: 0;
+          margin-bottom: 0.5em;
+      }
+
+      .productInfo{
+          margin-bottom: 1em;
+      }
+
+  /*-------Cross Sell Section------*/
+      .productCard {
+          width: 100%;
+          margin-bottom: 1.5em;
+      }
+
+      .productCard img {
+          padding: 1em 1em 0;
+      }
+
+}
+
+
+/*
+Contact Page Styling -------------------------------------------------------------------
+*/
+
+/* Contact page container */
 .contact-container {
   justify-content: center;
   margin-right: auto;
@@ -264,7 +553,7 @@ Contact Page Styling
 }
 
 /*
-3D Cans
+3D Cans Styling -------------------------------------------------------------------
 */
 
 .drink-section {
@@ -281,6 +570,7 @@ Contact Page Styling
   transition: all .2s ease-in-out;
 }
 
+/* Make the Can grow on hover*/
 #peach-can:hover {
   transform: scale(1.2);
 }
@@ -301,6 +591,7 @@ Contact Page Styling
   transition: all .2s ease-in-out;
 }
 
+/*Make the Can grow on hover*/
 #raspberry-can:hover {
   transform: scale(1.2);
 }
@@ -322,6 +613,7 @@ Contact Page Styling
   transition: all .2s ease-in-out;
 }
 
+/* Make the Can grow on hover*/
 #rhubarb-can:hover {
   transform: scale(1.2);
 }
@@ -332,38 +624,12 @@ Contact Page Styling
   width: 100%;
 }
 
-/*
-Product Styling
-*/
-
-.productCaroselItem {
-  cursor: pointer;
-  transition: transform .2s;
-}
-
-.productCaroselItem:hover {
-  transform: scale(1.1);
-}
-
-.img-magnifier-container {
-  position: relative;
-}
-
-.img-magnifier-glass {
-  position: absolute;
-  border: 3px solid #000;
-  border-radius: 5%;
-  cursor: none;
-  /*Set the size of the magnifier glass:*/
-  width: 200px;
-  height: 200px;
-  opacity: 0;
-}
 
 /*
-Privacy Policy Styling
+Privacy Policy Styling -------------------------------------------------------------------
 */
 
+/*Privacy page container*/
 .privacy-content {
   margin-left: auto;
   margin-right: auto;
@@ -372,22 +638,26 @@ Privacy Policy Styling
   justify-content: center;
 }
 
+/* Indent for listed items*/
 .indent {
   margin-left: 40px;
 }
 
+/* Container for each group of points*/
 .privacySection {
   margin-top: 40px;
 }
 
 /*
-Terms and Conditions Styling
+Terms and Conditions Styling -------------------------------------------------------------------
 */
 
+/*Container for section of Terms content*/
 .terms-section {
   margin-top: 40px;
 }
 
+/* Container for whole of Terms content*/
 .terms-content {
   margin-left: auto;
   margin-right: auto;
@@ -397,7 +667,7 @@ Terms and Conditions Styling
 }
 
 /*
-Shipping and Returns Stling
+Shipping and Returns Styling -------------------------------------------------------------------
 */
 
 .shipping-section {
@@ -413,10 +683,702 @@ Shipping and Returns Stling
 }
 
 /*
-Stockist Styling
+About Us Styling -------------------------------------------------------------------
+*/
+
+/* General About Us settings */
+
+/* Section Titles */
+.about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+  margin-top: 2.25em;
+  margin-bottom: 1.5em;
+}
+
+/* Section containers */
+.about-people-planet, .about-sea, .about-earth, .about-communities, .man-behind-brand, .so-feel-good {
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 1.5em;
+  
+}
+
+.article{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1.75em;
+}
+
+/* Video Coumn */
+.vidColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+/*----- Logos -----*/ 
+
+.planet-logo {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wave-logo {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-image {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*-----Titles-----*/
+#aboutComms-Title, #aboutEarth-Title, #aboutSea-Title{
+  background-repeat: no-repeat;
+  background-size : cover;
+  background-position: center;
+}
+
+#aboutSea-Title{
+  padding-top: 25px;
+  padding-bottom: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#aboutEarth-Title{
+  padding-top: 25px;
+  padding-bottom: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#aboutComms-Title{
+  padding-top: 25px;
+  padding-bottom: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.placeholder {
+  visibility: hidden;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+/* ----- Styling for 1st Infographic ------ */
+/* Infographic before hover */
+.info-hover1 {
+  background-image: url("./assets/infographics_recycle.png"); /* Created by Group Mint. Using: Feel Good Drinks. N.d. "Every Can Counts." Issuu. Accessed June 20, 2021. https://issuu.com/feel-good-drinks/docs/feel_good_drinks_carbon_mission_possible_may2021_s?fr=sOTQ4ZjM2OTMzODU.  */
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover1:hover {
+  background-image: url("./assets/Infographic_recycle_hover.png"); /* Created by Group Mint */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover1:hover .info-overlay1 {
+  opacity: 1;
+}
+
+.info-text1 {
+  position: absolute;
+  text-align: center;
+  top: 29%;
+  left: 12%;
+  font-size: 1.2vw;
+  width: 70%;
+}
+
+/* ----- Styling for 2nd Infographic ----- */
+
+/* Infographic before hover */
+.info-hover2 {
+  background-image: url("./assets/infographic_planetmark.png"); /* Created by Group Mint. Using: Feel Good Drinks. N.d. "[Planetmark Logo]." Issuu. Accessed June 20, 2021. https://issuu.com/feel-good-drinks/docs/feel_good_drinks_carbon_mission_possible_may2021_s?fr=sOTQ4ZjM2OTMzODU.  */
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover2:hover {
+  background-image: url("./assets/Infographic_planetmark_hover.png"); /* Created by Group Mint */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover2:hover .info-overlay2 {
+  opacity: 1;
+}
+
+.info-text2 {
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 14%;
+  font-size: 1.3vw;
+  width: 70%;
+}
+
+
+/* ------ Styling for 3rd Infographic ------- */
+
+/* Infographic before hover */
+.info-hover3 {
+  background-image: url("./assets/infographic_emissions.png"); /* Created by Group Mint. Using: SVG Silh. N.d. "Measurement scales symbol democracy." Accessed June 20, 2021. https://svgsilh.com/image/311504.html.  */
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover3:hover {
+  background-image: url("./assets/Infographic_emissions_hover.png"); /* Created by Group Mint */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover3:hover .info-overlay3 {
+  opacity: 1;
+}
+
+.info-text3 {
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 14%;
+  font-size: 1.3vw;
+  width: 70%;
+}
+
+/* ----- Styling for 4th Infographic ------ */
+
+/* Infographic before hover */
+.info-hover4 {
+  background-image: url("./assets/infographic_cans.png"); /* Created by Group Mint. Using: Vectoreps10. N.d. "Soda can icon line drink bottle symbol." Accessed June 20, 2021. https://www.vectorstock.com/royalty-free-vector/soda-can-icon-line-drink-bottle-symbol-vector-21087558.  */
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover4:hover {
+  background-image: url("./assets/Infographic_cans_hover.png"); /* Created by Group Mint */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay4 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover4:hover .info-overlay4 {
+  opacity: 1;
+}
+
+.info-text4 {
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  left: 14%;
+  font-size: 1.7vw;
+  width: 70%;
+}
+
+/* ------ Styling for 5th Infographic ------- */
+
+/* Infographic before hover */
+.info-hover5 {
+  background-image: url("./assets/infographic_rucksacks.png"); /* Created by Group Mint. Using: Ryabokon, Ivan. N.d. "Backpack Icon." 123rf. Accessed June 20, 2021. https://www.123rf.com/photo_64092223_stock-vector-backpack-icon-outline-illustration-of-backpack-vector-icon-for-web.html.  */
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover5:hover {
+  background-image: url("./assets/Infographic_rucksacks_hover.png"); /* Created by Group Mint */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay5 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover5:hover .info-overlay5 {
+  opacity: 1;
+}
+
+.info-text5 {
+  position: absolute;
+  text-align: center;
+  top: 38%;
+  left: 14%;
+  font-size: 1.7vw;
+  width: 70%;
+}
+
+/* ----- Styling for 6th Infographic ------ */
+
+/* Infographic before hover */
+.info-hover6 {
+  background-image: url("./assets/infographic_co2.png"); /* Created by Group Mint. Using: Nexusby. N.d. "Co2 Carbon Dioxide Emissions." Shutterstock. Accessed June 20, 2021. https://www.shutterstock.com/image-vector/co2-carbon-dioxide-emissions-vector-icon-1432893998.  */
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover6:hover {
+  background-image: url("./assets/Infographic_co2_hover.png"); /* Created by Group Mint */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay6 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover6:hover .info-overlay6 {
+  opacity: 1;
+}
+
+.info-text6 {
+  position: absolute;
+  text-align: center;
+  top: 28%;
+  left: 15%;
+  font-size: 1.7vw;
+  width: 68%;
+}
+
+/* ------ Styling for 7th Infographic ------- */
+
+/* Infographic before hover */
+.info-hover7 {
+  background-image: url("./assets/infographic_donation.png"); /* Created by Group Mint. Using: Surur, Akhmad Sobahus. N.d. "Charity Icon." Dreamstime. https://www.dreamstime.com/charity-icon-illustration-to-commemorate-international-day-design-template-vector-image194448732.   */
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover7:hover {
+  background-image: url("./assets/Infographic_donation_hover.png"); /* Created by Group Mint */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay7 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover7:hover .info-overlay7 {
+  opacity: 1;
+}
+
+.info-text7 {
+  position: absolute;
+  text-align: center;
+  top: 25%;
+  left: 15%;
+  font-size: 1.7vw;
+  width: 68%;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+
+  /* General About Us settings */
+  .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+      margin-top: 1.5em;
+  }
+
+  .about-people-planet, .about-sea, .about-earth, .about-communities, .man-behind-brand, .so-feel-good {
+      margin: 0 2em;
+  }
+
+   /* ----- Infographics styling -----*/
+
+  .info-text1 {
+      font-size: 1.5vw;
+      left: 14%;
+      width: 67%;
+  }
+
+  .info-text2 {
+      font-size: 1.6vw;
+      top: 40%;
+      left: 15%;
+  }
+
+  .info-text3 {
+      font-size: 1.6vw;
+      top: 40%;
+      width: 67%;
+  }
+
+  .info-text4 {
+      font-size: 1.8vw;
+      top: 40%;
+      left: 15%;
+  }
+
+  .info-text5 {
+      font-size: 1.9vw;
+      top: 40%;
+      left: 16%;
+      width: 67%;
+  }
+
+  .info-text6 {
+      top: 40%;
+      left: 16%;
+      font-size: 1.8vw;
+      width: 66%;
+  }
+
+  .info-text7 {
+      top: 40%;
+      left: 17%;
+      font-size: 1.8vw;
+      width: 66%;
+  }
+  
+  /*------Titles------*/
+
+  #aboutSea-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+
+  #aboutEarth-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+  }
+
+  #aboutComms-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+
+  /* General About Us settings */
+
+  .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+      margin-top: 1.25em;
+  }
+
+  .about-people-planet p, .man-behind-brand p, .so-feel-good p, .about-sea p, .about-earth p, .about-communities p {
+      font-size: initial;
+  }
+
+   /* ----- Infographics styling -----*/
+  
+  .info-text1 {
+      font-size: 1.5vw;
+      width: 67%;
+  }
+
+  .info-text2 {
+      font-size: 1.6vw;
+      top: 40%;
+      left: 16%;
+      width: 68%;
+  }
+
+  .info-text3 {
+      width: 63%;
+      left: 17%;
+  }
+
+  .info-text4 {
+      width: 65%;
+      left: 17%;
+  }
+
+  .info-text5 {
+      font-size: 2vw;
+  }
+
+  .info-text6 {
+      top: 42%;
+  }
+
+  .info-text7 {
+      top: 36%;
+  }
+
+  /* ------Titles-------*/
+
+  #aboutSea-Title {
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+
+  #aboutEarth-Title {
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+  }
+
+  #aboutComms-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+}
+
+/* RESPONSIVE - Small Tablet Styling ---------- */
+@media all and (max-width: 576px) {
+
+   /* ----- Infographics styling -----*/
+
+  .info-text1 {
+      font-size: 3.5vw;
+  }
+
+  .info-text2 {
+      font-size: 4vw;
+  }
+
+  .info-text3 {
+      font-size: 4vw;
+      width: 65%;
+      left: 16%;
+  }
+
+  .info-text4 {
+      font-size: 4.3vw;
+      top: 37%;
+      width: 67%;
+  }
+
+  .info-text5 {
+      font-size: 4.3vw;
+      top: 37%;
+      width: 67%;
+  }
+
+  .info-text6 {
+      font-size: 4.2vw;
+      width: 65%;
+      top: 28%;
+  }
+
+  .info-text7 {
+      font-size: 4.2vw;
+      width: 65%;
+      top: 26%;
+  }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+
+  /* ------ General About us stylings------*/
+
+  .about-people-planet,.about-sea,.about-earth,.about-communities, .man-behind-brand, .so-feel-good{
+      margin: 0 0.5em;
+     
+  }
+
+  .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+      margin-top: 1em;
+  }
+
+  .article{
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* ----- Infographics styling -----*/
+
+  .info-text1 {
+      font-size: 4vw;
+  }
+
+  .info-text3{
+      left: 15%;
+  }
+
+  .info-text4 {
+      width: 65%;
+      left: 17%;
+      font-size: 4.5vw;
+  }
+
+  .info-text5 {
+      font-size: 4.5vw;
+  }
+
+  .info-text6 {
+      top: 32%;
+      left: 17%;
+  }
+
+  .info-text7 {
+      top: 36%;
+      left: 18%;
+  }
+
+ /*--------Titles----------*/
+
+ #aboutSea-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+
+  #aboutEarth-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+  }
+
+  #aboutComms-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+}
+
+/*
+Stockists Styling -------------------------------------------------------------------
 */ 
 
-/*Styling for Images of Stockist  Credits to Michael Mullany on Stack Overflow https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css*/
+/*Styling for Images of Stockist. Adapted from: Abbas, Salman Von. 2021. "Convert an image to grayscale in HTML/CSS." Stack Overflow. https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css. */
 .stockistImg{
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
@@ -433,35 +1395,33 @@ Stockist Styling
 
 }
 
+/* Container for Stockists page*/
 .stock-container {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Container for button on stockist page */
 .stock-btn-cont {
   justify-content: center;
   margin-right: auto;
   margin-left: auto; 
 }
 
+/* Make button text bigger */
 .stock-btn {
   font-size: large;
 
 }
 
-@keyframes example {
-  0%   {transform:scale(1);}
-  50%  {transform:scale(1.5);}
-  100% {transform:scale(1);}
-}
+/* 
+Custom Button Animation ---- Adapted from: Yuhomyan. n.d. "Black&White Button." Codepen. Accessed August 9, 2021. https://codepen.io/yuhomyan/pen/LYNVVNO.
+*/
 
-.cart-badge {
-  animation: example 1s;
-}
+/* Styling for normal sized buttons*/
 
-/* Custom Button Animation ---- Adapted from: Yuhomyan. n.d. "Black&White Button." Codepen. Accessed August 9, 2021. https://codepen.io/yuhomyan/pen/LYNVVNO.*/
-
+/* Focus state for pack sizes */
 .btn-3:focus {
   border: 2px solid #e4690c;
 }
@@ -502,7 +1462,6 @@ Stockist Styling
   background-color: white;
   color: #e4690c;
 }
-
 
 .btn-3 span {
   position: absolute;
@@ -564,8 +1523,7 @@ Stockist Styling
   width: 100%;
 }
 
-
-/*Widest Button*/
+/* Styling for Widest Button */
 
 .custom-btn-widest {
   width: 100%;
@@ -655,7 +1613,7 @@ Stockist Styling
   width: 100%;
 }
 
-/* Wide button */
+/* Styling for medium sized button */
 
 .custom-btn-wide {
   width: 140px;
@@ -744,3 +1702,255 @@ Stockist Styling
 .btn-4 span:hover:after {
   width: 100%;
 }
+
+
+/*
+Footer Styling -------------------------------------------------------------------
+*/
+
+/* Footer colour and size */
+footer{
+  background-color: #f3c5bf;
+  width: 100%;
+}
+
+/* Footer link colour */
+footer a{
+  color: black;
+}
+
+/* Container for copyright and sub navigation*/
+#footerInfo{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Copyright section*/
+#footerCopyright{
+  width: 50%;
+  margin-left: 2em;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+/* Make copyright text extra small*/
+#footerCopyright p {
+  font-size: x-small;
+}
+
+#footerCopyright h3 {
+  font-size: large;
+}
+
+/* Secondary nav section */
+#footerNav{
+  text-align: right;
+  padding-right: 30px;
+  float: right !important;
+  margin-left: auto;
+}
+
+/* Styling for privacy policy, terms and conditions and shipping and returns*/
+#footerLink{
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: small;
+  padding-bottom: 10px;
+}
+
+/* Link black*/
+#footerLink a {
+  color: black;
+}
+
+/* Link orange on hover */
+#footerLink a:hover{
+  color: #e4690c;
+}
+
+.link-footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+
+  #footerInfo{
+      width: 90%;
+  }
+
+  #footerCopyright{
+      width: 50%;
+      margin-left: 2em;
+  }
+
+  #footerNav {
+      width: calc(30% - 2em);
+      
+  }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+
+  #footerCopyright {
+      width: 50%;
+      margin-left: 2em;
+  }
+
+  #footerNav {
+      
+      width: auto;
+  }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+
+  #footerInfo{
+      width: 100%;
+  }
+
+  #footerCopyright {
+      width: 100%;
+      margin-left: 1em;
+  }
+
+  #footerLink a {
+      margin-right: 0.8em;
+  }
+
+  #footerCopyright {
+      width: calc(50% - 2em);
+      margin: 0 1em;
+  }
+
+  #footerCopyright p {
+      margin-bottom: 0.25em;
+  }
+
+  #footerNav {
+      width: calc(50% - 1em);
+      margin: 0;
+  }
+   #footerLink {
+       width: 80%;
+   }
+
+}
+
+/*Footer Socials ----------- Adapted from: Said, Abdelrhman. n.d. "Social Media Icons with Popups (HTML + Pure CSS Only." Codepen. Accessed August 9, 2021. https://codepen.io/abdelrhmansaid/pen/OJRNOpQ.*/
+
+.social-link:hover {
+  color: white;
+}
+.wrapper{
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding-top: 5px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon:hover a {
+    color: white;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background-color: #0a66c2;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
