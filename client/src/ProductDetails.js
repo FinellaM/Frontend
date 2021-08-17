@@ -1,9 +1,7 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import '@shoelace-style/shoelace/dist/themes/base.css';
-import SlButton from '@shoelace-style/react/dist/button';
 import '@shoelace-style/shoelace/dist/components/icon/icon.js';
-import SlCard from '@shoelace-style/react/dist/card';
 import SlRating from '@shoelace-style/react/dist/rating';
 import './product.css'
 import { Link } from 'react-router-dom';

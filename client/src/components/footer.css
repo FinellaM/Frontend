@@ -6,12 +6,6 @@ footer{
 footer a{
     color: black;
 }
-
-.socials{
-    display: flex;
-    padding-bottom: 5px;
-    justify-content: center;
-}
   
 .socialBtn{
     margin-right: 0.5em;
@@ -155,6 +149,8 @@ footer a{
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    padding-bottom: 5px;
 }
   
   .wrapper .icon {

@@ -174,11 +174,24 @@
 
     .productOptions{
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
     }
 
     .productInfo{
         margin-bottom: 1em;
+    }
+
+}
+
+@media all and (max-width: 582px){
+    .packoption {
+        margin-bottom: 0.5em;
+        margin-right: 0;
+    }
+    
+    .productOptions {
+        display: flex;
+        flex-direction: column;
     }
 }
 

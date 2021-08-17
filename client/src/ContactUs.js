@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const ContactUs = () => {
 
@@ -37,7 +37,7 @@ const ContactUs = () => {
                             <label className="form-field">Phone (Optional)</label><br></br>{/* Label for phone form field, optional */}
                             <input name="phone" type="text" className="form-input col-9 col-lg-7"></input><br></br> {/* Text input for phone number (using text instead of number to allow for symbols for country/state codes etc, better UX) */}
                             <label className="form-field">Message<span className="form-required">*</span></label><br></br> {/* Label for message form field, with styled asterix to visually show required fields */}
-                            <textarea name="message" className="message-textarea col-9 col-lg-7" maxlength="1000" required></textarea><br></br> {/* Textare for message input, 1000 character limit, set to required */}
+                            <textarea name="message" className="message-textarea col-9 col-lg-7" maxLength="1000" required></textarea><br></br> {/* Textare for message input, 1000 character limit, set to required */}
                             <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7"></input><br></br> {/* File upload button, not required. */}
                             <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"></input> {/* Submit button. Form not functioning yet. */}
                         </form>

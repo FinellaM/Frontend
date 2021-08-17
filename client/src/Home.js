@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Home = () => {
 
@@ -39,8 +39,8 @@ const Home = () => {
                             <h4>Feel Good is a range of 100% natural, great tasting, fruitful sparkling waters in recyclable and plastic free packaging.</h4>
                         </div>
                         <div className="mt-5">
-                            <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop Now</span></Link>
-                            <Link to="/about-us" className="custom-btn btn-3 m-3"><span>About Us</span></Link>
+                            <Link to="/shop" className="custom-btn btn-3 m-2"><span>Shop Now</span></Link>
+                            <Link to="/about-us" className="custom-btn btn-3 m-2"><span>About Us</span></Link>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@ const Home = () => {
                                             <div className="row align-items-center mb-5">
                                                 <div className="col-12" style={{ display: '-webkit-box' }}>
                                                     <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
+                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
                                                     </div>
                                                     <p className="card-text ml-5 mr-4">Our ambitions may be big, but we are already the first soft drink in the UK to become Climate Positive.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                                                 </div>
@@ -195,7 +195,7 @@ const Home = () => {
                                             <div className="row align-items-center mb-5">
                                                 <div className="col-12" style={{ display: '-webkit-box' }}>
                                                     <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
+                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
                                                     </div>
                                                     <p className="card-text ml-5 mr-4">We have been awarded Planet Mark certification and are committed to being Carbon Net Zero by 2030. So far so good.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                                                 </div>
@@ -203,7 +203,7 @@ const Home = () => {
                                             <div className="row align-items-center mb-5">
                                                 <div className="col-12" style={{ display: '-webkit-box' }}>
                                                     <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
+                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
                                                     </div>
                                                     <p className="card-text ml-5 mr-4">In addition we have established our 3% For People and Planet Fun - giving 3% of sales to charities and non-profit organisations with shared values and actions.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                                                 </div>
@@ -251,27 +251,27 @@ const Home = () => {
                         </div>
                         <div className="row insta-imgs">
                             <blockquote className="instagram-media" data-instgrm-version="7">
-                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"><i alt="Feel Good Drinks and Beau's Icecream Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"><i alt="Feel Good Drinks and their packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
+                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"><i alt="Feel Good Drinks on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"><i alt="Feel Good Drinks Peach and Passionfruit held on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
+                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"><i alt="Feel Good Drinks 3% for people and planet packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"><i alt="Feel Good Drinks Apple and Rhubarb with salad Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                         </div>

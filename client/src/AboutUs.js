@@ -1,5 +1,5 @@
 import './aboutUs.css';
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const AboutUs = () => {
 
@@ -76,7 +76,7 @@ const AboutUs = () => {
                             </div>
                             <div className="col-xl-5 gx-5 col-md-5 col-sm-6">
                                 <div className="vidColumn">
-                                    <img className="planet-logo" src="./planet_mark_logo_min.png" alt="Project mark logo" /> {/* Feel Good Drinks. n.d. "[Planetmark Logo]" Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet.  */}
+                                    <img className="planet-logo" src="./planet_mark_logo_min.png" alt="Planet mark logo" /> {/* Feel Good Drinks. n.d. "[Planetmark Logo]" Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet.  */}
                                     <video autoPlay loop muted playsInline className="col">
                                         <source src="./earth_animation.mp4" type="video/mp4" /> {/* Animation created by Group Mint. Based on: Feel Good Drinks. n.d. "[Earth Illustration]." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet.  */}
                                     </video>
@@ -173,19 +173,19 @@ const AboutUs = () => {
                     </div>
                     <div className="row g-4 justify-content-center">
                         <div className="info-hover1 col-lg-4 col-md-4 col-sm-4 col-10">
-                            <img src="./infographic_placeholder.png" alt="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="We have chosen to use aluminium cans because they can be recycled forever" className="placeholder"></img>
                             <div className="info-overlay1">
                                 <div className="info-text1">We have chosen to use aluminium cans because they can be recycled forever and saved 95% of energy compared to primary production</div>
                             </div>
                         </div>
                         <div className="info-hover2 col-lg-4 col-md-4 col-sm-4 col-10">
-                            <img src="./infographic_placeholder.png" alt="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="We have been awarded Planet Mark certification" className="placeholder"></img>
                             <div className="info-overlay2">
                                 <div className="info-text2">We have been awarded Planet Mark certification for our efforts so far</div>
                             </div>
                         </div>
                         <div className="info-hover3 col-lg-4 col-md-4 col-sm-4 col-10">
-                            <img src="./infographic_placeholder.png" alt="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="We have committed to a net zero business by 2030" className="placeholder"></img>
                             <div className="info-overlay3">
                                 <div className="info-text3">We have committed to a net zero business by 2030</div>
                             </div>
@@ -193,27 +193,27 @@ const AboutUs = () => {
                     </div>
                     <div className="row justify-content-center">
                         <div className="info-hover4 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="We have donated 63k cans to food banks and 7.5k cans to the NHS" className="placeholder"></img>
                             <div className="info-overlay4">
                                 <div className="info-text4">We have donated 63k cans to food banks and 7.5k cans to the NHS</div>
                             </div>
                         </div>
                         <div className="info-hover5 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="We have donated 750 rucksacks and sleeping bags to the homeless" className="placeholder"></img>
                             <div className="info-overlay5">
                                 <div className="info-text5">We have donated 750 rucksacks and sleeping bags to the homeless</div>
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
+                    <div className="row justify-content-center">
                         <div className="info-hover6 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="We have Offset 497 tonnes of CO2" className="placeholder"></img>
                             <div className="info-overlay6">
                                 <div className="info-text6">We have Offset 497 tonnes of CO2, with clean water Gold Standard schemes from Planet Mark</div>
                             </div>
                         </div>
                         <div className="info-hover7 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="We have donated £10k to charity so far in 2021" className="placeholder"></img>
                             <div className="info-overlay7">
                                 <div className="info-text7">We have already donated over £10k to charity so far this year (2021) through our 3% for People and Planet Fund</div>
                             </div>
