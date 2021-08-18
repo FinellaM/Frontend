@@ -4,6 +4,7 @@ const AboutUs = () => {
 
     useEffect(() => {
 
+        // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
             top: 0,
             left: 0,
@@ -18,10 +19,9 @@ const AboutUs = () => {
                     <h1 className="pageTitle">About Us</h1>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} /> {/* Divider under page title */}
                 </div>
             </div>
-
             <div className="row m-auto align-items-center text-left">
                 {/* Entire Page's Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                 <div className="about-people-planet">
@@ -52,14 +52,12 @@ const AboutUs = () => {
                                     </video>
                                 </div>
                             </div>
-
                             <div className="col-xl-7 gx-7 col-md-7 col-sm-6">
                                 <p><strong>Project Seagrass</strong> is a brilliant conservation initiative to restore lost ecosystems that absorb high levels of carbon. They are the forefront of societal change to enable the recognition, recovery and resilience of seagrass ecosystems globally - a crucial planetary life support. Marine conservation is a subject very close to Feel Good leader Ed Woolner's heart and one of his main objectives is to offset carbon via ocean and sea protection to restore ocean biodiversity and promote blue health. So this is a very special partnership.</p>
                                 <p>Feel Good are joining forces with Project Seagrass to assist in their ocean marine restoration including programmes to rewild seagrass, invite them to speak directly to our community and financially contribute to a short film they have commission for the G7.</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className="about-earth">
                     <div id="aboutEarth-Title" className="row justify-content-center" style={{
@@ -82,9 +80,7 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
                 <div className="about-communities">
                     <div id="aboutComms-Title" className="row justify-content-center" style={{
@@ -108,11 +104,8 @@ const AboutUs = () => {
                                 <p>Feel Good will be working with The Wave on their forthcoming social impact programme to help those who would not have the opportunity to experience surfing, will spread the word about the benefits of blue health and run a series of events and competitions.</p>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div className="man-behind-brand" style={{ borderTop: '2px solid #222222' }}> {/* Line to seperate page sections */}
                     <h2 className="text-center">The Man Behind The Brand</h2> {/* Page section title */}
                     <div>
@@ -124,7 +117,6 @@ const AboutUs = () => {
                                 <p>Getting in the water allows me to challenge myself in a variety of conditions and, by being present in the moment, it gives me space to think - often influencing some of life's big decisions. Like launching a purpossful brand, Feel Good Drinks.</p>
                             </div>
                         </div>
-
                         <p className="text-center"><strong>Feel Good drinks are a range of 100% natural, great tasting, fruity sparkling waters that contain no nasty additives, added sugars or sweetners, making them a healthy choice for all.</strong></p>
                         <div className="row article">
                             <div className="col-lg-9 col-md-8 col-sm-8 align-self-center">
@@ -132,7 +124,6 @@ const AboutUs = () => {
                             </div>
                             <img src="./climate_positive.png" alt="climate positive archievement" className="col-lg-3 col-md-4 col-sm-4 col-9 about-image" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Every one of us can make a positive difference in the fight against climate change." Instagram Photo, June 2, 2021. https://www.instagram.com/p/CPm9239L71_/.  */}
                         </div>
-
                         <p className="text-center"><strong>We have established The Feel Good 3% People Planet Fund. It's out own way of giving back.</strong></p>
                         <div className="row article">
                             <video className="col-lg-4 col-md-5 col-sm-5 col-9 about-image" autoPlay loop muted playsInline>
@@ -151,13 +142,9 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
                 <div className="so-feel-good" style={{ borderTop: '2px solid #222222' }}> {/* Line to seperate page sections */}
-
                     <h2 className="text-center">So Far So Feel Good</h2> {/* Page section title */}
                     <div className="row article">
                         <img src="./speech_bubble_slim.png" alt="speech bubble" className="col-lg-3 col-md-3 g-1 col-sm-3 col-9 about-image" /> {/* Edited by Group Mint. Original: John3. 2019. "Chat Oval Speech Bubbles Symbol Comments." Top PNG. https://toppng.com/chat-oval-speech-bubbles-symbol-comments-icon-chat-PNG-free-PNG-Images_234561.  */}
@@ -170,6 +157,7 @@ const AboutUs = () => {
                     <div className="text-left">
                         <p><strong>At Feel Good each decision we make is a big one because, before we think about the product, we think about the planet and the people. We are at the start of our sustainability journey and are constantly looking to improve our impact as we progress.</strong></p>
                     </div>
+                    {/* References for Infographic images can be found in the CSS file */}
                     <div className="row g-4 justify-content-center">
                         <div className="info-hover1 col-lg-4 col-md-4 col-sm-4 col-10">
                             <img src="./infographic_placeholder.png" alt="We have chosen to use aluminium cans because they can be recycled forever" className="placeholder"></img>
@@ -220,9 +208,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-
         </div>
-
     );
 }
 

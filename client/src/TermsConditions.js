@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// Makes the site jump to the top of new pages when links are clicked
 const Terms = () => {
 
     useEffect(() => {
@@ -19,7 +20,7 @@ const Terms = () => {
                     <h1 className="pageTitle">Terms & Conditions</h1>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} /> {/* Divider under title */}
                 </div>
             </div>
             <div className="row text-left align-items-center terms-content">
@@ -65,7 +66,7 @@ const Terms = () => {
                         <h5><strong>YOUR ACCOUNT AND PASSWORD</strong></h5>
                         <p>If you choose, or you are provided with, a user identification code, password or any other piece of information as part of our security procedures, you must treat such information as confidential. You must not disclose it to any third party.</p>
                         <p> We have the right to disable any user identification code or password, whether chosen by you or allocated by us, at any time, if in our reasonable opinion you have failed to comply with any of the provisions of these terms of use.</p>
-                        <p>If you know or suspect that anyone other than you knows your user identification code or password, you must promptly notify us at <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p>
+                        <p>If you know or suspect that anyone other than you knows your user identification code or password, you must promptly notify us at <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p> {/* Makes email open in email program */}
                     </div>
                     <div className="terms-section">
                         <h5><strong>INTELLECTUAL PROPERTY RIGHTS</strong></h5>
@@ -114,7 +115,7 @@ const Terms = () => {
                         <p>You must not establish a link to our site in any website that is not owned by you. Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page.</p>
                         <p>We reserve the right to withdraw linking permission without notice.</p>
                         <p>The website in which you are linking must comply in all respects with the content standards set out in our Acceptable Use Policy.</p>
-                        <p>If you wish to make any use of content on our site or in our apps other than that set out above, please contact <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p>
+                        <p>If you wish to make any use of content on our site or in our apps other than that set out above, please contact <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p> {/* Makes email open in email program */}
                     </div>
                     <div className="terms-section">
                         <h5><strong>ACCEPTABLE USE POLICY</strong></h5>
@@ -166,14 +167,13 @@ const Terms = () => {
                     </div>
                     <div className="terms-section">
                         <h5><strong>CONTACT US</strong></h5>
-                        <p>To contact us, please email <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p>
+                        <p>To contact us, please email <a href="mailto:hello@feelgooddrinks.com">hello@feelgooddrinks.com</a></p> {/* Makes email open in email program */}
                         <p>Thank you for visiting our site.</p><br></br>
                     </div>
                 </div>
-
             </div>
-
         </div>
+        // All textual content on this page is from: Feel Good Drinks. n.d. "Terms & Conditions." Feel Good Drinks. Accessed August 1, 2021. https://feelgooddrinks.com/pages/terms-conditions.
     );
 }
 

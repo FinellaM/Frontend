@@ -6,6 +6,8 @@ import { useEffect } from "react";
 const Home = () => {
 
     useEffect(() => {
+
+        // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
             top: 0,
             left: 0,
@@ -80,7 +82,7 @@ const Home = () => {
                                     <div className="mt-4 text-center">
                                         <h4><strong>From £4.99</strong></h4>
                                     </div>
-                                    <div className="mt-4 text-justify">
+                                    <div className="mt-4 text-left">
                                         <p>We added a squeeze of real apple juice, natural peach & passionfruit flavours and a touch of maca to our British sparkling water to make a tongue-tingling drink you can enjoy anywhere; the perfect non-alcoholic pick-me-up! Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
@@ -112,7 +114,7 @@ const Home = () => {
                                     <div className="mt-4 text-center">
                                         <h4><strong>From £4.99</strong></h4>
                                     </div>
-                                    <div className="mt-4 text-justify">
+                                    <div className="mt-4 text-left">
                                         <p> Natural raspberry flavour, a squeeze of real apple juice plus a touch of hibiscus and ginseng is added to our British sparkling water, to create a delicious fruitful alternative to sugary carbonated drinks. Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
@@ -158,7 +160,7 @@ const Home = () => {
                                     <div className="mt-4 text-center">
                                         <h4><strong>From £4.99</strong></h4>
                                     </div>
-                                    <div className="mt-4 text-justify">
+                                    <div className="mt-4 text-left">
                                         <p>Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons and the ideal choice to refresh you any day of the year. Don't forget to chill it! Stop, sip and give back. </p> {/* Text Source: Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
@@ -257,23 +259,23 @@ const Home = () => {
                             <blockquote className="instagram-media" data-instgrm-version="7" >
                                 <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"><i alt="Feel Good Drinks and their packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. As it's an embed we had little control over styling of these images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
                                 <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"><i alt="Feel Good Drinks on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
                                 <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"><i alt="Feel Good Drinks Peach and Passionfruit held on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
                                 <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"><i alt="Feel Good Drinks 3% for people and planet packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
                                 <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"><i alt="Feel Good Drinks Apple and Rhubarb with salad Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                         </div>
                     </div>
                 </div>

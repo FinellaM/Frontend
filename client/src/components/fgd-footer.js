@@ -13,30 +13,35 @@ const Footer = () => {
   return (
     <footer>
       <div className="wrapper">
+        {/* Facebook social icon */}
         <a href={Facebook} target="_blank" rel="noreferrer" className="social-link">
           <span className="icon facebook">
             <span className="tooltip">Facebook</span>
             <span><i className="fa fa-facebook" style={{ fontSize: '25px', }}></i></span>
           </span>
         </a>
+        {/* Twitter social icon */}
         <a href={Twitter} target="_blank" rel="noreferrer" className="social-link">
           <span className="icon twitter">
             <span className="tooltip">Twitter</span>
             <span><i className="fa fa-twitter" style={{ fontSize: '27px', }}></i></span>
           </span>
         </a>
+        {/* Instagram social icon */}
         <a href={Instagram} target="_blank" rel="noreferrer" className="social-link">
           <span className="icon instagram">
             <span className="tooltip">Instagram</span>
             <span><i className="fa fa-instagram" style={{ fontSize: '27px', }}></i></span>
           </span>
         </a>
+        {/* YouTube social icon */}
         <a href={Youtube} target="_blank" rel="noreferrer" className="social-link">
           <span className="icon youtube">
             <span className="tooltip">Youtube</span>
             <span><i className="fa fa-youtube" style={{ fontSize: '24px', }}></i></span>
           </span>
         </a>
+        {/* LinkedIn social icon */}
         <a href={Linkedin} target="_blank" rel="noreferrer" className="social-link">
           <span className="icon linkedin">
             <span className="tooltip">LinkedIn</span>
@@ -51,6 +56,7 @@ const Footer = () => {
           </p>
           <p>No part of this work may be reproduced without concent of the original copyright owners. See code comments for references.</p>
         </div>
+        {/* Footer sub menu */}
         <div id="footerNav">
           <Link to="/"><h5>Home</h5></Link>
           <Link to="/shop"><h5>Shop</h5></Link>
@@ -60,9 +66,9 @@ const Footer = () => {
       </div>
       <div id="footerLink" className="row justify-content-center">
         <Link to="/privacy-policy" className="link-footer">Privacy Policy</Link>
-        <p>|</p>
-        <Link to="/terms-conditions" className="link-footer">Terms and Conditions</Link> 
-        <p>|</p>
+        <p>|</p> {/* To divide the links visually */}
+        <Link to="/terms-conditions" className="link-footer">Terms and Conditions</Link>
+        <p>|</p> {/* To divide the links visually */}
         <Link to="/shipping-Returns" className="link-footer">Shipping and Returns</Link>
       </div>
     </footer>

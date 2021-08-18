@@ -23,7 +23,6 @@ const ProductList = ({ product }) => {
         <div className="card mt-3" style={{
             boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 20px -5px',
         }}>
-            
             {/* Card's content, storing image, product's name, size and price */}
             <div className="card-body">
                 <div className="row">
@@ -33,7 +32,6 @@ const ProductList = ({ product }) => {
                             position: 'relative',
                         }}>
                             <img src={`../${product.images[0]}`} alt="" className="shop-product-image w-100" />
-
                             <div className="row overlay w-100 h-100" onMouseEnter={(e) => showRolloverEffect(e, product._id)} onMouseLeave={(e) => hideRolloverEffect(e, product._id)}>
                                 <div className="overlay-content text-center">
                                     <div>
@@ -46,16 +44,16 @@ const ProductList = ({ product }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 mt-3">
-                        <h5 className="card-text"><strong>{product.flavour}</strong></h5>
-                        <p className="card-text mb-1">{product.size + 'ml'}</p>
-                        <h5 className="card-text"><strong>{'From £ ' + product.price[0]}</strong></h5>
-                        
-                    </div>
+                    <Link to={`/product/${product._id}`}>
+                        <div className="col-12 mt-3 card-details">
+                            <h5 className="card-text"><strong>{product.flavour}</strong></h5>
+                            <p className="card-text mb-1">{product.size + 'ml'}</p>
+                            <h5 className="card-text"><strong>{'From £ ' + product.price[0]}</strong></h5>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
-        
     );
 }
 // Exporting the component

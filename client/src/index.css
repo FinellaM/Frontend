@@ -26,8 +26,10 @@ img {
   margin-left: 15px;
 }
 
+/* Link hover colour */
 a:hover {
   color: #e4690c;
+  text-decoration: none;
 }
 
 .link-dark:hover, .btn-light:hover {
@@ -36,10 +38,12 @@ a:hover {
   background-color: white;
 }
 
+/* Make navigation icon orange on hover*/
 .nav-icon:hover {
   color: #e4690c;
 }
 
+/* Make cart icon orange on hover */
 .cart-icon:hover {
   color: #e4690c;
 }
@@ -215,11 +219,28 @@ Shop Styling -------------------------------------------------------------------
   opacity: 0;
 }
 
+.card-details p {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-details h5 {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-details p:hover {
+  text-decoration: none;
+
+}
+
+
 /*
 Product Styling -------------------------------------------------------------------
 */
 
 /*-----Product Picture & Description-----*/
+
 .product {
   justify-content: center;
   margin-left: auto;
@@ -247,6 +268,7 @@ Product Styling ----------------------------------------------------------------
   margin-right: 1em;
 }
 
+/* Styling for the product image carousel*/
 .productImgCarosel {    
   display: flex;
   flex-direction: row;
@@ -270,14 +292,15 @@ Product Styling ----------------------------------------------------------------
   display: flex;
 }
 
+/* Styling for the star ratings */
 .productRating {
   padding-top: 10px;
   padding-bottom: 10px;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  --symbol-color-active: #e4690c;
-  --symbol-spacing: 3px;
+  --symbol-color-active: #e4690c; /* Shoelace attribute, change colour of stars when active */
+  --symbol-spacing: 3px; /* Shoelace attribute, change space between stars*/
 }
 
 .productOptions {
@@ -293,22 +316,13 @@ Product Styling ----------------------------------------------------------------
   margin-right: 1em;
 }
 
-.nutritionalTable {
-  flex-direction: column;
-  box-sizing: content-box; 
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  padding: 0;
-}
-
 .back-btn {
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
 /*--------Info about product---------**/
+
 .productFacts {
   margin-top: 3em;
   margin-bottom: 1.75em;
@@ -343,6 +357,17 @@ Product Styling ----------------------------------------------------------------
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+/* Styling for nutrition table */
+.nutritionalTable {
+  flex-direction: column;
+  box-sizing: content-box; 
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding: 0;
 }
 
 /* Hover effect for secondary product photos*/
@@ -381,7 +406,6 @@ Product Styling ----------------------------------------------------------------
 
 .productCard img, .productCard h4, .productCard h5, .productCard p {
   margin-bottom: 0;
-  
 }
 
 .productCard h4, .productCard h5 {
@@ -1771,6 +1795,7 @@ footer a{
 /* Link orange on hover */
 #footerLink a:hover{
   color: #e4690c;
+  text-decoration: underline;
 }
 
 .link-footer {

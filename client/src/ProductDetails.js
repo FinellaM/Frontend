@@ -18,14 +18,16 @@ const ProductDetails = ({ cart, setCart }) => {
 
     const [cartState, setCartState] = useState({ id: "", flavour: "", pack: "", price: 0, thumbnail: "" });
 
-    // Fetch the product list from the backend, and set the splash image for every card
+    
     useEffect(() => {
 
+        // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
             top: 0,
             left: 0,
         });
 
+        // Fetch the product list from the backend, and set the splash image for every card
         fetch(`/product/${id}`)
             .then(res => {
                 return res.json();
@@ -326,7 +328,7 @@ const ProductDetails = ({ cart, setCart }) => {
                                     <div className="productDesc">
                                         <h2>{product.flavour}</h2>
                                         <h4>{`${product.size}ml`}</h4>
-                                        <SlRating readonly precision=".25" value="{product.rating}" className="productRating"></SlRating>
+                                        <SlRating readonly precision=".25" value="{product.rating}" className="productRating"></SlRating> {/* Displays the ratings from the backend, read only. */}
                                         <h3>{`£${product.price[0]}`}</h3>
                                         <p>{product.description}</p>
 

@@ -4,6 +4,7 @@ const Shipping = () => {
 
     useEffect(() => {
 
+        // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
             top: 0,
             left: 0,
@@ -19,7 +20,7 @@ const Shipping = () => {
                     <h1 className="pageTitle">Shipping & Returns</h1>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} /> {/* Divider under page title */}
                 </div>
             </div>
             <div className="row text-left align-items-center shipping-content">
@@ -43,6 +44,7 @@ const Shipping = () => {
                 </div>
             </div>
         </div>
+        // All textual content from: Feel Good Drinks. n.d. "Shipping & Returns." Feel Good Drinks. Accessed August 1, 2021. https://feelgooddrinks.com/pages/shipping-returns.
     );
 }
  
