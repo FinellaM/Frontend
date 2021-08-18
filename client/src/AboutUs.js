@@ -155,7 +155,8 @@ const AboutUs = () => {
                         </div>
                     </div>
                     <div className="text-left">
-                        <p><strong>At Feel Good each decision we make is a big one because, before we think about the product, we think about the planet and the people. We are at the start of our sustainability journey and are constantly looking to improve our impact as we progress.</strong></p>
+                        <p>At Feel Good each decision we make is a big one because, before we think about the product, we think about the planet and the people. We are at the start of our sustainability journey and are constantly looking to improve our impact as we progress.</p>
+                        <p><strong>Click or hover over the images below to see more details!</strong></p>
                     </div>
                     {/* References for Infographic images can be found in the CSS file */}
                     <div className="row g-4 justify-content-center">
