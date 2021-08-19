@@ -173,13 +173,13 @@ const AboutUs = () => {
                     </div>
                     <div className="row g-4 justify-content-center">
                         <div className="info-hover1 col-lg-4 col-md-4 col-sm-4 col-10">
-                            <img src="./infographic_placeholder.png" alt="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="placeholder for text on environment efforts in packaging drinks" className="placeholder"></img>
                             <div className="info-overlay1">
                                 <div className="info-text1">We have chosen to use aluminium cans because they can be recycled forever and saved 95% of energy compared to primary production</div>
                             </div>
                         </div>
                         <div className="info-hover2 col-lg-4 col-md-4 col-sm-4 col-10">
-                            <img src="./infographic_placeholder.png" alt="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="placeholder for certification for environment efforts" className="placeholder"></img>
                             <div className="info-overlay2">
                                 <div className="info-text2">We have been awarded Planet Mark certification for our efforts so far</div>
                             </div>
@@ -193,13 +193,13 @@ const AboutUs = () => {
                     </div>
                     <div className="row justify-content-center">
                         <div className="info-hover4 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="placeholder for stats on food donation efforts" className="placeholder"></img>
                             <div className="info-overlay4">
                                 <div className="info-text4">We have donated 63k cans to food banks and 7.5k cans to the NHS</div>
                             </div>
                         </div>
                         <div className="info-hover5 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="placeholder for stats on donation efforts" className="placeholder"></img>
                             <div className="info-overlay5">
                                 <div className="info-text5">We have donated 750 rucksacks and sleeping bags to the homeless</div>
                             </div>
@@ -207,13 +207,13 @@ const AboutUs = () => {
                     </div>
                     <div class="row justify-content-center">
                         <div className="info-hover6 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt="statistics on efforts for environment protection" className="placeholder"></img>
                             <div className="info-overlay6">
                                 <div className="info-text6">We have Offset 497 tonnes of CO2, with clean water Gold Standard schemes from Planet Mark</div>
                             </div>
                         </div>
                         <div className="info-hover7 col-lg-5 col-md-5 col-sm-5 col-10">
-                            <img src="./infographic_placeholder.png" al="placeholder" className="placeholder"></img>
+                            <img src="./infographic_placeholder.png" alt=" charity statistics" className="placeholder"></img>
                             <div className="info-overlay7">
                                 <div className="info-text7">We have already donated over £10k to charity so far this year (2021) through our 3% for People and Planet Fund</div>
                             </div>
