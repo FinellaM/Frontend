@@ -1,5 +1,4 @@
 import '@shoelace-style/shoelace/dist/themes/base.css';
-import SlButton from '@shoelace-style/react/dist/button';
 import '@shoelace-style/react/dist/spinner';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import './footer.css';
