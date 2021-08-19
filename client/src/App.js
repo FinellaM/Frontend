@@ -14,6 +14,7 @@ import '@shoelace-style/shoelace/dist/themes/base.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProductDetails from './ProductDetails';
+import NotFound from './_404';
 import { useState, useEffect } from "react";
 setBasePath('./../dist/shoelace');
 
@@ -71,6 +72,10 @@ function App() {
             </Route>
             <Route exact path="/shipping-returns">
               <Shipping />
+            </Route>
+
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>

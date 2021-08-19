@@ -29,6 +29,7 @@ const ContactUs = () => {
             body: JSON.stringify(contactDetail),
 
         }).then(() => {
+            console.log(contactDetail);
             console.log('contact form submitted!');
             setIsPending(false);
         })
