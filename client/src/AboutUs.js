@@ -26,15 +26,20 @@ const AboutUs = () => {
                 {/* Entire Page's Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                 <div className="about-people-planet">
                     <h2 className="text-center">3% for People & Planet</h2> {/* Page section title */}
-                    <div >
+                    <div className="row">
+                    <img src="./man_behind_brand.png" className="col-lg-4 col-md-5 col-sm-6 about-intro-img"></img> { /* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/. */}
+                    <div className="col-lg-8 col-md-7 col-sm-6">
                         <p>At the beating heart of Feel Good is a mission to make this world a better place for everyone.</p>
                         <p>We wanted to create a brand that could give back to people AND the planet. Giving people a better choice about how they consume. That's why we created the 3% for People & Planet Fund. We donate 3% of our sales to charities that support personal and planetary wellbeing. Now that feels good, doesn't it?</p>
                         <h5>#FeelGoodMoments</h5>
-                        <p style={{ marginBottom: '0.125em' }}>We facilitate #FeelGoodMoments in partnerships with charities that align with our values of fostering communities, the environment and personal wellbering. The good news is we can help more people as Feel Good grows. Every can sold makes a difference.</p>
-                        <p style={{ marginBottom: '0.125em' }}>Feel Good employees get involved too. Every year they each work 4 days at the charities we have partnered with on #DoGoodMoments.</p>
+                        <p>We facilitate #FeelGoodMoments in partnerships with charities that align with our values of fostering communities, the environment and personal wellbering. The good news is we can help more people as Feel Good grows. Every can sold makes a difference.</p>
+                        </div>
+                        </div>
+                        <p>Feel Good employees get involved too. Every year they each work 4 days at the charities we have partnered with on #DoGoodMoments.</p>
                         <br></br>
                         <p><strong>So far this year the 3% People & Planet fund has donated over £10k to charity and we are excited to introduce you to the people we have been working with...</strong></p>
-                    </div>
+                    
+                
                 </div>
                 <div className="about-sea">
                     <div id="aboutSea-Title" className="row justify-content-center" style={{
@@ -111,7 +116,7 @@ const AboutUs = () => {
                     <div>
                         <p className="text-center"><strong>We all have feel good moments. Mine is being in the sea. Whether it's swimming, surfing or sailing, either on my own or with my family and friends, it's exactly where I want to be.</strong></p>
                         <div className="row article">
-                            <img src="./man_behind_brand.png" alt="Man behind the brand" className="col-lg-4 col-md-5 col-sm-6" /> { /* Feel Good Drinks (@feelgooddrinks). 2021. "This time of the year feels soooo good, doesn't it?" Instagram Photo, May 28, 2021. https://www.instagram.com/p/CPawuHAriI5/. */}
+                            <img src="./ed_owner.png" alt="Man behind the brand" className="col-lg-4 col-md-5 col-sm-6" /> {/* Feel Good Drinks (@feelgooddrinks). 2021. "HAPPY SUNDAY." Instagram Photo, June 27, 2021. https://www.instagram.com/p/CQnhwFwLwWO/. */}
                             <div className="col-lg-8 col-md-7 col-sm-6 align-self-center">
                                 <p>I was lucky that I knew this from an early age having moved to the Gower when I was 9. Living by the coast became an essential part of my wellbeing and so, at the age of 21, I chose to put the sea permanently at the centre of my world when I moved to West Dorset. It was one of the best decisions I ever made and has kept a balance throughout my life.</p>
                                 <p>Getting in the water allows me to challenge myself in a variety of conditions and, by being present in the moment, it gives me space to think - often influencing some of life's big decisions. Like launching a purpossful brand, Feel Good Drinks.</p>

@@ -58,10 +58,10 @@ const Footer = () => {
         </div>
         {/* Footer sub menu */}
         <div id="footerNav">
-          <Link to="/"><h5>Home</h5></Link>
-          <Link to="/shop"><h5>Shop</h5></Link>
-          <Link to="/about-us"><h5>About Us</h5></Link>
-          <Link to="/contact-us"><h5>Contact</h5></Link>
+          <Link to="/"><h6>Home</h6></Link>
+          <Link to="/shop"><h6>Shop</h6></Link>
+          <Link to="/about-us"><h6>About Us</h6></Link>
+          <Link to="/contact-us"><h6>Contact</h6></Link>
         </div>
       </div>
       <div id="footerLink" className="row justify-content-center">
