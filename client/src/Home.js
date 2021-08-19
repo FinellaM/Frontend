@@ -5,34 +5,53 @@ const Home = () => {
     useEffect(() => {
         const gsap = window.gsap;
 
-        gsap.to(".dot", { x: 0 }); /* moves to this position on x-axis */
+        // gsap.to(".dot", { x: 0 }); /* moves to this position on x-axis */
 
-        gsap.from(".dot", { y: 750 }); /* from this spot on y-axis*/
+        // gsap.from(".dot", { y: 750 }); /* from this spot on y-axis*/
 
-gsap.fromTo(".bubbleone", {scale: 1},
-        {scale: 0.1, duration:2,  repeat: -1})
+        // gsap.to(".dot-two", { x: 1000 }); /* moves to this position on x-axis */
+
+        // gsap.from(".dot-two", { y: 750 }); /* from this spot on y-axis*/
+
+        gsap.fromTo(".bubbleone", {scale: 0.1},
+        {scale: 1, duration:2,  repeat: -1})
 
         gsap.fromTo(".bubbletwo", {scale: 1},
         {scale: 1.5, duration:2,  repeat: -1})
 
-        gsap.fromTo(".bubblethree", {scale: 1},
-        {scale: 1.5, duration:2,  repeat: -1})
+        gsap.fromTo(".bubblethree", {scale: 0.5, opacity:0},
+        {scale: 1.5, duration:2,  repeat: -1, opacity:1})
+
+        gsap.fromTo(".bubblefour", {scale: 0, opacity:1},
+        {scale: 1.5, duration:3,  repeat: -1, opacity:0})
 
         // add timeline 
-        var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+        var tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
 
         //add 3 tweens that will play in direct succession.
-        tl.to(".numberone", { duration: 1, opacity: 0.5, x: 0, y: 20 });
-        tl.to(".numbertwo", { duration: 1, opacity: 0, x: 0, scale: 0.2, y: 20 });
-        tl.to(".numberthree", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
-        tl.to(".numberfour", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
-        tl.to(".numberfive", { duration: 0.5, opacity: 0, x: 0, scale: 2, y: 20 });
-        tl.to(".numbersix", { duration: 0.5, opacity: 0, x: 0, y: 20 });
+        tl.to(".numberone", { duration: 1, scale: 1, opacity: 0});
+        tl.to(".numbertwo", { duration: 1, opacity: 0,  scale: 2});
+        tl.to(".numberthree", { duration: 0.5, opacity: 1, scale: 2 });
+        tl.to(".numberfour", { duration: 0.1, opacity: 0, scale: 2});
+        tl.to(".numberfive", { duration: 1, opacity: 1,  scale: 2, y: 0});
+        tl.to(".numbersix", { duration: 0.5, scale: 1.5, opacity: 0 });
+
+        // add another timeline 
+        var t2 = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+        //add 3 tweens that will play in direct succession.
+        t2.to(".number-one", { duration: 1, opacity: 0,  x: 0});
+        t2.to(".number-two", { duration: 1, opacity: 0.5, x: 0, scale: 2 });
+        t2.to(".number-three", { duration: 0.5, opacity: 1, x: 0, scale: 2, y: 20 });
+        t2.to(".number-four", { duration: 0.5, opacity: 0.5, x: 0, scale: 2, y: 20 });
+        t2.to(".number-five", { duration: 2, opacity: 0, scale: 2});
+        t2.to(".number-six", { duration: 0.5, opacity: 0 });
+
 
         // animation for class circle objects
         let object = {
             el: '.circle',
-            duration: 6
+            duration: 10,
         }
 
         gsap.fromTo(object.el, object.duration, {
@@ -244,19 +263,31 @@ gsap.fromTo(".bubbleone", {scale: 1},
                             <div className="col-6">
                                 <div class="bubbleone"></div>
                                 <div class="bubbletwo"></div>
+                                <div class="bubblethree"></div>
+                                <div class="bubblefour"></div>
+                                
+                                
                                 <div class="circles">
                                     <div class="circle"></div>
                                     <div class="circle"></div>
                                     <div class="circle"></div>
                                     <div class="circle"></div>
                                 </div>
+                                
                             </div>
                             <div className="col-6">
                                 <div>
+                                <div class="number-two"></div>
                                     <div class="dot numberone" ></div>
                                     <div class="dot numberfive" ></div>
                                     <div class="dot numbertwo"></div>
+                                    
+                                    <div class=" number-one" ></div>
+                                    <div class="number-five" ></div>
+                                    
+
                                 </div>
+                                
                             </div>
                         </div>
                         <div className="row insta-imgs">
@@ -291,6 +322,9 @@ gsap.fromTo(".bubbleone", {scale: 1},
                                 <div class="dot numbersix" ></div>
                                 <div class="dot numberthree"></div>
                                 <div class="dot numberfour"></div>
+                                <div class="dot number-six" ></div>
+                                <div class="dot number-three"></div>
+                                <div class="dot number-four"></div>
                                 <div class="circles">
                                     <div class="circle"></div>
                                     <div class="circle"></div>
