@@ -27,19 +27,20 @@ const ContactUs = () => {
             email: emailAddress,
             phone: phoneNo,
             message: messageTxt,
-            attachment: file
+            attachment: file,
         };
+
+        setIsPending(true);
         
         fetch('/message', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(contactDetail),
+            body: JSON.stringify(contactDetail)
 
         }).then(() => {
-             console.log(contactDetail);
-             console.log('contact form submitted!');
-             setIsPending(false);
-        });
+            console.log('contact form submitted!');
+            setIsPending(false);
+        })
     }
 
     return (
@@ -60,18 +61,18 @@ const ContactUs = () => {
                         <p className="col-10 col-lg-8 contact-desc">We always like to hear from customers or potential stockists, so if you'd like to get in contact with us, fill out the form below or use one of the alternate contact methods listed! </p>
                         <form className="form" onSubmit={formSubmit}>
                             <label className="form-field">Full Name<span className="form-required">*</span></label><br></br> {/* Label for Name form field with styled asterix to visually show required fields */}
-                                <input name="full_name" type="text" className="form-input col-9 col-lg-7" required value={nameFull} onChange={(e) => setName(e.target.value)}/><br></br> {/* Text input field for Name, set to required */}
+                            <input name="full_name" type="text" className="form-input col-9 col-lg-7" required value={nameFull} onChange={(e) => setName(e.target.value)}/><br></br> {/* Text input field for Name, set to required */}
                             <label className="form-field">Business Name (Optional)</label><br></br> {/* Label for Business name field, which is optional */}
-                                <input name="business_name" type="text" className="form-input col-9 col-lg-7" value={business} onChange={(e) => setBusiness(e.target.value)}/><br></br> {/* Text input for business name, not required */}
+                            <input name="business_name" type="text" className="form-input col-9 col-lg-7" value={business} onChange={(e) => setBusiness(e.target.value)}/><br></br> {/* Text input for business name, not required */}
                             <label className="form-field">Email<span className="form-required">*</span></label><br></br> {/* Label for Email form field with styled asterix to visually show required fields */}
-                                <input name="email" type="email" className="form-input col-9 col-lg-7" required value={emailAddress} onChange={(e) => setEmail(e.target.value)}/><br></br> {/* email input for email, set to required */}
+                            <input name="email" type="email" className="form-input col-9 col-lg-7" required value={emailAddress} onChange={(e) => setEmail(e.target.value)}/><br></br> {/* email input for email, set to required */}
                             <label className="form-field">Phone (Optional)</label><br></br>{/* Label for phone form field, optional */}
-                                <input name="phone" type="text" className="form-input col-9 col-lg-7" value={phoneNo} onChange={(e) => setPhone(e.target.value)}/><br></br> {/* Text input for phone number (using text instead of number to allow for symbols for country/state codes etc, better UX) */}
+                            <input name="phone" type="text" className="form-input col-9 col-lg-7" value={phoneNo} onChange={(e) => setPhone(e.target.value)}/><br></br> {/* Text input for phone number (using text instead of number to allow for symbols for country/state codes etc, better UX) */}
                             <label className="form-field">Message<span className="form-required">*</span></label><br></br> {/* Label for message form field, with styled asterix to visually show required fields */}
-                                <textarea name="message" className="message-textarea col-9 col-lg-7" maxlength="1000" required value={messageTxt} onChange={(e) => setMessage(e.target.value)}/><br></br> {/* Textare for message input, 1000 character limit, set to required */}
+                            <textarea name="message" className="message-textarea col-9 col-lg-7" maxlength="1000" required value={messageTxt} onChange={(e) => setMessage(e.target.value)}/><br></br> {/* Textare for message input, 1000 character limit, set to required */}
                             <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7" value={file} onChange={(e) => setFile(e.target.value)}/><br></br> {/* File upload button, not required. */}
-                            { !isPending && <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"/>} {/* Submit button. Form not functioning yet. */}
-                            { isPending && <input type="submit" name="submit" value="Submitting..." className="form-submit btn btn-light col-3 disabled" aria-disabled="true"  tabindex="-5"> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"/></input>} {/* Submit button when submission is in progress. */}
+                            { !isPending && <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"/>} {/* Submit button.*/}
+                            { isPending && <input type="submit" name="submitting" value="Submitting..." className="form-submit btn btn-secondary col-3" aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" /></input>} {/* Submit button when submission is in progress. */}
                             {/*Details that will be submitted */}
                         </form>
 
