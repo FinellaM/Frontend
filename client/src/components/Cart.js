@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import SlButton from '@shoelace-style/react/dist/button';
 import { useState, useEffect } from "react";
 
-const Cart = ({ cart }) => {
+const Cart = ({ newCart }) => {
 
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -14,13 +14,16 @@ const Cart = ({ cart }) => {
 
     useEffect(() => {
 
-        var price = 0;
-        
-        for (let x in cart) {
-            setTotalPrice(price += cart[x].price);
-        }
+        fetch(`/cart`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                // console.log(data);
+                setTotalPrice(data.totalPrice);
+            })
 
-    }, [cart]);
+    }, [newCart]);
 
     return (
         <div id="myCart" className="cart">
@@ -29,7 +32,7 @@ const Cart = ({ cart }) => {
                 <div className="col-12 text-center" style={{
                     padding: '2em',
                 }}>
-                    {cart.length === 0 && <Link to="/" style={{
+                    {!newCart && <Link to="/" style={{
                         padding: '0px',
                         marginTop: '1em',
                     }}>
@@ -44,32 +47,59 @@ const Cart = ({ cart }) => {
                             Cart is empty...
                         </SlButton>
                     </Link>}
-                    {cart.length !== 0 && cart.map((c, index) => (
-                        <div className="card mt-3" id={c.id + "-" + index} key={c.id + "-" + index} style={{
+
+                    {newCart && newCart.map((c, index) => (
+                        <div className="card mt-3" id={c.item._id + "-" + index} key={c.item._id + "-" + index} style={{
                             boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 20px -5px',
                         }}>
                             {/* Card's content, storing image, product's name, size and price */}
-                            <div className="card-body">
+                            <div className="card-body" style={{
+                                position: 'relative',
+                            }}>
+                                {newCart.length == 1 && (
+                                    <span id="" style={{
+                                        backgroundColor: '#e4690c',
+                                        position: 'absolute',
+                                        top: '-14px',
+                                        left: '245px',
+                                        padding: '0px 11px',
+                                        borderRadius: '50px',
+                                        fontSize: '22px',
+                                        color: 'white',
+                                    }}>{c.qty}</span>
+                                )}
+                                {newCart.length > 1 && (
+                                    <span id="" style={{
+                                        backgroundColor: '#e4690c',
+                                        position: 'absolute',
+                                        top: '-14px',
+                                        left: '229px',
+                                        padding: '0px 11px',
+                                        borderRadius: '50px',
+                                        fontSize: '22px',
+                                        color: 'white',
+                                    }}>{c.qty}</span>
+                                )}
                                 <div className="row">
                                     <div className="col-12 text-center">
-                                        <img src={`../${c.thumbnail}`} alt="" className="shop-product-image w-100" />
+                                        <img src={`../${c.item.thumbnail}`} alt="" className="shop-product-image w-100" />
                                     </div>
                                     <div className="col-12 mt-3">
-                                        <h5 className="card-text"><strong>{c.flavour}</strong></h5>
-                                        <p className="card-text mb-1">{c.pack + ' Pack'}</p>
-                                        <h5 className="card-text"><strong>{'£ ' + c.price}</strong></h5>
+                                        <h5 className="card-text"><strong>{c.item.flavour}</strong></h5>
+                                        <p className="card-text mb-1">{c.item.pack + ' Pack'}</p>
+                                        <h5 className="card-text"><strong>{'£ ' + c.item.price}</strong></h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
 
-                    {cart.length !== 0 && <div className="mt-4">
+                    {newCart && <div className="mt-4">
                         <p>{`Total Price : ${totalPrice}`}</p>
                     </div>
                     }
 
-                    {cart.length !== 0 && <Link to="/" style={{
+                    {newCart && <Link to="/checkout" style={{
                         padding: '0px',
                         marginTop: '1em',
                     }}>

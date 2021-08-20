@@ -8,8 +8,10 @@ import './product.css'
 import { Link } from 'react-router-dom';
 import ProductList from "./ProductList";
 
-const ProductDetails = ({ cart, setCart }) => {
+const ProductDetails = ({ setNewCart }) => {
     const { id } = useParams();
+
+    const [price, setPrice] = useState(0);
 
     // Constant for storing product list
     const [product, setProduct] = useState(null);
@@ -18,7 +20,7 @@ const ProductDetails = ({ cart, setCart }) => {
 
     const [relatedProduct, setRelatedProduct] = useState(null);
 
-    const [cartState, setCartState] = useState({ id: "", flavour: "", pack: "", price: 0, thumbnail: "" });
+    const [cartState, setCartState] = useState({ id: "", flavour: "", pack: "", price: 0, thumbnail: "", itemID: "" });
 
     // Fetch the product list from the backend, and set the splash image for every card
     useEffect(() => {
@@ -35,6 +37,7 @@ const ProductDetails = ({ cart, setCart }) => {
             .then(data => {
                 // console.log(data);
                 setProduct(data);
+                setPrice(data.price[0]);
 
                 if (data.nutrition.length !== 1) {
                     fetch(`/nutrition`)
@@ -286,16 +289,33 @@ const ProductDetails = ({ cart, setCart }) => {
         magnify("productImg", 1.5);
     }
 
-    const setPack = (pack, price) => {
-        const currentCartState = { id: id, flavour: product.flavour, pack: pack, price: price, thumbnail: product.images[0] };
+    const setPack = (pack, price, itemID) => {
+        const currentCartState = { id: id, flavour: product.flavour, pack: pack, price: price, thumbnail: product.images[0], itemID: itemID };
         setCartState(currentCartState);
+        setPrice(currentCartState.price);
+        // console.log(itemID);
     }
-    
+
     const addCart = (cartState) => {
-        console.log(cartState);
+        // console.log(cartState);
         document.getElementById("cart-badge").className += "cart-badge";
         setTimeout(() => { document.getElementById("cart-badge").className = ""; }, 1000);
-        setCart([...cart, cartState]);
+
+        fetch(`/cart/${cartState.itemID}`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+
+                fetch(`/cart/items`)
+                    .then(res => {
+                        return res.json();
+                    })
+                    .then(data => {
+                        // console.log(data);
+                        setNewCart(data);
+                    })
+            })
     }
 
     return (
@@ -335,13 +355,13 @@ const ProductDetails = ({ cart, setCart }) => {
                                         <h2>{product.flavour}</h2>
                                         <h4>{`${product.size}ml`}</h4>
                                         <SlRating readonly value="{product.rating}" className="productRating"></SlRating>
-                                        <h3>{`£${product.price[0]}`}</h3>
+                                        <h3>{`£ ${price}`}</h3>
                                         <p>{product.description}</p>
 
                                         <div className="productOptions">
-                                            <SlButton className="packoption" onClick={() => setPack(3, product.price[0])}>3 Pack</SlButton>
-                                            <SlButton className="packoption" onClick={() => setPack(6, product.price[1])}>6 Pack</SlButton>
-                                            <SlButton onClick={() => setPack(12, product.price[2])}>12 Pack</SlButton>
+                                            <SlButton className="packoption" onClick={() => setPack(3, product.price[0], product.items[0])}>3 Pack</SlButton>
+                                            <SlButton className="packoption" onClick={() => setPack(6, product.price[1], product.items[1])}>6 Pack</SlButton>
+                                            <SlButton onClick={() => setPack(12, product.price[2], product.items[2])}>12 Pack</SlButton>
                                         </div>
                                         <SlButton size="large" onClick={() => addCart(cartState)}>Add to Cart</SlButton>
 
