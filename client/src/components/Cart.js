@@ -65,7 +65,7 @@ const Cart = ({ cart }) => {
                     ))}
 
                     {cart.length !== 0 && <div className="mt-4">
-                        <p>{`Total Price : ${totalPrice}`}</p>
+                        <p>{`Total Price: £${totalPrice}`}</p>
                     </div>
                     }
 

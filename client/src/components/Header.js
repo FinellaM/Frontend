@@ -20,9 +20,9 @@ const Header = ({ cart, windowListener }) => {
 
             <nav className="navbar navbar-expand-lg bg-green">
                 <div className="col-6 col-sm-6 col-md-4">
-                    <Link to="/" className="logo">
+                    <a href="/" className="logo">
                         <img src={"../feelgooddrinks_logo.png"} alt="logo" style={{ height: '50px' }} />
-                    </Link>
+                    </a>
                 </div>
 
                 <div className="col text-right">

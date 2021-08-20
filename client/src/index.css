@@ -1,5 +1,5 @@
 /*
-Universal Styling
+Universal Styling -------------------------------------------------------------------
 */
 
 body {
@@ -26,8 +26,10 @@ img {
   margin-left: 15px;
 }
 
+/* Link hover colour */
 a:hover {
   color: #e4690c;
+  text-decoration: none;
 }
 
 .link-dark:hover, .btn-light:hover {
@@ -36,17 +38,19 @@ a:hover {
   background-color: white;
 }
 
+/* Make navigation icon orange on hover*/
 .nav-icon:hover {
   color: #e4690c;
 }
 
+/* Make cart icon orange on hover */
 .cart-icon:hover {
   color: #e4690c;
 }
 
 
 /* 
-Sidebar styling
+Sidebar styling -------------------------------------------------------------------
 */
 
 /* Make the menu fixed to the top of the page */
@@ -89,7 +93,6 @@ nav .btn {
   transition: 0.3s;
 }
 
-
 nav p {
   color: black;
 }
@@ -103,6 +106,7 @@ nav p {
   margin-left: 50px;
 }
 
+/* Hover colour for cart and sidenav links*/
 .sidenav a:hover, .cart a:hover {
   color: #e4690c;
 }
@@ -112,48 +116,29 @@ a.btn {
 }
 
 /*
-Shop Styling
+Cart Styling -------------------------------------------------------------------
 */
 
-.splash-image {
-  width: 100%;
+/* Animation for cart icon number */
+@keyframes example {
+  0%   {transform:scale(1);}
+  50%  {transform:scale(1.5);}
+  100% {transform:scale(1);}
 }
 
-.shop-product-image {
-  transition: transform .2s; /* Animation */
-}
-
-.shop-container {
-  padding-bottom: 50px;
-}
-
-.overlay {
-  transition: .2s;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0px;
-  left: 15px;
-  cursor: pointer;
-  background:rgba(255, 126, 244, 0);
-}
-
-.overlay:hover {
-  background:rgba(255, 126, 244, 0.6);
-}
-
-.overlay-content {
-  opacity: 0;
+.cart-badge {
+  animation: example 1s;
 }
 
 /*
-Homepage Styling
+Homepage Styling -------------------------------------------------------------------
 */
 
 .hero-text {
   padding-left: 50px;
 }
 
+/* Hero image text for mobile */
 @media all and (max-width: 425px){
   .hero-text h4 {
     font-size: 5vw;
@@ -169,12 +154,14 @@ Homepage Styling
   width: 65%;
 }
 
+/* Container around whole of homepage body (excluding hero image section)*/
 .home-container {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Container around instagram section */
 .insta-container {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -183,6 +170,7 @@ Homepage Styling
   margin-right: auto;
 }
 
+/* Container around instagram images*/
 .insta-imgs {
   justify-content: center;
   margin-left: auto;
@@ -193,10 +181,335 @@ Homepage Styling
   color: black;
 }
 
+
 /*
-Contact Page Styling
+Shop Styling -------------------------------------------------------------------
 */
 
+.splash-image {
+  width: 100%;
+}
+
+.shop-product-image {
+  transition: transform .2s; /* Animation */
+}
+
+.shop-container {
+  padding-bottom: 50px;
+}
+
+/* overlay for products in shop*/
+.overlay {
+  transition: .2s;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  cursor: pointer;
+  background:rgba(255, 126, 244, 0);
+}
+
+/* Overlay colour */
+.overlay:hover {
+  background:#ffdad5af;
+}
+
+.overlay-content {
+  opacity: 0;
+}
+
+.card-details p {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-details h5 {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-details p:hover {
+  text-decoration: none;
+
+}
+
+
+/*
+Product Styling -------------------------------------------------------------------
+*/
+
+/*-----Product Picture & Description-----*/
+
+.product {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-container {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productInfo{
+  display: flex;
+  flex-direction: row;
+}
+
+.productImages, .productDesc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productImages img{
+  margin-right: 1em;
+}
+
+/* Styling for the product image carousel*/
+.productImgCarosel {    
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+
+.productImgCarosel img {
+  width: calc(20% - 1em);
+}
+
+.productDesc h4 {
+  margin-bottom: 0;
+}
+
+.productDesc {
+  padding: 20px;
+}
+
+.nutritFact {
+  text-align: right;
+  display: flex;
+}
+
+/* Styling for the star ratings */
+.productRating {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  --symbol-color-active: #e4690c; /* Shoelace attribute, change colour of stars when active */
+  --symbol-spacing: 3px; /* Shoelace attribute, change space between stars*/
+}
+
+.productOptions {
+  margin-bottom: 1em;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.packoption {
+  margin-right: 1em;
+}
+
+.back-btn {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/*--------Info about product---------**/
+
+.productFacts {
+  margin-top: 3em;
+  margin-bottom: 1.75em;
+}
+
+.productFacts h3 {
+  margin-bottom: 1em;  
+}
+
+.nutritAttribute {
+  margin-right: 0.5em;
+}
+
+.nutritAvTitle {
+  background-color: #e1e1e1;
+  box-sizing: content-box; 
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  padding:0.25em 0.125em; 
+  justify-content: space-between;
+}
+
+.nutritAvTitle h5 {
+  font-weight: 600;
+}
+
+.nutritInfo {
+  padding: 0.25em 0.5em 0;
+  box-sizing: content-box; 
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Styling for nutrition table */
+.nutritionalTable {
+  flex-direction: column;
+  box-sizing: content-box; 
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Hover effect for secondary product photos*/
+.productCaroselItem {
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.productCaroselItem:hover {
+  transform: scale(1.1);
+}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+/* Magnifier for product images */
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 5%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+/*-----Cross Sell  section------*/
+
+.productCard {
+  width: calc(33.33% - 2.25em);
+  margin-right: 2.25em;
+  text-align: left;
+}
+
+.productCard img, .productCard h4, .productCard h5, .productCard p {
+  margin-bottom: 0;
+}
+
+.productCard h4, .productCard h5 {
+  font-weight: 600;
+}
+
+.productCard img {
+  padding: 1.5em 1.5em 0
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+
+  .productInfo {
+      flex-direction: column;
+  }
+
+  .productImages{
+      width: 60%;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .productDesc{
+      width: 80%;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .productOptions{
+      display: flex;
+      flex-direction: row;
+  }
+
+  .productInfo{
+      margin-bottom: 1em;
+  }
+
+}
+
+@media all and (max-width: 582px){
+  
+  /*------Product Picture & Description------*/
+  .packoption {
+      margin-bottom: 0.5em;
+      margin-right: 0;
+  }
+
+  .productOptions {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+
+  /*-----Product Picture & Description------*/
+      .productInfo {
+          flex-direction: column;
+      }
+
+      .productImages{
+          width: 100%;
+      }
+
+      .productDesc{
+          width: 100%;
+      }
+
+      .productOptions{
+          display: flex;
+          flex-direction: column;
+      }
+
+      .packoption {
+          margin-right: 0;
+          margin-bottom: 0.5em;
+      }
+
+      .productInfo{
+          margin-bottom: 1em;
+      }
+
+  /*-------Cross Sell Section------*/
+      .productCard {
+          width: 100%;
+          margin-bottom: 1.5em;
+      }
+
+      .productCard img {
+          padding: 1em 1em 0;
+      }
+
+}
+
+
+/*
+Contact Page Styling -------------------------------------------------------------------
+*/
+
+/* Contact page container */
 .contact-container {
   justify-content: center;
   margin-right: auto;
@@ -250,7 +563,7 @@ Contact Page Styling
 /*Styling for submit button*/
 .form-submit {
   margin-top: 30px;
-  border: 2px solid black;
+  border: 1px solid grey;
   font-size: larger;
 }
 
@@ -264,7 +577,7 @@ Contact Page Styling
 }
 
 /*
-3D Cans
+3D Cans Styling -------------------------------------------------------------------
 */
 
 .drink-section {
@@ -281,6 +594,7 @@ Contact Page Styling
   transition: all .2s ease-in-out;
 }
 
+/* Make the Can grow on hover*/
 #peach-can:hover {
   transform: scale(1.2);
 }
@@ -301,6 +615,7 @@ Contact Page Styling
   transition: all .2s ease-in-out;
 }
 
+/*Make the Can grow on hover*/
 #raspberry-can:hover {
   transform: scale(1.2);
 }
@@ -322,6 +637,7 @@ Contact Page Styling
   transition: all .2s ease-in-out;
 }
 
+/* Make the Can grow on hover*/
 #rhubarb-can:hover {
   transform: scale(1.2);
 }
@@ -332,38 +648,12 @@ Contact Page Styling
   width: 100%;
 }
 
-/*
-Product Styling
-*/
-
-.productCaroselItem {
-  cursor: pointer;
-  transition: transform .2s;
-}
-
-.productCaroselItem:hover {
-  transform: scale(1.1);
-}
-
-.img-magnifier-container {
-  position: relative;
-}
-
-.img-magnifier-glass {
-  position: absolute;
-  border: 3px solid #000;
-  border-radius: 5%;
-  cursor: none;
-  /*Set the size of the magnifier glass:*/
-  width: 200px;
-  height: 200px;
-  opacity: 0;
-}
 
 /*
-Privacy Policy Styling
+Privacy Policy Styling -------------------------------------------------------------------
 */
 
+/*Privacy page container*/
 .privacy-content {
   margin-left: auto;
   margin-right: auto;
@@ -372,22 +662,26 @@ Privacy Policy Styling
   justify-content: center;
 }
 
+/* Indent for listed items*/
 .indent {
   margin-left: 40px;
 }
 
+/* Container for each group of points*/
 .privacySection {
   margin-top: 40px;
 }
 
 /*
-Terms and Conditions Styling
+Terms and Conditions Styling -------------------------------------------------------------------
 */
 
+/*Container for section of Terms content*/
 .terms-section {
   margin-top: 40px;
 }
 
+/* Container for whole of Terms content*/
 .terms-content {
   margin-left: auto;
   margin-right: auto;
@@ -397,7 +691,7 @@ Terms and Conditions Styling
 }
 
 /*
-Shipping and Returns Stling
+Shipping and Returns Styling -------------------------------------------------------------------
 */
 
 .shipping-section {
@@ -413,10 +707,737 @@ Shipping and Returns Stling
 }
 
 /*
-Stockist Styling
+About Us Styling -------------------------------------------------------------------
+*/
+
+/* General About Us settings */
+
+.about-intro-img {
+  margin-bottom: 15px;
+}
+
+/* Section Titles */
+.about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+  margin-top: 2.25em;
+  margin-bottom: 1.5em;
+}
+
+/* Section containers */
+.about-people-planet, .about-sea, .about-earth, .about-communities, .man-behind-brand, .so-feel-good {
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 1.5em;
+  
+}
+
+.article{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1.75em;
+}
+
+/* Video Coumn */
+.vidColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+/*----- Logos -----*/ 
+
+.planet-logo {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wave-logo {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-image {
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*-----Titles-----*/
+#aboutComms-Title, #aboutEarth-Title, #aboutSea-Title{
+  background-repeat: no-repeat;
+  background-size : cover;
+  background-position: center;
+}
+
+#aboutSea-Title{
+  padding-top: 25px;
+  padding-bottom: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#aboutEarth-Title{
+  padding-top: 25px;
+  padding-bottom: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#aboutComms-Title{
+  padding-top: 25px;
+  padding-bottom: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.placeholder {
+  visibility: hidden;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/* ----- Styling for 1st Infographic ------ */
+
+/* Infographic before hover */
+.info-hover1 {
+  background-image: url("./assets/infographics_recycle.png"); /* Created by Group Mint. Using: Feel Good Drinks. N.d. "Every Can Counts." Issuu. Accessed June 20, 2021. https://issuu.com/feel-good-drinks/docs/feel_good_drinks_carbon_mission_possible_may2021_s?fr=sOTQ4ZjM2OTMzODU.  */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover1:hover {
+  background-image: url("./assets/Infographic_recycle_hover.png"); /* Created by Group Mint */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover1:hover .info-overlay1 {
+  opacity: 1;
+}
+
+.info-text1 {
+  position: absolute;
+  text-align: center;
+  top: 31%;
+  left: 20%;
+  font-size: 1.1vw;
+  width: 55%;
+}
+
+/* ----- Styling for 2nd Infographic ----- */
+
+/* Infographic before hover */
+.info-hover2 {
+  background-image: url("./assets/infographic_planetmark.png"); /* Created by Group Mint. Using: Feel Good Drinks. N.d. "[Planetmark Logo]." Issuu. Accessed June 20, 2021. https://issuu.com/feel-good-drinks/docs/feel_good_drinks_carbon_mission_possible_may2021_s?fr=sOTQ4ZjM2OTMzODU.  */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover2:hover {
+  background-image: url("./assets/Infographic_planetmark_hover.png"); /* Created by Group Mint */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover2:hover .info-overlay2 {
+  opacity: 1;
+}
+
+.info-text2 {
+  position: absolute;
+  text-align: center;
+  top: 38%;
+  left: 20%;
+  font-size: 1.2vw;
+  width: 60%;
+}
+
+
+/* ------ Styling for 3rd Infographic ------- */
+
+/* Infographic before hover */
+.info-hover3 {
+  background-image: url("./assets/infographic_emissions.png"); /* Created by Group Mint. Using: SVG Silh. N.d. "Measurement scales symbol democracy." Accessed June 20, 2021. https://svgsilh.com/image/311504.html.  */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover3:hover {
+  background-image: url("./assets/Infographic_emissions_hover.png"); /* Created by Group Mint */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover3:hover .info-overlay3 {
+  opacity: 1;
+}
+
+.info-text3 {
+  position: absolute;
+  text-align: center;
+  top: 41%;
+  left: 19%;
+  font-size: 1.2vw;
+  width: 60%;
+}
+
+/* ----- Styling for 4th Infographic ------ */
+
+/* Infographic before hover */
+.info-hover4 {
+  background-image: url("./assets/infographic_cans.png"); /* Created by Group Mint. Using: Vectoreps10. N.d. "Soda can icon line drink bottle symbol." Accessed June 20, 2021. https://www.vectorstock.com/royalty-free-vector/soda-can-icon-line-drink-bottle-symbol-vector-21087558.  */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover4:hover {
+  background-image: url("./assets/Infographic_cans_hover.png"); /* Created by Group Mint */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay4 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover4:hover .info-overlay4 {
+  opacity: 1;
+}
+
+.info-text4 {
+  position: absolute;
+  text-align: center;
+  top: 37%;
+  left: 19%;
+  font-size: 1.6vw;
+  width: 60%;
+}
+
+/* ------ Styling for 5th Infographic ------- */
+
+/* Infographic before hover */
+.info-hover5 {
+  background-image: url("./assets/infographic_rucksacks.png"); /* Created by Group Mint. Using: Ryabokon, Ivan. N.d. "Backpack Icon." 123rf. Accessed June 20, 2021. https://www.123rf.com/photo_64092223_stock-vector-backpack-icon-outline-illustration-of-backpack-vector-icon-for-web.html.  */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover5:hover {
+  background-image: url("./assets/Infographic_rucksacks_hover.png"); /* Created by Group Mint */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay5 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover5:hover .info-overlay5 {
+  opacity: 1;
+}
+
+.info-text5 {
+  position: absolute;
+  text-align: center;
+  top: 38%;
+  left: 17%;
+  font-size: 1.6vw;
+  width: 65%;
+}
+
+/* ----- Styling for 6th Infographic ------ */
+
+/* Infographic before hover */
+.info-hover6 {
+  background-image: url("./assets/infographic_co2.png"); /* Created by Group Mint. Using: Nexusby. N.d. "Co2 Carbon Dioxide Emissions." Shutterstock. Accessed June 20, 2021. https://www.shutterstock.com/image-vector/co2-carbon-dioxide-emissions-vector-icon-1432893998.  */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover6:hover {
+  background-image: url("./assets/Infographic_co2_hover.png"); /* Created by Group Mint */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay6 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover6:hover .info-overlay6 {
+  opacity: 1;
+}
+
+.info-text6 {
+  position: absolute;
+  text-align: center;
+  top: 34%;
+  left: 19%;
+  font-size: 1.5vw;
+  width: 62%;
+}
+
+/* ------ Styling for 7th Infographic ------- */
+
+/* Infographic before hover */
+.info-hover7 {
+  background-image: url("./assets/infographic_donation.png"); /* Created by Group Mint. Using: Surur, Akhmad Sobahus. N.d. "Charity Icon." Dreamstime. https://www.dreamstime.com/charity-icon-illustration-to-commemorate-international-day-design-template-vector-image194448732.   */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  position: relative;
+}
+
+/* Infographic hover background */
+.info-hover7:hover {
+  background-image: url("./assets/Infographic_donation_hover.png"); /* Created by Group Mint */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Infographic text overlay */
+.info-overlay7 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.info-hover7:hover .info-overlay7 {
+  opacity: 1;
+}
+
+.info-text7 {
+  position: absolute;
+  text-align: center;
+  top: 29%;
+  left: 20%;
+  font-size: 1.5vw;
+  width: 60%;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+
+  /* General About Us settings */
+  .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+      margin-top: 1.5em;
+  }
+
+  .about-people-planet, .about-sea, .about-earth, .about-communities, .man-behind-brand, .so-feel-good {
+      margin: 0 2em;
+  }
+
+   /* ----- Infographics styling -----*/
+
+  .info-text1 {
+      font-size: 1.4vw;
+      left: 17%;
+      top: 32%;
+      width: 60%;
+  }
+
+  .info-text2 {
+      font-size: 1.6vw;
+      top: 40%;
+      left: 19%;
+  }
+
+  .info-text3 {
+      font-size: 1.6vw;
+      top: 42%;
+      left: 18%;
+      width: 60%;
+  }
+
+  .info-text4 {
+      font-size: 1.8vw;
+      top: 42%;
+      left: 20%;
+  }
+
+  .info-text5 {
+      font-size: 1.9vw;
+      top: 40%;
+      left: 19%;
+      width: 60%;
+  }
+
+  .info-text6 {
+      top: 40%;
+      left: 20%;
+      font-size: 1.8vw;
+      width: 60%;
+  }
+
+  .info-text7 {
+      top: 38%;
+      left: 20%;
+      font-size: 1.8vw;
+      width: 60%;
+  }
+  
+  /*------Titles------*/
+
+  #aboutSea-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+
+  #aboutEarth-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+  }
+
+  #aboutComms-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+
+  /* General About Us settings */
+
+  .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+      margin-top: 1.25em;
+  }
+
+  .about-people-planet p, .man-behind-brand p, .so-feel-good p, .about-sea p, .about-earth p, .about-communities p {
+      font-size: initial;
+  }
+
+   /* ----- Infographics styling -----*/
+  
+  .info-text1 {
+      font-size: 1.4vw;
+      width: 63%;
+      left: 15%;
+  }
+
+  .info-text2 {
+      font-size: 1.6vw;
+      top: 40%;
+      left: 17%;
+      width: 64%;
+  }
+
+  .info-text3 {
+      width: 63%;
+      left: 17%;
+  }
+
+  .info-text4 {
+      width: 60%;
+      left: 20%;
+      font-size: 1.7vw;
+  }
+
+  .info-text5 {
+      font-size: 2vw;
+  }
+
+  .info-text6 {
+      top: 42%;
+  }
+
+  .info-text7 {
+      top: 36%;
+  }
+
+  /* ------Titles-------*/
+
+  #aboutSea-Title {
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+
+  #aboutEarth-Title {
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+  }
+
+  #aboutComms-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+}
+
+/* RESPONSIVE - Small Tablet Styling ---------- */
+@media all and (max-width: 576px) {
+
+   /* ----- Infographics styling -----*/
+
+  .info-text1 {
+      font-size: 3.4vw;
+      left: 16%;
+  }
+
+  .info-text2 {
+      font-size: 3.9vw;
+  }
+
+  .info-text3 {
+      font-size: 3.9vw;
+      width: 60%;
+      left: 19%;
+  }
+
+  .info-text4 {
+      font-size: 4.2vw;
+      top: 37%;
+      left: 17%;
+      width: 65%;
+  }
+
+  .info-text5 {
+      font-size: 4.2vw;
+      top: 37%;
+      left: 20%;
+      width: 60%;
+  }
+
+  .info-text6 {
+      font-size: 4.1vw;
+      width: 60%;
+      top: 30%;
+  }
+
+  .info-text7 {
+      font-size: 4vw;
+      width: 60%;
+      top: 26%;
+  }
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+
+  /* ------ General About us stylings------*/
+
+  .about-people-planet,.about-sea,.about-earth,.about-communities, .man-behind-brand, .so-feel-good{
+      margin: 0 0.5em;
+     
+  }
+
+  .about-people-planet h2, .man-behind-brand h2, .so-feel-good h2 {
+      margin-top: 1em;
+  }
+
+  .article{
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* ----- Infographics styling -----*/
+
+  .info-text1 {
+      font-size: 3.8vw;
+      width: 60%;
+      left: 18%;
+  }
+
+  .info-text2 {
+    width: 58%;
+    left: 21%;
+  }
+
+  .info-text3{
+      left: 19%;
+
+  }
+
+  .info-text4 {
+      width: 65%;
+      left: 17%;
+      font-size: 4.5vw;
+  }
+
+  .info-text5 {
+      font-size: 4.5vw;
+  }
+
+  .info-text6 {
+      top: 32%;
+      left: 20%;
+  }
+
+  .info-text7 {
+      top: 29%;
+      left: 21%;
+      width: 58%;
+  }
+
+ /*--------Titles----------*/
+
+ #aboutSea-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+
+  #aboutEarth-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+  }
+
+  #aboutComms-Title{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+  }
+}
+
+/*
+Stockists Styling -------------------------------------------------------------------
 */ 
 
-/*Styling for Images of Stockist  Credits to Michael Mullany on Stack Overflow https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css*/
+/*Styling for Images of Stockist. Adapted from: Abbas, Salman Von. 2021. "Convert an image to grayscale in HTML/CSS." Stack Overflow. https://stackoverflow.com/questions/609273/convert-an-image-to-grayscale-in-html-css. */
 .stockistImg{
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
@@ -433,38 +1454,35 @@ Stockist Styling
 
 }
 
+/* Container for Stockists page*/
 .stock-container {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Container for button on stockist page */
 .stock-btn-cont {
   justify-content: center;
   margin-right: auto;
   margin-left: auto; 
 }
 
+/* Make button text bigger */
 .stock-btn {
-  font-size: x-large;
-  width: 200px;
+  font-size: large;
+
 }
 
-@keyframes example {
-  0%   {transform:scale(1);}
-  50%  {transform:scale(1.5);}
-  100% {transform:scale(1);}
-}
+/* 
+Custom Button Animation ---- Adapted from: Yuhomyan. n.d. "Black&White Button." Codepen. Accessed August 9, 2021. https://codepen.io/yuhomyan/pen/LYNVVNO.
+*/
 
-.cart-badge {
-  animation: example 1s;
-}
+/* Styling for normal sized buttons*/
 
-/* Custom Button Animation Test ---- Adapted from: Yuhomyan. n.d. "Black&White Button." Codepen. Accessed August 9, 2021. https://codepen.io/yuhomyan/pen/LYNVVNO.*/
-
-.btn-bigger {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+/* Focus state for pack sizes */
+.btn-3:focus {
+  border: 2px solid #e4690c;
 }
 
 .custom-btn {
@@ -475,7 +1493,7 @@ Stockist Styling
   font-weight: 500;
   background-color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
   position: relative;
   display: inline-block;
 }
@@ -498,16 +1516,19 @@ Stockist Styling
   line-height: 39px;
   padding: 0;
 }
-.btn-3:hover{
+
+.btn-3:hover {
   background-color: white;
   color: #e4690c;
 }
+
 .btn-3 span {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
 }
+
 .btn-3:before,
 .btn-3:after {
   position: absolute;
@@ -515,22 +1536,27 @@ Stockist Styling
   left: 0;
   top: 0;
   background: #e4690c;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
+
 .btn-3:before {
   height: 0%;
   width: 2px;
 }
+
 .btn-3:after {
   width: 0%;
   height: 2px;
 }
+
 .btn-3:hover:before {
   height: 100%;
 }
+
 .btn-3:hover:after {
   width: 100%;
 }
+
 .btn-3 span:before,
 .btn-3 span:after {
   position: absolute;
@@ -538,8 +1564,9 @@ Stockist Styling
   right: 0;
   bottom: 0;
   background: #e4690c;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
+
 .btn-3 span:before {
   width: 2px;
   height: 0%;
@@ -554,3 +1581,446 @@ Stockist Styling
 .btn-3 span:hover:after {
   width: 100%;
 }
+
+/* Styling for Widest Button */
+
+.custom-btn-widest {
+  width: 100%;
+  height: 40px;
+  padding: 10px 25px;
+  border: 1px solid grey;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-btn-widest:hover {
+  border: #e4690c;
+  text-decoration: none; 
+}
+
+.custom-btn-widest span {
+  color: #000;
+}
+
+.custom-btn-widest span:hover {
+  text-decoration: none;
+  color: #e4690c;
+}
+
+.btn-5 {
+  line-height: 39px;
+  padding: 0;
+}
+.btn-5:hover{
+  background-color: white;
+  color: #e4690c;
+}
+.btn-5 span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-5:before,
+.btn-5:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e4690c;
+  transition: all 0.7s ease;
+}
+.btn-5:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-5:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-5:hover:before {
+  height: 100%;
+}
+.btn-5:hover:after {
+  width: 100%;
+}
+.btn-5 span:before,
+.btn-5 span:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #e4690c;
+  transition: all 0.7s ease;
+}
+.btn-5 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-5 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-5 span:hover:before {
+  height: 100%;
+}
+.btn-5 span:hover:after {
+  width: 100%;
+}
+
+/* Styling for medium sized button */
+
+.custom-btn-wide {
+  width: 140px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 1px solid grey;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-btn-wide:hover {
+  border: #e4690c;
+  text-decoration: none; 
+}
+
+.custom-btn-wide span {
+  color: #000;
+}
+
+.custom-btn-wide span:hover {
+  text-decoration: none;
+  color: #e4690c;
+}
+
+.btn-4 {
+  line-height: 39px;
+  padding: 0;
+}
+.btn-4:hover{
+  background-color: white;
+  color: #e4690c;
+}
+.btn-4 span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-4:before,
+.btn-4:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e4690c;
+  transition: all 0.7s ease;
+}
+.btn-4:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-4:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-4:hover:before {
+  height: 100%;
+}
+.btn-4:hover:after {
+  width: 100%;
+}
+.btn-4 span:before,
+.btn-4 span:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #e4690c;
+  transition: all 0.7s ease;
+}
+.btn-4 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-4 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-4 span:hover:before {
+  height: 100%;
+}
+.btn-4 span:hover:after {
+  width: 100%;
+}
+
+
+/*
+Footer Styling -------------------------------------------------------------------
+*/
+
+/* Footer colour and size */
+footer{
+  background-color: #f3c5bf;
+  width: 100%;
+}
+
+/* Footer link colour */
+footer a{
+  color: black;
+}
+
+/* Container for copyright and sub navigation*/
+#footerInfo{
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Copyright section*/
+#footerCopyright{
+  width: 50%;
+  margin-left: 2em;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+/* Make copyright text extra small*/
+#footerCopyright p {
+  font-size: x-small;
+}
+
+#footerCopyright h3 {
+  font-size: large;
+}
+
+/* Secondary nav section */
+#footerNav{
+  text-align: right;
+  padding-right: 30px;
+  float: right !important;
+  margin-left: auto;
+}
+
+/* Styling for privacy policy, terms and conditions and shipping and returns*/
+#footerLink{
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: small;
+  padding-bottom: 10px;
+}
+
+/* Link black*/
+#footerLink a {
+  color: black;
+}
+
+/* Link orange on hover */
+#footerLink a:hover{
+  color: #e4690c;
+  text-decoration: underline;
+}
+
+.link-footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE - IPAD PRO Styling -------------------*/
+@media all and (max-width: 1024px){
+
+  #footerInfo{
+      width: 80%;
+  }
+
+  #footerCopyright{
+      width: 50%;
+      margin-left: 2em;
+  }
+
+  #footerNav {
+      width: calc(30% - 2em);
+      
+  }
+}
+
+/* RESPONSIVE - TABLET Styling -------------------*/
+@media all and (max-width: 768px){
+
+  #footerCopyright {
+      width: 70%;
+      margin-left: 2em;
+  }
+
+  #footerNav {
+      
+      width: auto;
+  }
+}
+
+@media all and (max-width: 600px) {
+
+  #footerInfo {
+    width: 100%;
+  }
+  
+}
+
+/* RESPONSIVE - MOBILE Styling -------------------*/
+@media all and (max-width: 425px){
+
+  #footerInfo{
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+
+  #footerCopyright {
+      width: 100%;
+      margin-left: 1em;
+  }
+
+  #footerLink a {
+      margin-right: 0.8em;
+  }
+
+  #footerCopyright {
+      width: calc(50% - 2em);
+      margin: 0 1em;
+  }
+
+  #footerCopyright p {
+      margin-bottom: 0.25em;
+  }
+
+  #footerNav {
+      width: calc(50% - 1em);
+      margin: 0;
+  }
+   #footerLink {
+       width: 80%;
+   }
+
+}
+
+/*Footer Socials ----------- Adapted from: Said, Abdelrhman. n.d. "Social Media Icons with Popups (HTML + Pure CSS Only." Codepen. Accessed August 9, 2021. https://codepen.io/abdelrhmansaid/pen/OJRNOpQ.*/
+
+.social-link:hover {
+  color: white;
+}
+.wrapper{
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding-top: 5px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon:hover a {
+    color: white;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background-color: #0a66c2;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+

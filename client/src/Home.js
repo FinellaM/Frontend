@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Home = () => {
 
     useEffect(() => {
+
+        // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
             top: 0,
             left: 0,
@@ -39,8 +41,8 @@ const Home = () => {
                             <h4>Feel Good is a range of 100% natural, great tasting, fruitful sparkling waters in recyclable and plastic free packaging.</h4>
                         </div>
                         <div className="mt-5">
-                            <Link to="/shop" className="custom-btn btn-3 m-3"><span>Shop Now</span></Link>
-                            <Link to="/about-us" className="custom-btn btn-3 m-3"><span>About Us</span></Link>
+                            <Link to="/shop" className="custom-btn btn-3 m-2"><span>Shop Now</span></Link>
+                            <Link to="/about-us" className="custom-btn btn-3 m-2"><span>About Us</span></Link>
                         </div>
                     </div>
                 </div>
@@ -80,7 +82,7 @@ const Home = () => {
                                     <div className="mt-4 text-center">
                                         <h4><strong>From £4.99</strong></h4>
                                     </div>
-                                    <div className="mt-4 text-justify">
+                                    <div className="mt-4 text-left">
                                         <p>We added a squeeze of real apple juice, natural peach & passionfruit flavours and a touch of maca to our British sparkling water to make a tongue-tingling drink you can enjoy anywhere; the perfect non-alcoholic pick-me-up! Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Peach & Passionfruit." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/peach-passionfruit-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
@@ -112,7 +114,7 @@ const Home = () => {
                                     <div className="mt-4 text-center">
                                         <h4><strong>From £4.99</strong></h4>
                                     </div>
-                                    <div className="mt-4 text-justify">
+                                    <div className="mt-4 text-left">
                                         <p> Natural raspberry flavour, a squeeze of real apple juice plus a touch of hibiscus and ginseng is added to our British sparkling water, to create a delicious fruitful alternative to sugary carbonated drinks. Stop, sip and give back.</p> {/* Text Source: Feel Good Drinks. N.d. "Raspberry & Hibiscus." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/raspberry-hibiscus-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
@@ -158,7 +160,7 @@ const Home = () => {
                                     <div className="mt-4 text-center">
                                         <h4><strong>From £4.99</strong></h4>
                                     </div>
-                                    <div className="mt-4 text-justify">
+                                    <div className="mt-4 text-left">
                                         <p>Real apple juice and 100% natural rhubarb flavours infused with Echinacea makes our British sparkling water a delicious taste of the seasons and the ideal choice to refresh you any day of the year. Don't forget to chill it! Stop, sip and give back. </p> {/* Text Source: Feel Good Drinks. N.d. "Rhubarb & Apple." Feel Good Drinks. Accessed June 10, 2021. https://feelgooddrinks.com/collections/shop/products/rhubarb-apple-12-x-330ml. */}
                                     </div>
                                     <div className="mt-2 text-center">
@@ -187,7 +189,7 @@ const Home = () => {
                                             <div className="row align-items-center mb-5">
                                                 <div className="col-12" style={{ display: '-webkit-box' }}>
                                                     <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
+                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
                                                     </div>
                                                     <p className="card-text ml-5 mr-4">Our ambitions may be big, but we are already the first soft drink in the UK to become Climate Positive.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                                                 </div>
@@ -195,7 +197,7 @@ const Home = () => {
                                             <div className="row align-items-center mb-5">
                                                 <div className="col-12" style={{ display: '-webkit-box' }}>
                                                     <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
+                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
                                                     </div>
                                                     <p className="card-text ml-5 mr-4">We have been awarded Planet Mark certification and are committed to being Carbon Net Zero by 2030. So far so good.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                                                 </div>
@@ -203,7 +205,7 @@ const Home = () => {
                                             <div className="row align-items-center mb-5">
                                                 <div className="col-12" style={{ display: '-webkit-box' }}>
                                                     <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="" width="30px" height="auto" className="ml-4" />
+                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
                                                     </div>
                                                     <p className="card-text ml-5 mr-4">In addition we have established our 3% For People and Planet Fun - giving 3% of sales to charities and non-profit organisations with shared values and actions.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                                                 </div>
@@ -232,7 +234,7 @@ const Home = () => {
                                         </div>
                                         <div className="col-12 order-8 order-lg-8">
                                             <div className="mt-2 text-center">
-                                                <Link to="/about-us" className="btn btn-light m-3">Find Out More</Link>
+                                                <Link to="/about-us" className="custom-btn-wide btn-4 m-3"><span>Find Out More</span></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -251,29 +253,29 @@ const Home = () => {
                         </div>
                         <div className="row insta-imgs">
                             <blockquote className="instagram-media" data-instgrm-version="7">
-                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"><i alt="Feel Good Drinks and Beau's Icecream Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"><i alt="Feel Good Drinks and their packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. As it's an embed we had little control over styling of these images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
+                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"><i alt="Feel Good Drinks on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"><i alt="Feel Good Drinks Peach and Passionfruit held on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
+                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"><i alt="Feel Good Drinks 3% for people and planet packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"><i alt="Feel Good Drinks Apple and Rhubarb with salad Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                         </div>
                     </div>
                 </div>
