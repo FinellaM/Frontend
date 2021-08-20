@@ -29,19 +29,17 @@ const ContactUs = () => {
             message: messageTxt,
             attachment: file
         };
-        console.log(contactDetail);
         
         fetch('/message', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(contactDetail),
 
+        }).then(() => {
+             console.log(contactDetail);
+             console.log('contact form submitted!');
+             setIsPending(false);
         });
-        // .then(() => {
-        //     console.log(contactDetail);
-        //     console.log('contact form submitted!');
-        //     setIsPending(false);
-        // })
     }
 
     return (
@@ -73,7 +71,7 @@ const ContactUs = () => {
                                 <textarea name="message" className="message-textarea col-9 col-lg-7" maxlength="1000" required value={messageTxt} onChange={(e) => setMessage(e.target.value)}/><br></br> {/* Textare for message input, 1000 character limit, set to required */}
                             <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7" value={file} onChange={(e) => setFile(e.target.value)}/><br></br> {/* File upload button, not required. */}
                             { !isPending && <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"/>} {/* Submit button. Form not functioning yet. */}
-                            { isPending && <input type="submit" name="submit" value="Submitting..." className="form-submit btn btn-light col-3 disabled" aria-disabled="true"  tabindex="-1"> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"/></input>} {/* Submit button when submission is in progress. */}
+                            { isPending && <input type="submit" name="submit" value="Submitting..." className="form-submit btn btn-light col-3 disabled" aria-disabled="true"  tabindex="-5"> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"/></input>} {/* Submit button when submission is in progress. */}
                             {/*Details that will be submitted */}
                         </form>
 

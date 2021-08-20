@@ -4,7 +4,7 @@ const _404 = () => {
     return ( 
         <div className="container-fluid">
             <div className="row mt-4 align-items-center">
-                <div className="col-12 text-left" style={{borderBottom:'2px solid #000', marginBottom:'3em'}}>
+                <div className="col-12 text-left" style={{borderBottom:'2px solid #b8b8b8', marginBottom:'3em'}}>
                     <h1 className="pageTitle">Page Not found</h1>
                 </div>
                 <br></br>
