@@ -26,10 +26,6 @@ const Shipping = () => {
             <div className="row text-left align-items-center shipping-content">
                 <div className="col-lg-8 col-md-10 col-sm-12">
                     <div className="shipping-section">
-                        <h5><strong>DELIVERY COSTS</strong></h5>
-                            <p>Delivery for mainland UK is at a flat rate of £3.49.</p>
-                    </div>
-                    <div className="shipping-section">
                         <h5><strong>DELIVERY TERMS</strong></h5>
                             <p>We aim to ship on the same day to a UK address for orders placed before midday. Please allow 2-3 working days for your Feel Good to arrive at your doorstep.  #FeelGoodMoment</p>
                     </div>

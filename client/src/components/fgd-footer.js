@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         {/* Footer sub menu */}
         <div id="footerNav">
-          <Link to="/"><h6>Home</h6></Link>
+          <a href="/"><h6>Home</h6></a>
           <Link to="/shop"><h6>Shop</h6></Link>
           <Link to="/about-us"><h6>About Us</h6></Link>
           <Link to="/contact-us"><h6>Contact</h6></Link>
