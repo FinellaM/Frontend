@@ -14,10 +14,10 @@ const Home = () => {
         // gsap.from(".dot-two", { y: 750 }); /* from this spot on y-axis*/
 
         gsap.fromTo(".bubbleone", {scale: 0.1},
-        {scale: 1, duration:2,  repeat: -1})
+        {scale: 1, duration:2,  repeat: -1, opacity: 0})
 
         gsap.fromTo(".bubbletwo", {scale: 1},
-        {scale: 1.5, duration:2,  repeat: -1})
+        {scale: 1.5, duration:2,  repeat: -1, opacity:  0})
 
         gsap.fromTo(".bubblethree", {scale: 0.5, opacity:0},
         {scale: 1.5, duration:2,  repeat: -1, opacity:1})
@@ -31,9 +31,9 @@ const Home = () => {
         //add 3 tweens that will play in direct succession.
         tl.to(".numberone", { duration: 1, scale: 1, opacity: 0});
         tl.to(".numbertwo", { duration: 1, opacity: 0,  scale: 2});
-        tl.to(".numberthree", { duration: 0.5, opacity: 1, scale: 2 });
+        tl.to(".numberthree", { duration: 0.5, opacity: 0, scale: 2 });
         tl.to(".numberfour", { duration: 0.1, opacity: 0, scale: 2});
-        tl.to(".numberfive", { duration: 1, opacity: 1,  scale: 2, y: 0});
+        tl.to(".numberfive", { duration: 1, opacity: 0,  scale: 2});
         tl.to(".numbersix", { duration: 0.5, scale: 1.5, opacity: 0 });
 
         // add another timeline 
@@ -41,11 +41,11 @@ const Home = () => {
 
         //add 3 tweens that will play in direct succession.
         t2.to(".number-one", { duration: 1, opacity: 0,  x: 0});
-        t2.to(".number-two", { duration: 1, opacity: 0.5, x: 0, scale: 2 });
+        t2.to(".number-two", { duration: 1, opacity: 0, scale: 2 });
         t2.to(".number-three", { duration: 0.5, opacity: 1, x: 0, scale: 2, y: 20 });
-        t2.to(".number-four", { duration: 0.5, opacity: 0.5, x: 0, scale: 2, y: 20 });
-        t2.to(".number-five", { duration: 2, opacity: 0, scale: 2});
-        t2.to(".number-six", { duration: 0.5, opacity: 0 });
+        t2.to(".number-four", { duration: 0.5, opacity: 0,scale: 2 });
+        t2.to(".number-five", { duration: 1, opacity: 0, scale: 2});
+        t2.to(".number-six", { duration: 0.5, opacity: 0, scale:1.5});
 
 
         // animation for class circle objects

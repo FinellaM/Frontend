@@ -465,11 +465,13 @@ Stockist Styling
   width: 100px;
   background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
-  display: inline-block; /* horizontal instead of vertical*/
-  margin-top: 50px;
+  /*display: inline-block; /* horizontal instead of vertical*/
+  /* left: -1000px; */
   border: 3px solid red;
   z-index: -1;
-  margin-right: 500px;
+  position:absolute;
+  left: -200px;
+  
 }
 
 .bubblethree {
@@ -478,9 +480,13 @@ Stockist Styling
   background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
-  margin-left: 1000px;/*  space in between circles*/
+  /*margin-left: 1000px;/*  space in between circles*/
   border: 3px solid orange;
 	position: absolute;
+  right: -700px;
+  top: 700px;
+
+ 
   z-index:  -1;
 }
 
@@ -493,7 +499,8 @@ Stockist Styling
   /* margin-top:500px; */
   border: 3px solid #ff008c;
 	position: absolute;
-
+  left: -200px;
+  top: 500px;
   z-index:  -1;
 }
 
@@ -553,8 +560,8 @@ Stockist Styling
   /*margin: 100px;/*  space in between circles*/
   border: 3px solid purple;
   position: absolute;
-  left: 500px;
-  top: -50px;
+  left:800px;
+  top: -200px;
   
 }
 
@@ -584,7 +591,7 @@ Stockist Styling
   position: absolute;
   left: 500px;
   /* bottom: 400px; */
-  top: -500px;
+  top: -400px;
 }
 
 .number-one {
@@ -619,15 +626,15 @@ Stockist Styling
   background-color:white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   /*display: inline-block; /* horizontal instead of vertical*/
-  margin-top: 100px;
+ position: absolute;
   border: 3px solid rgb(94, 255, 0);
-  margin-bottom: 300px;
+left: -200px;
   z-index: -1;
 }
 
 .number-four {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   background-color:white;
   border-radius: 50%; /*makes shape from a square into a circle*/
   display: inline-block; /* horizontal instead of vertical*/
@@ -657,7 +664,7 @@ Stockist Styling
   border-radius: 50%; /*makes shape from a square into a circle*/
   /*display: inline-block; /* horizontal instead of vertical*/
   /*margin: 100px;/*  space in between circles*/
-  border: 5px solid rgb(65, 65, 7);
+  border: 2px solid rgb(65, 65, 7);
   /* margin-right: 1200px; */
   position: absolute;
   left: -500px;
