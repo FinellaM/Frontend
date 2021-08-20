@@ -1,10 +1,8 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import '@shoelace-style/shoelace/dist/themes/base.css';
-import SlButton from '@shoelace-style/react/dist/button';
-import SlCard from '@shoelace-style/react/dist/card';
+import '@shoelace-style/shoelace/dist/components/icon/icon.js';
 import SlRating from '@shoelace-style/react/dist/rating';
-import './product.css'
 import { Link } from 'react-router-dom';
 import ProductList from "./ProductList";
 
@@ -22,14 +20,16 @@ const ProductDetails = ({ setNewCart }) => {
 
     const [cartState, setCartState] = useState({ id: "", flavour: "", pack: "", price: 0, thumbnail: "", itemID: "" });
 
-    // Fetch the product list from the backend, and set the splash image for every card
+    
     useEffect(() => {
 
+        // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
             top: 0,
             left: 0,
         });
 
+        // Fetch the product list from the backend, and set the splash image for every card
         fetch(`/product/${id}`)
             .then(res => {
                 return res.json();
@@ -322,19 +322,13 @@ const ProductDetails = ({ setNewCart }) => {
         (product && nutrition && relatedProduct) && (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-12 col-xl-9 col-lg-10 col-md-12 col-sm-12 product-container">
-                        <Link to="/shop">
-                            <SlButton style={{
-                                textAlign: 'left !important',
-                                marginTop: '1em',
-                                marginBottom: '1em',
-                            }}>
-                                <i className="fa fa-arrow-left" style={{
-                                    fontSize: '20px',
-                                    marginRight: '0.5em',
-                                }}></i>
-                                Back
-                            </SlButton>
+                    <div className="col-11 col-xl-9 col-lg-10 col-md-11 col-sm-11 product-container">
+                        <Link to="/shop" className="custom-btn btn-3 text-center back-btn">
+                            <span><i className="fa fa-arrow-left" style={{
+                                fontSize: '20px',
+                                marginRight: '0.5em',
+                            }}></i>
+                                Back</span>
                         </Link>
                         <div className="text-center">
                             <div className="productBox">
@@ -354,16 +348,16 @@ const ProductDetails = ({ setNewCart }) => {
                                     <div className="productDesc">
                                         <h2>{product.flavour}</h2>
                                         <h4>{`${product.size}ml`}</h4>
-                                        <SlRating readonly value="{product.rating}" className="productRating"></SlRating>
+                                        <SlRating readonly precision=".25" value="{product.rating}" className="productRating"></SlRating> {/* Displays the ratings from the backend, read only. */}
                                         <h3>{`£ ${price}`}</h3>
                                         <p>{product.description}</p>
 
                                         <div className="productOptions">
-                                            <SlButton className="packoption" onClick={() => setPack(3, product.price[0], product.items[0])}>3 Pack</SlButton>
-                                            <SlButton className="packoption" onClick={() => setPack(6, product.price[1], product.items[1])}>6 Pack</SlButton>
-                                            <SlButton onClick={() => setPack(12, product.price[2], product.items[2])}>12 Pack</SlButton>
+                                            <Link className="packoption custom-btn btn-3" onClick={() => setPack(3, product.price[0], product.items[0])}><span>3 Pack</span></Link>
+                                            <Link className="packoption custom-btn btn-3" onClick={() => setPack(6, product.price[1], product.items[1])}><span>6 Pack</span></Link>
+                                            <Link className="custom-btn btn-3" onClick={() => setPack(12, product.price[2], product.items[2])}><span>12 Pack</span></Link>
                                         </div>
-                                        <SlButton size="large" onClick={() => addCart(cartState)}>Add to Cart</SlButton>
+                                        <Link className="custom-btn-widest btn-5" onClick={() => addCart(cartState)}><span>Add to Cart</span></Link>
 
                                     </div>
                                 </div>
@@ -418,7 +412,7 @@ const ProductDetails = ({ setNewCart }) => {
                                         relatedProduct && relatedProduct
                                             .filter((product) => product._id !== id)
                                             .map((product) => (
-                                                <div className="product col-12 col-lg-4 col-md-4 col-sm-8 mt-0" id={product._id} key={product._id} style={{
+                                                <div className="product col-12 col-lg-4 col-md-4 col-sm-6 mt-0" id={product._id} key={product._id} style={{
                                                     padding: '1.5em',
                                                 }}>
                                                     <div className="splash-image" style={{
