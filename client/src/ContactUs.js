@@ -21,18 +21,27 @@ const ContactUs = () => {
 
     const formSubmit = (e) => {
         e.preventDefault();
-        const contactDetail = { nameFull, business, emailAddress, phoneNo, messageTxt, file};
+        const contactDetail = { 
+            fullName: nameFull,
+            businessName: business,
+            email: emailAddress,
+            phone: phoneNo,
+            message: messageTxt,
+            attachment: file
+        };
+        console.log(contactDetail);
         
         fetch('/message', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(contactDetail),
 
-        }).then(() => {
-            console.log(contactDetail);
-            console.log('contact form submitted!');
-            setIsPending(false);
-        })
+        });
+        // .then(() => {
+        //     console.log(contactDetail);
+        //     console.log('contact form submitted!');
+        //     setIsPending(false);
+        // })
     }
 
     return (
