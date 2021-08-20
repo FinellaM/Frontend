@@ -6,8 +6,10 @@ import SlRating from '@shoelace-style/react/dist/rating';
 import { Link } from 'react-router-dom';
 import ProductList from "./ProductList";
 
-const ProductDetails = ({ cart, setCart }) => {
+const ProductDetails = ({ setNewCart }) => {
     const { id } = useParams();
+
+    const [price, setPrice] = useState(0);
 
     // Constant for storing product list
     const [product, setProduct] = useState(null);
@@ -16,7 +18,7 @@ const ProductDetails = ({ cart, setCart }) => {
 
     const [relatedProduct, setRelatedProduct] = useState(null);
 
-    const [cartState, setCartState] = useState({ id: "", flavour: "", pack: "", price: 0, thumbnail: "" });
+    const [cartState, setCartState] = useState({ id: "", flavour: "", pack: "", price: 0, thumbnail: "", itemID: "" });
 
     
     useEffect(() => {
@@ -35,6 +37,7 @@ const ProductDetails = ({ cart, setCart }) => {
             .then(data => {
                 // console.log(data);
                 setProduct(data);
+                setPrice(data.price[0]);
 
                 if (data.nutrition.length !== 1) {
                     fetch(`/nutrition`)
@@ -286,16 +289,33 @@ const ProductDetails = ({ cart, setCart }) => {
         magnify("productImg", 1.5);
     }
 
-    const setPack = (pack, price) => {
-        const currentCartState = { id: id, flavour: product.flavour, pack: pack, price: price, thumbnail: product.images[0] };
+    const setPack = (pack, price, itemID) => {
+        const currentCartState = { id: id, flavour: product.flavour, pack: pack, price: price, thumbnail: product.images[0], itemID: itemID };
         setCartState(currentCartState);
+        setPrice(currentCartState.price);
+        // console.log(itemID);
     }
 
     const addCart = (cartState) => {
-        console.log(cartState);
+        // console.log(cartState);
         document.getElementById("cart-badge").className += "cart-badge";
         setTimeout(() => { document.getElementById("cart-badge").className = ""; }, 1000);
-        setCart([...cart, cartState]);
+
+        fetch(`/cart/${cartState.itemID}`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+
+                fetch(`/cart/items`)
+                    .then(res => {
+                        return res.json();
+                    })
+                    .then(data => {
+                        // console.log(data);
+                        setNewCart(data);
+                    })
+            })
     }
 
     return (
@@ -329,13 +349,13 @@ const ProductDetails = ({ cart, setCart }) => {
                                         <h2>{product.flavour}</h2>
                                         <h4>{`${product.size}ml`}</h4>
                                         <SlRating readonly precision=".25" value="{product.rating}" className="productRating"></SlRating> {/* Displays the ratings from the backend, read only. */}
-                                        <h3>{`£${product.price[0]}`}</h3>
+                                        <h3>{`£ ${price}`}</h3>
                                         <p>{product.description}</p>
 
                                         <div className="productOptions">
-                                            <Link className="packoption custom-btn btn-3" onClick={() => setPack(3, product.price[0])}><span>3 Pack</span></Link>
-                                            <Link className="packoption custom-btn btn-3" onClick={() => setPack(6, product.price[1])}><span>6 Pack</span></Link>
-                                            <Link className="custom-btn btn-3" onClick={() => setPack(12, product.price[2])}><span>12 Pack</span></Link>
+                                            <Link className="packoption custom-btn btn-3" onClick={() => setPack(3, product.price[0], product.items[0])}><span>3 Pack</span></Link>
+                                            <Link className="packoption custom-btn btn-3" onClick={() => setPack(6, product.price[1], product.items[1])}><span>6 Pack</span></Link>
+                                            <Link className="custom-btn btn-3" onClick={() => setPack(12, product.price[2], product.items[2])}><span>12 Pack</span></Link>
                                         </div>
                                         <Link className="custom-btn-widest btn-5" onClick={() => addCart(cartState)}><span>Add to Cart</span></Link>
 
