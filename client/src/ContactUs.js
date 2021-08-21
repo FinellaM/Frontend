@@ -4,6 +4,17 @@ const ContactUs = () => {
 
     useEffect(() => {
         // Put your Javascript code here...
+        const gsap = window.gsap;
+
+        gsap.fromTo("contact-bubbleone", {scale: 0.1},
+        {scale: 1, duration:2,  repeat: -1, opacity: 0})
+
+        gsap.fromTo(".contact-bubbletwo", {scale: 1},
+        {scale: 1.5, duration:2,  repeat: -1, opacity:  0})
+
+        
+gsap.fromTo(".contact-bubblethree", {scale: 0.5, opacity:0},
+{scale: 1.5, duration:2,  repeat: -1, opacity:1})
 
     }, []);
 
@@ -37,7 +48,9 @@ const ContactUs = () => {
                             <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7"></input><br></br> {/* File upload button, not required. */}
                             <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"></input> {/* Submit button. Form not functioning yet. */}
                         </form>
-
+<div class = "contact-bubbleone"></div>
+<div class = "contact-bubbletwo"></div>
+<div class = "contact-bubblethree"></div>
                         <div className="other-contact col-9"> {/* Other contact information */}
                             <h2>Other ways to contact us</h2><br></br>
                             <div className="text-left">
