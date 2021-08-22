@@ -154,6 +154,12 @@ Homepage Styling ---------------------------------------------------------------
   width: 65%;
 }
 
+.mission-container {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Container around whole of homepage body (excluding hero image section)*/
 .home-container {
   justify-content: center;
@@ -1621,7 +1627,7 @@ Custom Button Animation ---- Adapted from: Yuhomyan. n.d. "Black&White Button." 
   font-weight: 500;
   background-color: white;
   cursor: pointer;
-  transition: all 0.7s ease;
+  transition: all 1s ease;
   position: relative;
   display: inline-block;
 }
@@ -1661,7 +1667,7 @@ Custom Button Animation ---- Adapted from: Yuhomyan. n.d. "Black&White Button." 
   left: 0;
   top: 0;
   background: #e4690c;
-  transition: all 0.7s ease;
+  transition: all 1s ease;
 }
 .btn-5:before {
   height: 0%;
@@ -1684,7 +1690,7 @@ Custom Button Animation ---- Adapted from: Yuhomyan. n.d. "Black&White Button." 
   right: 0;
   bottom: 0;
   background: #e4690c;
-  transition: all 0.7s ease;
+  transition: all 1s ease;
 }
 .btn-5 span:before {
   width: 2px;
