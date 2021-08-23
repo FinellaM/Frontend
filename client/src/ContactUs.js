@@ -72,7 +72,7 @@ const ContactUs = () => {
                             <textarea name="message" className="message-textarea col-9 col-lg-7" maxlength="1000" required value={messageTxt} onChange={(e) => setMessage(e.target.value)}/><br></br> {/* Textare for message input, 1000 character limit, set to required */}
                             <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7" value={file} onChange={(e) => setFile(e.target.value)}/><br></br> {/* File upload button, not required. */}
                             { !isPending && <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"/>} {/* Submit button.*/}
-                            { isPending && <input type="submit" name="submitting" value="Submitting..." className="form-submit btn btn-secondary col-3" aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" /></input>} {/* Submit button when submission is in progress. */}
+                            { isPending && <button type="submit button" className="form-submit btn btn-secondary col-3" aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true" />Submitting...</button>} {/* Submit button when submission is in progress. */}
                             {/*Details that will be submitted */}
                         </form>
 
