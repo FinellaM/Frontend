@@ -474,7 +474,8 @@ Stockist Styling
   border: 3px solid red;
   z-index: -1;
   position:absolute;
-  left: -200px;
+  left: 0px;
+  top: 100px;
   
 }
 
@@ -487,7 +488,7 @@ Stockist Styling
   /*margin-left: 1000px;/*  space in between circles*/
   border: 3px solid orange;
 	position: absolute;
-  right: -600px;
+  right: -400px;
   top: 700px;
 
  
@@ -503,9 +504,8 @@ Stockist Styling
   /* margin-top:500px; */
   border: 3px solid #ff008c;
 	position: absolute;
-  left: -200px;
-  top: 500px;
-  z-index:  -1;
+  /* left: -200px; */
+  bottom:  0px;
 }
 
 
@@ -520,7 +520,7 @@ Stockist Styling
   /* margin-left: 500px; */
   position: absolute;
  
-  left: -600px;
+  left: -400px;
   bottom: 200px;
   
 }
@@ -551,8 +551,8 @@ Stockist Styling
   /* margin-left: 300px; */
   border: 2px solid green;
   position:absolute;
-  left: -400px;
-  bottom: 200px;
+  /* left: -400px;*/
+  bottom: 200px; 
 }
 
 .numberfour {
@@ -564,8 +564,8 @@ Stockist Styling
   /*margin: 100px;/*  space in between circles*/
   border: 3px solid purple;
   position: absolute;
-  left: 600px;
-  top: -100px;
+  /* left: 600px;*/
+  bottom: 300px;  
   
 }
 
@@ -579,8 +579,8 @@ Stockist Styling
   margin-left:500px; */
   border: 2px solid aqua;
   position: absolute;
-  right: 0px;
-  top: 1200px;
+  right: 50px;
+  bottom: 50px;
 }
 
 
@@ -591,11 +591,11 @@ Stockist Styling
   border-radius: 50%; /*makes shape from a square into a circle*/
   /*display: inline-block; /* horizontal instead of vertical*/
   /*margin: 100px;/*  space in between circles*/
-  border: 5px solid yellow;
+  border: 2px solid yellow;
   position: absolute;
-  left: 500px;
+  /* left: 500px; */
   /* bottom: 400px; */
-  top: -400px;
+  /* top: -400px; */
 }
 
 .number-one {
@@ -607,7 +607,7 @@ Stockist Styling
   /* margin-right: 7500px; */
   border: 3px solid navy;
   position: absolute;
-  left: -600px;
+  left: -400px;
   bottom:200px;
 }
 
@@ -616,11 +616,10 @@ Stockist Styling
   width: 150px;
   background-color: white;
   border-radius: 50%; /*makes shape from a square into a circle*/
-  display: inline-block; /* horizontal instead of vertical*/
-  margin-top: 250px;/*  space in between circles*/
+  position:absolute;
+
   border: 3px solid khaki;
-  margin-bottom: 750px;
-  margin-left: 500px;
+right: 100px;
   
 }
 
@@ -632,8 +631,11 @@ Stockist Styling
   /*display: inline-block; /* horizontal instead of vertical*/
  position: absolute;
   border: 3px solid rgb(94, 255, 0);
-left: -200px;
-  z-index: -1;
+/* left: -200px; */
+  /* z-index: -1; */
+ top: 150px;
+ left: 300px;
+ /*left: 100px; */
 }
 
 .number-four {
@@ -656,8 +658,7 @@ left: -200px;
   border: 3px solid rgb(255, 208, 0);
   /* margin-left: 500px; */
   position: absolute;
-  bottom: 1000px;
-  left: -500px;
+  top: -30px;
 
 }
 
@@ -671,8 +672,8 @@ left: -200px;
   border: 2px solid rgb(65, 65, 7);
   /* margin-right: 1200px; */
   position: absolute;
-  left: -500px;
-  bottom: 500px;
+  /* left: -200px; */
+  bottom: 500px; 
 }
 
 
@@ -683,7 +684,7 @@ left: -200px;
   width: 200px; /* sets position on x-axis */
   height: 200px;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   bottom: 0px;
 }
 
@@ -693,7 +694,8 @@ left: -200px;
   position: absolute;
   z-index: -1;
   /* float: right; */
-  left: 500px;
+  left: 800px; 
+
 }
 
 .circle {

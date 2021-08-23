@@ -23,7 +23,7 @@ const Home = () => {
         {scale: 1.5, duration:2,  repeat: -1, opacity:1})
 
         gsap.fromTo(".bubblefour", {scale: 0, opacity:1},
-        {scale: 1.5, duration:3,  repeat: -1, opacity:0})
+        {scale: 1.5, duration:2,  repeat: -1, opacity:0})
 
         // add timeline 
         var tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
@@ -265,6 +265,7 @@ const Home = () => {
                                 <div class="bubbletwo"></div>
                                 <div class="bubblethree"></div>
                                 <div class="bubblefour"></div>
+                                <div class="dot number-three"></div>
                                 
                                 
                                 <div class="circles">
@@ -282,8 +283,8 @@ const Home = () => {
                                     <div class="dot numberfive" ></div>
                                     <div class="dot numbertwo"></div>
                                     
-                                    <div class=" number-one" ></div>
-                                    <div class="number-five" ></div>
+                                    <div class=" dot number-one" ></div>
+                                    <div class="dot number-five" ></div>
                                     
 
                                 </div>
@@ -323,7 +324,7 @@ const Home = () => {
                                 <div class="dot numberthree"></div>
                                 <div class="dot numberfour"></div>
                                 <div class="dot number-six" ></div>
-                                <div class="dot number-three"></div>
+                            
                                 <div class="dot number-four"></div>
                                 <div class="circles">
                                     <div class="circle"></div>
