@@ -101,13 +101,13 @@ const ContactUs = () => {
 
         }).then(() => {
             console.log('contact form submitted!');
-            setName(''); {/*Reset name of contact input*/ }
-            setBusiness(''); {/*Reset name of business input*/ }
-            setEmail(''); {/*Reset email input*/ }
-            setPhone(''); {/*Reset phone input*/ }
-            setMessage(''); {/*Reset message input*/ }
-            setFile(''); {/*Reset file input*/ }
-            setToastType(ToastType.success);
+            setName(''); {/*Reset name of contact input*/}
+            setBusiness(''); {/*Reset name of business input*/}
+            setEmail(''); {/*Reset email input*/}
+            setPhone(''); {/*Reset phone input*/}
+            setMessage(''); {/*Reset message input*/}
+            setFile(''); {/*Reset file input*/}
+            setToastType(ToastType.success); {/*Setting the Toast notification background colour to Orange*/}
             setToastMessage('Form Submitted Successfully! We will contact you as soon as we can.');
             setIsPending(false); {/*Clear "is submitting" status on button*/ }
         })
@@ -159,7 +159,7 @@ const ContactUs = () => {
                                 ref={ToastRef}
                                 message={toastMessage}
                                 type={toastType}
-                            />
+                            /> {/*Toast Notification settings */}
                         </form>
                         <div class="contact-bubbleone"></div>
                         <div class="contact-bubbletwo"></div>
