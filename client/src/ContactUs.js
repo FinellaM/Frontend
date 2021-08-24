@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import Toast from './components/Toast';
 
 const ContactUs = () => {
 
@@ -50,7 +51,12 @@ const ContactUs = () => {
         })
     }
 
+    const ToastType = {
+        success: "success",
+        fail: "fail",
+    };
     
+    const ToastRef = useRef(null)
 
     return (
         <div className="container-fluid">
@@ -70,19 +76,28 @@ const ContactUs = () => {
                         <p className="col-10 col-lg-8 contact-desc">We always like to hear from customers or potential stockists, so if you'd like to get in contact with us, fill out the form below or use one of the alternate contact methods listed! </p>
                         <form className="form" onSubmit={formSubmit}>
                             <label className="form-field">Full Name<span className="form-required">*</span></label><br></br> {/* Label for Name form field with styled asterix to visually show required fields */}
-                            <input name="full_name" type="text" className="form-input contactInfo col-9 col-lg-7" required value={nameFull} onChange={(e) => setName(e.target.value)}/><br></br> {/* Text input field for Name, set to required */}
+                            <input name="full_name" type="text" className="form-input col-9 col-lg-7" required value={nameFull} onChange={(e) => setName(e.target.value)}/><br></br> {/* Text input field for Name, set to required */}
                             <label className="form-field">Business Name (Optional)</label><br></br> {/* Label for Business name field, which is optional */}
-                            <input name="business_name" type="text" className="form-input contactInfo col-9 col-lg-7" value={business} onChange={(e) => setBusiness(e.target.value)}/><br></br> {/* Text input for business name, not required */}
+                            <input name="business_name" type="text" className="form-input col-9 col-lg-7" value={business} onChange={(e) => setBusiness(e.target.value)}/><br></br> {/* Text input for business name, not required */}
                             <label className="form-field">Email<span className="form-required">*</span></label><br></br> {/* Label for Email form field with styled asterix to visually show required fields */}
-                            <input name="email" type="email" className="form-input contactInfo col-9 col-lg-7" required value={emailAddress} onChange={(e) => setEmail(e.target.value)}/><br></br> {/* email input for email, set to required */}
+                            <input name="email" type="email" className="form-input col-9 col-lg-7" required value={emailAddress} onChange={(e) => setEmail(e.target.value)}/><br></br> {/* email input for email, set to required */}
                             <label className="form-field">Phone (Optional)</label><br></br>{/* Label for phone form field, optional */}
-                            <input name="phone" type="text" className="form-input col-9 col-lg-7 contactInfo" value={phoneNo} onChange={(e) => setPhone(e.target.value)}/><br></br> {/* Text input for phone number (using text instead of number to allow for symbols for country/state codes etc, better UX) */}
+                            <input name="phone" type="text" className="form-input col-9 col-lg-7" value={phoneNo} onChange={(e) => setPhone(e.target.value)}/><br></br> {/* Text input for phone number (using text instead of number to allow for symbols for country/state codes etc, better UX) */}
                             <label className="form-field">Message<span className="form-required">*</span></label><br></br> {/* Label for message form field, with styled asterix to visually show required fields */}
-                            <textarea name="message" className="message-textarea col-9 col-lg-7 contactInfo" maxlength="1000" required value={messageTxt} onChange={(e) => setMessage(e.target.value)}/><br></br> {/* Textare for message input, 1000 character limit, set to required */}
-                            <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7 contactFile" value={file} onChange={(e) => setFile(e.target.value)}/><br></br> {/* File upload button, not required. */}
-                            { !isPending && <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"/>} {/* Submit button.*/}
+                            <textarea name="message" className="message-textarea col-9 col-lg-7" maxlength="1000" required value={messageTxt} onChange={(e) => setMessage(e.target.value)}/><br></br> {/* Textare for message input, 1000 character limit, set to required */}
+                            <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7" value={file} onChange={(e) => setFile(e.target.value)}/><br></br> {/* File upload button, not required. */}
+                            { !isPending && <input type="submit" name="submit" value="Submit" 
+                                className="form-submit btn btn-light col-3" 
+                                onClick={() => {
+                                ToastRef.current.show();
+                            }}/>} {/* Submit button.*/}
                             { isPending && <button type="submit button" className="form-submit btn btn-secondary col-3" aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"  style = {{marginRight: '0.125em'}}/>Submitting...</button>} {/* Submit button when submission is in progress. */}
                             {/*Details that will be submitted */}
+                            <Toast 
+                                ref={ToastRef}
+                                message="Form Submitted Successfully! We will contact you as soon as we can." 
+                                type={ToastType.success}
+                            />
                         </form>
 
                         <div className="other-contact col-9"> {/* Other contact information */}
