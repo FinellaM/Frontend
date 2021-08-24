@@ -9,7 +9,7 @@ const Toast = forwardRef((props, ref) => {
             setShowToast(true);
             setTimeout(() => {
                 setShowToast(false);
-            }, 3000);
+            }, 5000);
         },
     }));
     return (

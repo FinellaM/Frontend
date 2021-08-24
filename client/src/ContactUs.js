@@ -19,6 +19,8 @@ const ContactUs = () => {
     const [messageTxt, setMessage] = useState('');
     const [file, setFile] = useState('');
     const [isPending, setIsPending] = useState(false);
+    const [toastMessage, setToastMessage] = useState('');
+    const [toastType, setToastType] = useState('');
 
 
     const formSubmit = (e) => {
@@ -47,6 +49,7 @@ const ContactUs = () => {
             setPhone(''); {/*Reset phone input*/}
             setMessage(''); {/*Reset message input*/}
             setFile(''); {/*Reset file input*/}
+            setToastMessage('Form Submitted Successfully! We will contact you as soon as we can.');
             setIsPending(false); {/*Clear "is submitting" status on button*/}
         })
     }
@@ -95,7 +98,7 @@ const ContactUs = () => {
                             {/*Details that will be submitted */}
                             <Toast 
                                 ref={ToastRef}
-                                message="Form Submitted Successfully! We will contact you as soon as we can." 
+                                message={toastMessage} 
                                 type={ToastType.success}
                             />
                         </form>
