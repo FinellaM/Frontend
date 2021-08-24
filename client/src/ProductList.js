@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProductList = ({ product }) => {
+const ProductList = ({ product, setNewCart }) => {
     // Show the rollover effect every time the mouse is hovering over the specified area
     const showRolloverEffect = (e, id) => {
         if (e.target.previousElementSibling && e.target.children[0] && document.getElementById(id).getElementsByClassName("splash-image")[0]) {
@@ -18,6 +18,28 @@ const ProductList = ({ product }) => {
         }
     }
 
+    const addCart = (id) => {
+        // console.log(cartState);
+        document.getElementById("cart-badge").className += "cart-badge";
+        setTimeout(() => { document.getElementById("cart-badge").className = ""; }, 1000);
+
+        fetch(`/cart/${id}`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+
+                fetch(`/cart/items`)
+                    .then(res => {
+                        return res.json();
+                    })
+                    .then(data => {
+                        // console.log(data);
+                        setNewCart(data);
+                    })
+            })
+    }
+
     return (
         // Section for the single product card
         <div className="card mt-3" style={{
@@ -32,24 +54,25 @@ const ProductList = ({ product }) => {
                             position: 'relative',
                         }}>
                             <img src={`../${product.images[0]}`} alt="" className="shop-product-image w-100" />
-
                             <div className="row overlay w-100 h-100" onMouseEnter={(e) => showRolloverEffect(e, product._id)} onMouseLeave={(e) => hideRolloverEffect(e, product._id)}>
                                 <div className="overlay-content text-center">
                                     <div>
-                                        <a type="button" className="btn btn-light m-3">Add to Cart</a>
+                                        <a type="button" className="custom-btn btn-3 m-3"><span onClick={() => addCart(product.items[0])}>Add to Cart</span></a>
                                     </div>
                                     <div>
-                                        <Link to={`/product/${product._id}`} className="btn btn-light m-3">View Details</Link>
+                                        <Link to={`/product/${product._id}`} className="custom-btn btn-3 m-3"><span>View Details</span></Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-12 mt-3">
-                        <h5 className="card-text"><strong>{product.flavour}</strong></h5>
-                        <p className="card-text mb-1">{product.size + 'ml'}</p>
-                        <h5 className="card-text"><strong>{'From £ ' + product.price[0]}</strong></h5>
-                    </div>
+                    <Link to={`/product/${product._id}`}>
+                        <div className="col-12 mt-3 card-details">
+                            <h5 className="card-text"><strong>{product.flavour}</strong></h5>
+                            <p className="card-text mb-1">{product.size + 'ml'}</p>
+                            <h5 className="card-text"><strong>{'From £ ' + product.price[0]}</strong></h5>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

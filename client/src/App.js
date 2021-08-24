@@ -10,12 +10,20 @@ import Privacy from './PrivacyPolicy';
 import Terms from './TermsConditions';
 import Shipping from './ShippingReturns';
 import Footer from './components/fgd-footer';
+import './components/Toast';
 import '@shoelace-style/shoelace/dist/themes/base.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProductDetails from './ProductDetails';
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Checkout from './Checkout';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 setBasePath('./../dist/shoelace');
+
+// Make sure to call `loadStripe` outside of a component's render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe('pk_test_51IlvwoCM9bBMeA8Hr0yNKrNfkqVPwyPPu2vEf8JSZbidy56I2PLFcUwDBL6piEDY64LDTbwNCczpWQZ9YR5ImqwR00W4ENs9SG');
 
 function App() {
 
@@ -32,51 +40,54 @@ function App() {
     }
   }
 
-  const [cart, setCart] = useState([]);
+  const [newCart, setNewCart] = useState(null);
+
 
   return (
-    <Router>
-      <div className="App">
-        <Header cart={cart} windowListener={windowListener} />
-        <Sidenav />
-        <Cart cart={cart} />
-        <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/shop">
-              <Shop />
-            </Route>
-            <Route exact path="/product/:id">
-              <ProductDetails setCart={setCart} cart={cart} />
-            </Route>
-            <Route exact path="/about-us">
-              <AboutUs />
-            </Route>
-            <Route exact path="/contact-us">
-              <ContactUs />
-            </Route>
-            <Route exact path="/stockist">
-              <Stockist />
-            </Route>
-            <Route exact path="/cart">
-              <Cart />
-            </Route>
-            <Route exact path="/privacy-policy">
-              <Privacy />
-            </Route>
-            <Route exact path="/terms-conditions">
-              <Terms />
-            </Route>
-            <Route exact path="/shipping-returns">
-              <Shipping />
-            </Route>
-          </Switch>
+    <Elements stripe={stripePromise}>
+      <Router>
+        <div className="App">
+          <Header newCart={newCart} windowListener={windowListener} setNewCart={setNewCart} />
+          <Sidenav />
+          <Cart newCart={newCart} setNewCart={setNewCart} />
+          <div className="content">
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/shop">
+                <Shop setNewCart={setNewCart} />
+              </Route>
+              <Route exact path="/product/:id">
+                <ProductDetails setNewCart={setNewCart} />
+              </Route>
+              <Route exact path="/about-us">
+                <AboutUs />
+              </Route>
+              <Route exact path="/contact-us">
+                <ContactUs />
+              </Route>
+              <Route exact path="/stockist">
+                <Stockist />
+              </Route>
+              <Route exact path="/checkout">
+                <Checkout setNewCart={setNewCart} />
+              </Route>
+              <Route exact path="/privacy-policy">
+                <Privacy />
+              </Route>
+              <Route exact path="/terms-conditions">
+                <Terms />
+              </Route>
+              <Route exact path="/shipping-returns">
+                <Shipping />
+              </Route>
+            </Switch>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </Elements>
   );
 }
 

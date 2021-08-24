@@ -3,13 +3,13 @@ import ProductList from "./ProductList";
 import { Link } from 'react-router-dom';
 
 
-const Shop = () => {
+const Shop = ({ setNewCart }) => {
     // Constant for storing product list
     const [product, setProduct] = useState(null);
 
-    // Fetch the product list from the backend, and set the splash image for every card
     useEffect(() => {
-        
+
+        // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
             top: 0,
             left: 0,
@@ -36,10 +36,10 @@ const Shop = () => {
                     <h1 className="pageTitle">Shop</h1>
                 </div>
                 <div className="col-6 text-right">
-                    <Link to="/stockist" className="btn btn-light m-3">Find a Stockist</Link>
+                    <Link to="/stockist" className="custom-btn-wide btn-4 m-3 text-center"><span>Find a Stockist</span></Link>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} /> {/* Divider under the page title */}
                 </div>
             </div>
 
@@ -66,19 +66,18 @@ const Shop = () => {
                                     left: '0',
                                     bottom: '0',
                                     right: '0',
-                                    zIndex: '0',
+                                    zIndex: '-5',
                                     opacity: '0',
                                     transform: 'scale(1.1)',
                                 }}>
 
                                 </div>
-                                <ProductList product={p} />
+                                <ProductList product={p} setNewCart={setNewCart} />
                             </div>
                         ))}
                     </div>
                 </div>
                 <div className="col-1 col-lg-2">
-
                 </div>
                 {/* Images are pulled from the database. Image References: */}
                 {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH." Instagram Photo, March 3, 2021. https://www.instagram.com/p/CL7KBoJlScq/.  */}

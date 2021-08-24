@@ -22,7 +22,7 @@ const Sidenav = () => {
     return (
         <div id="mySidenav" className="sidenav">
             <a href="" className="closebtn" onClick={(e) => closeNav(e)}>&times;</a>
-            <Link to="/" className="nav-link" onClick={() => clickNav(0)}>Home</Link>
+            <a href="/" className="nav-link" onClick={() => clickNav(0)}>Home</a>
             <Link to="/shop" className="nav-link" onClick={() => clickNav(1)}>Shop</Link>
             <Link to="/about-us" className="nav-link" onClick={() => clickNav(2)}>About Us</Link>
             <Link to="/contact-us" className="nav-link" onClick={() => clickNav(3)}>Contact Us</Link>
