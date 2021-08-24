@@ -13,7 +13,7 @@
     z-index: 9000;
 }
 
-.toast .symbol{
+.toast .symbol{ /*Postition of Toast symbol for ease of access*/
     flex: 15%;
 }
 
@@ -23,7 +23,7 @@
     font-weight: bold;
 }
 
-.toast .message h6{
+.toast .message h6{ /*Centering Message*/
     margin-top: 0.5em;
 }
 
@@ -36,7 +36,7 @@
     visibility: hidden;
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn { /* Animation for Toast fading in*/
     from {
         bottom: 0px;
         opacity: 0;
@@ -47,7 +47,7 @@
     }
 }
 
-@keyframes fadeOut {
+@keyframes fadeOut { /* Animation for Toast fading out*/
     from {
         bottom: 30px;
         opacity: 1;
