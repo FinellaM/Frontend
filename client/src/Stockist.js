@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
+// Makes the site jump to the top of new pages when links are clicked
 const Stockist = () => {
 
     useEffect(() => {
@@ -20,7 +21,7 @@ const Stockist = () => {
                     <h1 className="pageTitle">Stockists</h1>
                 </div>
                 <div className="col-12 p-0">
-                    <hr style={{ borderTop: '2px solid #b8b8b8' }} />
+                    <hr style={{ borderTop: '2px solid #b8b8b8' }} /> {/* Divider under the title of the page */}
                 </div>
             </div>
             <div className="row mx-lg-5 mx-md-2 align-items-center text-left">
@@ -70,12 +71,11 @@ const Stockist = () => {
                 <div className="col-12 text-center mb-5">
                     <h3 className="mb-3 mt-5"><strong>Want to stock our product?</strong></h3><br></br>
                     <div className="col-6 stock-btn-cont">
-                        <Link to="/contact-us" className="btn btn-light m-3 stock-btn">Contact Us</Link>
+                        <Link to="/contact-us" className="custom-btn-widest btn-5 m-3 stock-btn"><span>Contact Us</span></Link>
                     </div>
                 </div>
             </div>
         </div>
-
     );
 }
 

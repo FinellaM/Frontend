@@ -4,7 +4,6 @@ import Toast from './components/Toast';
 const ContactUs = () => {
 
     useEffect(() => {
-
         window.scroll({
             top: 0,
             left: 0,
@@ -21,7 +20,6 @@ const ContactUs = () => {
     const [isPending, setIsPending] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
     const [toastType, setToastType] = useState('');
-
 
     const formSubmit = (e) => {
         e.preventDefault();
@@ -50,7 +48,7 @@ const ContactUs = () => {
             setMessage(''); {/*Reset message input*/}
             setFile(''); {/*Reset file input*/}
             setToastType(ToastType.success); {/*Setting the Toast notification background colour to Orange*/}
-            setToastMessage('Form Submitted Successfully! We will contact you as soon as we can.');
+            setToastMessage('Form Submitted Successfully! We will contact you as soon as we can.'); {/*Inputting Toast message*/}
             setIsPending(false); {/*Clear "is submitting" status on button*/}
         })
     }
@@ -60,7 +58,7 @@ const ContactUs = () => {
         fail: "fail",
     };
     
-    const ToastRef = useRef(null)
+    const ToastRef = useRef(null);
 
     return (
         <div className="container-fluid">
