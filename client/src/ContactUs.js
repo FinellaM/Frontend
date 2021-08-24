@@ -94,7 +94,7 @@ const ContactUs = () => {
 
         setIsPending(true);
 
-        fetch('/message', {
+        fetch('/api/message', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(contactDetail)

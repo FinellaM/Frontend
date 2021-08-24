@@ -15,12 +15,12 @@ const Cart = ({ newCart, setNewCart }) => {
     const removeItem = (e, id) => {
         e.preventDefault();
 
-        fetch(`/cart/remove/${id}`, {
+        fetch(`/api/cart/remove/${id}`, {
             method: 'DELETE'
         })
         .then(() => {
             
-            fetch(`/cart/items`)
+            fetch(`/api/cart/items`)
             .then(res => {
                 return res.json();
             })
@@ -41,7 +41,7 @@ const Cart = ({ newCart, setNewCart }) => {
 
     useEffect(() => {
 
-        fetch(`/cart`)
+        fetch(`/api/cart`)
             .then(res => {
                 return res.json();
             })

@@ -300,13 +300,13 @@ const ProductDetails = ({ setNewCart }) => {
         document.getElementById("cart-badge").className += "cart-badge";
         setTimeout(() => { document.getElementById("cart-badge").className = ""; }, 1000);
 
-        fetch(`/cart/${cartState.itemID}`)
+        fetch(`/api/cart/${cartState.itemID}`)
             .then(res => {
                 return res.json();
             })
             .then(data => {
 
-                fetch(`/cart/items`)
+                fetch(`/api/cart/items`)
                     .then(res => {
                         return res.json();
                     })

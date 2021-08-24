@@ -58,7 +58,7 @@ const Checkout = ({ setNewCart }) => {
 
         // Use fetch to send the token ID and any other payment data to your server.
         // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-        fetch('/checkout', {
+        fetch('/api/checkout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -68,7 +68,7 @@ const Checkout = ({ setNewCart }) => {
             .then(() => {
                 setIsSubmitted(true);
 
-                fetch(`/cart/items`)
+                fetch(`/api/cart/items`)
                     .then(res => {
                         return res.json();
                     })

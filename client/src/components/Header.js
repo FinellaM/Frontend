@@ -18,7 +18,7 @@ const Header = ({ newCart, windowListener, setNewCart }) => {
 
         window.addEventListener('click', windowListener);
 
-        fetch(`/cart/items`)
+        fetch(`/api/cart/items`)
             .then(res => {
                 return res.json();
             })
@@ -38,7 +38,7 @@ const Header = ({ newCart, windowListener, setNewCart }) => {
 
     useEffect(() => {
 
-        fetch(`/cart`)
+        fetch(`/api/cart`)
             .then(res => {
                 return res.json();
             })
