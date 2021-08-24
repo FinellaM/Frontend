@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
 const Home = () => {
-    
+
     useEffect(() => {
         const gsap = window.gsap;
 
@@ -403,24 +403,24 @@ const Home = () => {
                         </div>
                         <div className="row bubble-container">
                             <div className="col-6">
-                                    <div class="bubbleone"></div>
-                                    <div class="bubbletwo"></div>
-                                    <div class="bubblethree"></div>
-                                    <div class="bubblefour"></div>
-                                    <div class="dot number-three"></div>
-                                    
-                                    
-                                    <div class="circles">
-                                        <div class="circle"></div>
-                                        <div class="circle"></div>
-                                        <div class="circle"></div>
-                                        <div class="circle"></div>
-                                    </div>
-                                    
+                                <div class="bubbleone"></div>
+                                <div class="bubbletwo"></div>
+                                <div class="bubblethree"></div>
+                                <div class="bubblefour"></div>
+                                <div class="dot number-three"></div>
+
+
+                                <div class="circles">
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
                                 </div>
+
+                            </div>
                             <div className="col-6">
                                 <div>
-                                <div class="dot number-two"></div>
+                                    <div class="dot number-two"></div>
                                     <div class="dot numberone" ></div>
                                     <div class="dot numberfive" ></div>
                                     <div class="dot numbertwo"></div>
@@ -431,29 +431,29 @@ const Home = () => {
                         </div>
                         <div className="row insta-imgs">
                             <blockquote className="instagram-media" data-instgrm-version="7">
-                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"><i alt="Feel Good Drinks and Beau's Icecream Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"><i alt="Feel Good Drinks and their packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. As it's an embed we had little control over styling of these images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
+                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"><i alt="Feel Good Drinks on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"><i alt="Feel Good Drinks Peach and Passionfruit held on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
+                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"><i alt="Feel Good Drinks 3% for people and planet packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"><i alt="Feel Good Drinks Apple and Rhubarb with salad Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div>
+                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
                         </div>
 
                         <div className="row bubble-container2">
@@ -462,18 +462,18 @@ const Home = () => {
                                 <div class="dot numberthree"></div>
                                 <div class="dot numberfour"></div>
                                 <div class="dot number-six" ></div>
-                                <div class="dot number-four"></div>    
-                            <div class="circles2">
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
+                                <div class="dot number-four"></div>
+                                <div class="circles2">
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>

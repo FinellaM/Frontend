@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { InView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const AboutUs = () => {
 
