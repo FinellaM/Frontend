@@ -335,20 +335,20 @@ const ProductDetails = ({ setNewCart }) => {
                                 <div className="productInfo">
                                     <div className="productImages">
                                         <div className="img-magnifier-container mr-3">
-                                            <img src={`../${product.images[0]}`} alt={product.flavour} id="productImg" style={{ marginBottom: '1em' }} className="w-100" />
+                                            <img src={`../${product.images[0]}`} alt={`Can of ${product.flavour}`} id="productImg" style={{ marginBottom: '1em' }} className="w-100" />
                                         </div>
                                         <div className="productImgCarosel">
-                                            <img src={`../${product.images[0]}`} alt="" className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
-                                            <img src={`../${product.images[1]}`} alt="" className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
-                                            <img src={`../${product.images[2]}`} alt="" className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
-                                            <img src={`../${product.images[3]}`} alt="" className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
-                                            <img src={`../${product.images[4]}`} alt="" className="productCaroselItem" onClick={(e) => carouselEffect(e)} style={{ marginRight: 0 }} />
+                                            <img src={`../${product.images[0]}`} alt={`Can of ${product.flavour}`} className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
+                                            <img src={`../${product.images[1]}`} alt={`Can of ${product.flavour} in white background`} className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
+                                            <img src={`../${product.images[2]}`} alt={`Can of ${product.flavour} at the beach`} className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
+                                            <img src={`../${product.images[3]}`} alt={`Can of ${product.flavour} with other props`} className="productCaroselItem" onClick={(e) => carouselEffect(e)} />
+                                            <img src={`../${product.images[4]}`} alt={`Pouring a can of ${product.flavour}`} className="productCaroselItem" onClick={(e) => carouselEffect(e)} style={{ marginRight: 0 }} />
                                         </div>
                                     </div>
                                     <div className="productDesc">
                                         <h2>{product.flavour}</h2>
                                         <h4>{`${product.size}ml`}</h4>
-                                        <SlRating readonly precision=".25" value="{product.rating}" className="productRating"></SlRating> {/* Displays the ratings from the backend, read only. */}
+                                        <SlRating readonly precision=".25" value={product.rating} className="productRating"></SlRating> {/* Displays the ratings from the backend, read only. */}
                                         <h3>{`£ ${price}`}</h3>
                                         <p>{product.description}</p>
 
@@ -365,13 +365,13 @@ const ProductDetails = ({ setNewCart }) => {
                             <div className="productFacts">
                                 <h3>Ingredients</h3>
                                 {nutrition.map((n, index) => (
-                                    <p id={n._id} key={n._id}>{n.ingredients}</p>
+                                    <p id={n._id + "-" + index} key={n._id}>{n.ingredients}</p>
                                 ))}
                             </div>
                             <div className="productFacts">
                                 <h3>Nutritional Information</h3>
                                 {nutrition.map((n, index) => (
-                                    <div className="nutritionalTable col-lg-6 col-md-8 col-sm-8 col-8" id={n._id} key={n._id}>
+                                    <div className="nutritionalTable col-lg-6 col-md-8 col-sm-8 col-8" id={"nt-" + n._id + "-" + index} key={n._id}>
                                         <div className="nutritAvTitle">
                                             <h5 className="nutritAttribute">Average Quantity</h5>
                                             <h5 className="nutritFact text-right">Per 100ml</h5>
