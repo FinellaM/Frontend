@@ -191,6 +191,8 @@ Contact Page Styling
   margin-left: auto;
   margin-top: 30px;
   margin-bottom: 50px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .contact-card {
@@ -453,6 +455,7 @@ Stockist Styling
   width: 100%;
   bottom: 0;
 }
+
 .bubbleone {
 	height: 100px;
   width: 100px;
@@ -490,8 +493,6 @@ Stockist Styling
 	position: absolute;
   right: -400px;
   top: 700px;
-
- 
   z-index:  -1;
 }
 
@@ -524,8 +525,6 @@ Stockist Styling
   bottom: 200px;
   
 }
-
-
 
 .numbertwo {
   height: 50px;
@@ -676,10 +675,6 @@ right: 100px;
   bottom: 500px; 
 }
 
-
-
-
-
 .circles {
   width: 200px; /* sets position on x-axis */
   height: 200px;
@@ -710,7 +705,7 @@ right: 100px;
   border: 3px solid pink;
 }
 
-/* contact page animation */
+/* contact page animation ---------------- */
 
 .contact-bubbleone {
 	height: 100px;
