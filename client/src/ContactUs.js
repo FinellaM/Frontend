@@ -6,7 +6,7 @@ const ContactUs = () => {
         // Put your Javascript code here...
         const gsap = window.gsap;
 
-        gsap.fromTo("contact-bubbleone", {scale: 0.1},
+        gsap.fromTo(".contact-bubbleone", {scale: 0.1},
         {scale: 1, duration:2,  repeat: -1, opacity: 0})
 
         gsap.fromTo(".contact-bubbletwo", {scale: 1},
@@ -29,7 +29,7 @@ gsap.fromTo(object1.el, object1.duration, {
     opacity: 2,
     y: '+=10',
     scale: 1.5,
-    // transformOrigin: 'center'
+    
 }, {
     opacity: 1,
     y: '-2000', //  moving to this position on y-axis
@@ -50,7 +50,7 @@ gsap.fromTo(object2.el, object2.duration, {
     opacity: 2,
     y: '+=10',
     scale: 1.5,
-    // transformOrigin: 'center'
+    
 }, {
     opacity: 1,
     y: '-2000', //  moving to this position on y-axis

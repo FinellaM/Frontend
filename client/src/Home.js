@@ -5,14 +5,8 @@ const Home = () => {
     useEffect(() => {
         const gsap = window.gsap;
 
-        // gsap.to(".dot", { x: 0 }); /* moves to this position on x-axis */
-
-        // gsap.from(".dot", { y: 750 }); /* from this spot on y-axis*/
-
-        // gsap.to(".dot-two", { x: 1000 }); /* moves to this position on x-axis */
-
-        // gsap.from(".dot-two", { y: 750 }); /* from this spot on y-axis*/
-
+     
+        // animate bubbles using gsap
         gsap.fromTo(".bubbleone", {scale: 0.1},
         {scale: 1, duration:2,  repeat: -1, opacity: 0})
 
@@ -58,7 +52,7 @@ const Home = () => {
             opacity: 2,
             y: '+=10',
             scale: 1.5,
-            // transformOrigin: 'center'
+            
         }, {
             opacity: 1,
             y: '-2000', //  moving to this position on y-axis
@@ -278,7 +272,7 @@ const Home = () => {
                             </div>
                             <div className="col-6">
                                 <div>
-                                <div class="number-two"></div>
+                                    <div class="dot number-two"></div>
                                     <div class="dot numberone" ></div>
                                     <div class="dot numberfive" ></div>
                                     <div class="dot numbertwo"></div>
@@ -326,7 +320,7 @@ const Home = () => {
                                 <div class="dot number-six" ></div>
                             
                                 <div class="dot number-four"></div>
-                                <div class="circles">
+                                {/* <div class="circles1">
                                     <div class="circle"></div>
                                     <div class="circle"></div>
                                     <div class="circle"></div>
@@ -335,7 +329,7 @@ const Home = () => {
                                     <div class="circle"></div>
                                     <div class="circle"></div>
                                     <div class="circle"></div>
-                                </div>
+                                </div> */}
                                 <div class="circles2">
                                     <div class="circle"></div>
                                     <div class="circle"></div>
