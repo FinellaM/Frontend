@@ -49,6 +49,7 @@ const ContactUs = () => {
             setPhone(''); {/*Reset phone input*/}
             setMessage(''); {/*Reset message input*/}
             setFile(''); {/*Reset file input*/}
+            setToastType(ToastType.success);
             setToastMessage('Form Submitted Successfully! We will contact you as soon as we can.');
             setIsPending(false); {/*Clear "is submitting" status on button*/}
         })
@@ -94,12 +95,12 @@ const ContactUs = () => {
                                 onClick={() => {
                                 ToastRef.current.show();
                             }}/>} {/* Submit button.*/}
-                            { isPending && <button type="submit button" className="form-submit btn btn-secondary col-3" aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"  style = {{marginRight: '0.125em'}}/>Submitting...</button>} {/* Submit button when submission is in progress. */}
+                            { isPending && <button type="submit button" className="form-submit btn btn-secondary col-3 formSubmitBtn" aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"  style = {{marginRight: '0.125em'}}/>Submitting...</button>} {/* Submit button when submission is in progress. */}
                             {/*Details that will be submitted */}
                             <Toast 
                                 ref={ToastRef}
                                 message={toastMessage} 
-                                type={ToastType.success}
+                                type={toastType}
                             />
                         </form>
 

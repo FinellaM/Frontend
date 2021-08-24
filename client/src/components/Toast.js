@@ -16,7 +16,7 @@ const Toast = forwardRef((props, ref) => {
         <div className="toast" 
             id={showToast ? "show" : "hide"} 
             style={{backgroundColor: props.type === "success" ? "#e4690c" : "#FF0033",
-            color: props.type === "success" ? "black" : "white",
+            color: props.type === "success" ? "white" : "white",
         }}
         >
             <div className="symbol">{props.type === "success" ? <h1><i className="fa fa-check" aria-hidden="true"/></h1> : <h1><i className="fa fa-times" aria-hidden="true"/></h1>}</div>
