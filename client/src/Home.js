@@ -1,13 +1,153 @@
-import { Link } from 'react-router-dom';
 import { InView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from "react";
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
 const Home = () => {
-
+    
     useEffect(() => {
+        const gsap = window.gsap;
 
-        // Makes the site jump to the top of new pages when links are clicked
+        // animate bubbles using gsap
+        gsap.fromTo(".bubbleone", {
+            scale: 0.1
+        }, {
+            scale: 1,
+            duration: 2,
+            repeat: -1,
+            opacity: 0
+        })
+
+        gsap.fromTo(".bubbletwo", {
+            scale: 1
+        }, {
+            scale: 1.5,
+            duration: 2,
+            repeat: -1,
+            opacity: 0
+        })
+
+        gsap.fromTo(".bubblethree", {
+            scale: 0.5,
+            opacity: 0
+        }, {
+            scale: 1.5,
+            duration: 2,
+            repeat: -1,
+            opacity: 1
+        })
+
+        gsap.fromTo(".bubblefour", {
+            scale: 0,
+            opacity: 1
+        }, {
+            scale: 1.5,
+            duration: 2,
+            repeat: -1,
+            opacity: 0
+        })
+
+        // add timeline 
+        var tl = gsap.timeline({
+            repeat: -1,
+            repeatDelay: 0
+        });
+
+        //add 3 tweens that will play in direct succession.
+        tl.to(".numberone", {
+            duration: 1,
+            scale: 1,
+            opacity: 0
+        });
+        tl.to(".numbertwo", {
+            duration: 1,
+            opacity: 0,
+            scale: 2
+        });
+        tl.to(".numberthree", {
+            duration: 0.5,
+            opacity: 0,
+            scale: 2
+        });
+        tl.to(".numberfour", {
+            duration: 0.1,
+            opacity: 0,
+            scale: 2
+        });
+        tl.to(".numberfive", {
+            duration: 1,
+            opacity: 0,
+            scale: 2
+        });
+        tl.to(".numbersix", {
+            duration: 0.5,
+            scale: 1.5,
+            opacity: 0
+        });
+
+        // add another timeline 
+        var t2 = gsap.timeline({
+            repeat: -1,
+            repeatDelay: 0
+        });
+
+        //add 3 tweens that will play in direct succession.
+        t2.to(".number-one", {
+            duration: 1,
+            opacity: 0,
+            x: 0
+        });
+        t2.to(".number-two", {
+            duration: 1,
+            opacity: 0,
+            scale: 2
+        });
+        t2.to(".number-three", {
+            duration: 0.5,
+            opacity: 1,
+            x: 0,
+            scale: 2,
+            y: 20
+        });
+        t2.to(".number-four", {
+            duration: 0.5,
+            opacity: 0,
+            scale: 2
+        });
+        t2.to(".number-five", {
+            duration: 1,
+            opacity: 0,
+            scale: 2
+        });
+        t2.to(".number-six", {
+            duration: 0.5,
+            opacity: 0,
+            scale: 1.5
+        });
+
+
+        // animation for class circle objects
+        let object = {
+            el: '.circle',
+            duration: 10,
+        }
+
+        gsap.fromTo(object.el, object.duration, {
+            opacity: 2,
+            y: '+=10',
+            scale: 1.5,
+
+        }, {
+            opacity: 1,
+            y: '-2000', //  moving to this position on y-axis
+            scale: -0.5, // decreasing in size
+            stagger: {
+                each: object.duration / document.querySelectorAll(object.el).length,
+                repeat: -1
+            }
+        });
+
         window.scroll({
             top: 0,
             left: 0,
@@ -262,31 +402,79 @@ const Home = () => {
                                 <a className="insta-link" href="https://www.instagram.com/feelgooddrinks" target="_blank" rel="noreferrer"><h4>@feelgooddrinks</h4></a>
                             </div>
                         </div>
+                        <div className="row bubble-container">
+                            <div className="col-6">
+                                    <div class="bubbleone"></div>
+                                    <div class="bubbletwo"></div>
+                                    <div class="bubblethree"></div>
+                                    <div class="bubblefour"></div>
+                                    <div class="dot number-three"></div>
+                                    
+                                    
+                                    <div class="circles">
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                        <div class="circle"></div>
+                                    </div>
+                                    
+                                </div>
+                            <div className="col-6">
+                                <div>
+                                <div class="dot number-two"></div>
+                                    <div class="dot numberone" ></div>
+                                    <div class="dot numberfive" ></div>
+                                    <div class="dot numbertwo"></div>
+                                    <div class=" dot number-one" ></div>
+                                    <div class="dot number-five" ></div>
+                                </div>
+                            </div>
+                        </div>
                         <div className="row insta-imgs">
                             <blockquote className="instagram-media" data-instgrm-version="7">
-                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"><i alt="Feel Good Drinks and Beau's Icecream Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
+                                <a href="https://www.instagram.com/p/CQ0TmwBriQQ/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "COMPETITION CLOSED WINNER ANNOUNCED AT 6pm." Instagram Photo, July 2, 2021. https://www.instagram.com/p/CQ0TmwBriQQ/ */}
                             </blockquote>
                             <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"><i alt="Feel Good Drinks and their packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
+                                <a href="https://www.instagram.com/p/CQOUTyRraQf/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "DID YOU KNOW METALS RECYCLE FOREVER?" Instagram Photo, June 17, 2021. https://www.instagram.com/p/CQOUTyRraQf */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. As it's an embed we had little control over styling of these images. */}
+                            <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"><i alt="Feel Good Drinks on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
+                                <a href="https://www.instagram.com/p/CP8HbOCr3I8/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "Is it the weekend yet?" Instagram Image, June 10, 2021. https://www.instagram.com/p/CP8HbOCr3I8/. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
+                            <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"><i alt="Feel Good Drinks Peach and Passionfruit held on the beach Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
+                                <a href="https://www.instagram.com/p/CCopon9B3ze/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2020. "Smell the sea, and feel the sky." Instagram Photo, July 15, 2020. https://www.instagram.com/p/CCopon9B3ze */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
+                            <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"><i alt="Feel Good Drinks 3% for people and planet packaging Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
+                                <a href="https://www.instagram.com/p/CN0Ws5SLTtr/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "NEWSFLASH!" Instagram Image, April 19, 2021. https://www.instagram.com/p/CN0Ws5SLTtr/.  */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
+                            <div style={{ width: '10px', }}></div>
                             <blockquote className="instagram-media" data-instgrm-version="7" >
-                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"><i alt="Feel Good Drinks Apple and Rhubarb with salad Instagram Photo"></i></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
+                                <a href="https://www.instagram.com/p/CKyeur3lyx3/embed/"></a> {/* Feel Good Drinks (@feelgooddrinks). 2021. "LUNCH TIME!" Instagram Photo, February 2, 2021. https://www.instagram.com/p/CKyeur3lyx3. */}
                             </blockquote>
-                            <div style={{ width: '10px', }}></div> {/* Div to act as padding between insta images. */}
+                            <div style={{ width: '10px', }}></div>
+                        </div>
+
+                        <div className="row bubble-container2">
+                            <div className="col-12">
+                                <div class="dot numbersix" ></div>
+                                <div class="dot numberthree"></div>
+                                <div class="dot numberfour"></div>
+                                <div class="dot number-six" ></div>
+                                <div class="dot number-four"></div>    
+                            <div class="circles2">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>

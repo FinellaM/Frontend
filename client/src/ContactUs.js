@@ -3,6 +3,63 @@ import { useEffect } from "react";
 const ContactUs = () => {
 
     useEffect(() => {
+        // Put your Javascript code here...
+        const gsap = window.gsap;
+
+        gsap.fromTo(".contact-bubbleone", {scale: 0.1},
+        {scale: 1, duration:2,  repeat: -1, opacity: 0})
+
+        gsap.fromTo(".contact-bubbletwo", {scale: 1},
+        {scale: 1.5, duration:2,  repeat: -1, opacity:  0})
+
+        
+gsap.fromTo(".contact-bubblethree", {scale: 0.5, opacity:0},
+{scale: 1.5, duration:2,  repeat: -1, opacity:1})
+
+gsap.fromTo(".contact-bubblefour", {scale: 0, opacity:1},
+{scale: 1.5, duration:3,  repeat: -1, opacity:0})
+
+// animation for class circle objects
+let object1 = {
+    el: '.contact-circle-one',
+    duration: 10,
+}
+
+gsap.fromTo(object1.el, object1.duration, {
+    opacity: 2,
+    y: '+=10',
+    scale: 1.5,
+    
+}, {
+    opacity: 1,
+    y: '-2000', //  moving to this position on y-axis
+    scale: -0.5, // decreasing in size
+    stagger: {
+        each: object1.duration / document.querySelectorAll(object1.el).length,
+        repeat: -1
+    }
+});
+    
+// animation for class circle objects
+let object2 = {
+    el: '.contact-circle-two',
+    duration: 10,
+}
+
+gsap.fromTo(object2.el, object2.duration, {
+    opacity: 2,
+    y: '+=10',
+    scale: 1.5,
+    
+}, {
+    opacity: 1,
+    y: '-2000', //  moving to this position on y-axis
+    scale: -0.5, // decreasing in size
+    stagger: {
+        each: object2.duration / document.querySelectorAll(object2.el).length,
+        repeat: -1
+    }
+});
 
         // Makes the site jump to the top of new pages when links are clicked
         window.scroll({
@@ -42,6 +99,24 @@ const ContactUs = () => {
                             <input type="file" name="filename" className="form-input file-upload col-9 col-lg-7"></input><br></br> {/* File upload button, not required. */}
                             <input type="submit" name="submit" value="Submit" className="form-submit btn btn-light col-3"></input> {/* Submit button. Form not functioning yet. */}
                         </form>
+<div class = "contact-bubbleone"></div>
+<div class = "contact-bubbletwo"></div>
+<div class = "contact-bubblethree"></div>
+<div class = "contact-bubblefour"></div>
+
+<div class="contact-circles-one">
+                                    <div class="contact-circle-one"></div>
+                                    <div class="contact-circle-one"></div>
+                                    <div class="contact-circle-one"></div>
+                                    <div class="contact-circle-one"></div>
+                                </div>
+
+                                <div class="contact-circles-two">
+                                    <div class="contact-circle-two"></div>
+                                    <div class="contact-circle-two"></div>
+                                    <div class="contact-circle-two"></div>
+                                    <div class="contact-circle-two"></div>
+                                </div>
 
                         <div className="other-contact col-9"> {/* Other contact information */}
                             <h2>Other ways to contact us</h2><br></br>
