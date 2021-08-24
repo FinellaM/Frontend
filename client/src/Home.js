@@ -172,76 +172,87 @@ const Home = () => {
                         )}
                     </InView>
 
-                    <div className="row m-auto">
-                        <div className="col-12">
-                            <div className="card m-auto col-12 col-lg-10 col-md-12 col-sm-12" style={{
-                                boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 20px -5px',
-                            }}>
-                                <div className="card-body">
-                                    <div className="row">
-                                        <div className="col-12 text-center mb-4 order-1 order-lg-1">
-                                            <h2 className="card-title">Our Mission</h2> {/* Section title */}
-                                        </div>
-                                        <div className="col-12 text-center mb-5 order-2 order-lg-2">
-                                            <p className="card-subtitle"><strong>We are a purpose driven brand on a mission to lead change from within the drinks industry.</strong></p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
-                                        </div>
-                                        <div className="col-12 col-lg-6 order-4 order-lg-3">
-                                            <div className="row align-items-center mb-5">
-                                                <div className="col-12" style={{ display: '-webkit-box' }}>
-                                                    <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
+                    <InView triggerOnce threshold={0.25}>
+                        {({ ref, inView }) => (
+                            <motion.div
+                                variants={variants}
+                                initial="initial"
+                                animate={inView ? 'show' : undefined}
+                                transition={{ duration: 1 }}
+                                ref={ref}
+                                className="row m-auto"
+                            >
+                                <div className="col-12">
+                                    <div className="card m-auto col-12 col-lg-10 col-md-12 col-sm-12" style={{
+                                        boxShadow: 'rgb(0 0 0 / 30%) 0px 0px 20px -5px',
+                                    }}>
+                                        <div className="card-body">
+                                            <div className="row mission-container">
+                                                <div className="col-12 text-center mb-4 order-1 order-lg-1">
+                                                    <h2 className="card-title">Our Mission</h2> {/* Section title */}
+                                                </div>
+                                                <div className="col-12 text-center mb-5 order-2 order-lg-2">
+                                                    <p className="card-subtitle"><strong>We are a purpose driven brand on a mission to lead change from within the drinks industry.</strong></p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
+                                                </div>
+                                                <div className="col-12 col-lg-6 order-4 order-lg-3">
+                                                    <div className="row align-items-center mb-5">
+                                                        <div className="col-12" style={{ display: '-webkit-box' }}>
+                                                            <div className="row align-items-center">
+                                                                <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
+                                                            </div>
+                                                            <p className="card-text ml-5 mr-4">Our ambitions may be big, but we are already the first soft drink in the UK to become Climate Positive.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
+                                                        </div>
                                                     </div>
-                                                    <p className="card-text ml-5 mr-4">Our ambitions may be big, but we are already the first soft drink in the UK to become Climate Positive.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
-                                                </div>
-                                            </div>
-                                            <div className="row align-items-center mb-5">
-                                                <div className="col-12" style={{ display: '-webkit-box' }}>
-                                                    <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
+                                                    <div className="row align-items-center mb-5">
+                                                        <div className="col-12" style={{ display: '-webkit-box' }}>
+                                                            <div className="row align-items-center">
+                                                                <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
+                                                            </div>
+                                                            <p className="card-text ml-5 mr-4">We have been awarded Planet Mark certification and are committed to being Carbon Net Zero by 2030. So far so good.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
+                                                        </div>
                                                     </div>
-                                                    <p className="card-text ml-5 mr-4">We have been awarded Planet Mark certification and are committed to being Carbon Net Zero by 2030. So far so good.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
-                                                </div>
-                                            </div>
-                                            <div className="row align-items-center mb-5">
-                                                <div className="col-12" style={{ display: '-webkit-box' }}>
-                                                    <div className="row align-items-center">
-                                                        <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
+                                                    <div className="row align-items-center mb-5">
+                                                        <div className="col-12" style={{ display: '-webkit-box' }}>
+                                                            <div className="row align-items-center">
+                                                                <img src="./dot_point.png" alt="Dot Point" width="30px" height="auto" className="ml-4" />
+                                                            </div>
+                                                            <p className="card-text ml-5 mr-4">In addition we have established our 3% For People and Planet Fun - giving 3% of sales to charities and non-profit organisations with shared values and actions.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
+                                                        </div>
                                                     </div>
-                                                    <p className="card-text ml-5 mr-4">In addition we have established our 3% For People and Planet Fun - giving 3% of sales to charities and non-profit organisations with shared values and actions.</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-12 col-lg-6 text-center mb-5 order-3 order-lg-4">
-                                            <video className="planet-animation" autoPlay loop muted playsInline> {/* Animation of People and Planet logo, set to autoplay, loop forever. Muted for Chrome support, playsInline for IOS support */}
-                                                <source src="./people_planet.mp4" type="video/mp4" /> {/* Image Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. Animated by Group Mint*/}
-                                            </video>
-                                        </div>
-                                        <div className="col-12 order-5 order-lg-5">
-                                            <hr style={{ borderTop: '2px solid #222222' }} />
-                                        </div>
-                                        <div className="col-12 col-lg-6 text-center order-6 order-lg-6">
-                                            <img src="./speech_bubble_slim.png" alt="Speech Bubble" className="w-50" /> {/* Original Image Source: John3. 2019. "Chat Oval Speech Bubbles Symbol Comments." Top PNG. https://toppng.com/chat-oval-speech-bubbles-symbol-comments-icon-chat-PNG-free-PNG-Images_234561. Image modified by Group Mint*/}
-                                        </div>
-                                        <div className="col-12 col-lg-6 order-7 order-lg-7">
-                                            <div className="row">
-                                                <div className="col-12 text-center mb-3 mt-3">
-                                                    <p className="card-subtitle"><strong>As Ed Woolner, the man behind the brand says,</strong></p>
+                                                <div className="col-12 col-lg-6 col-md-10 text-center mb-5 order-3 order-lg-4">
+                                                    <video className="planet-animation" autoPlay loop muted playsInline> {/* Animation of People and Planet logo, set to autoplay, loop forever. Muted for Chrome support, playsInline for IOS support */}
+                                                        <source src="./people_planet.mp4" type="video/mp4" /> {/* Image Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. Animated by Group Mint*/}
+                                                    </video>
                                                 </div>
-                                                <div className="col-12">
-                                                    <p className="card-text ml-3">"We all know how precarious our planet's future is, how hard it is to protect and restore it, but we can have a positive impact - as custodians of the land, parents and consumers. With each choice we can make a difference and here at Feel Good we have the opportunity to support others with those choices too. That makes me very happy."</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
+                                                <div className="col-12 order-5 order-lg-5">
+                                                    <hr style={{ borderTop: '2px solid #222222' }} />
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-12 order-8 order-lg-8">
-                                            <div className="mt-2 text-center">
-                                                <Link to="/about-us" className="custom-btn-wide btn-4 m-3"><span>Find Out More</span></Link>
+                                                <div className="col-12 col-lg-6 col-md-10 text-center order-6 order-lg-6">
+                                                    <img src="./speech_bubble_slim.png" alt="Speech Bubble" className="w-50" /> {/* Original Image Source: John3. 2019. "Chat Oval Speech Bubbles Symbol Comments." Top PNG. https://toppng.com/chat-oval-speech-bubbles-symbol-comments-icon-chat-PNG-free-PNG-Images_234561. Image modified by Group Mint*/}
+                                                </div>
+                                                <div className="col-12 col-lg-6 order-7 order-lg-7">
+                                                    <div className="row">
+                                                        <div className="col-12 text-center mb-3 mt-3">
+                                                            <p className="card-subtitle"><strong>As Ed Woolner, the man behind the brand says,</strong></p>
+                                                        </div>
+                                                        <div className="col-12">
+                                                            <p className="card-text ml-3">"We all know how precarious our planet's future is, how hard it is to protect and restore it, but we can have a positive impact - as custodians of the land, parents and consumers. With each choice we can make a difference and here at Feel Good we have the opportunity to support others with those choices too. That makes me very happy."</p> {/* Text Source: Feel Good Drinks. N.d. "3% for People & Planet." Feel Good Drinks. Accessed June 11, 2021. https://feelgooddrinks.com/pages/3-percent-for-people-and-planet. */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-12 order-8 order-lg-8">
+                                                    <div className="mt-2 text-center">
+                                                        <Link to="/about-us" className="custom-btn-wide btn-4 m-3"><span>Find Out More</span></Link>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </motion.div>
+                        )}
+                    </InView>
                     <div className="row m-auto insta-container">
                         <div className="col-12">
                             <div className="mt-4 text-center">
