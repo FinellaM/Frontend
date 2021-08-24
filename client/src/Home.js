@@ -1,6 +1,5 @@
 import { InView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
