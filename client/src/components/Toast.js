@@ -15,7 +15,7 @@ const Toast = forwardRef((props, ref) => {
     return (
         <div className="toast" 
             id={showToast ? "show" : "hide"} 
-            style={{backgroundColor: props.type === "success" ? "#00F593" : "#FF0033",
+            style={{backgroundColor: props.type === "success" ? "#e4690c" : "#FF0033",
             color: props.type === "success" ? "black" : "white",
         }}
         >
