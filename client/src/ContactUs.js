@@ -49,7 +49,7 @@ const ContactUs = () => {
             setPhone(''); {/*Reset phone input*/}
             setMessage(''); {/*Reset message input*/}
             setFile(''); {/*Reset file input*/}
-            setToastType(ToastType.success);
+            setToastType(ToastType.success); {/*Setting the Toast notification background colour to Orange*/}
             setToastMessage('Form Submitted Successfully! We will contact you as soon as we can.');
             setIsPending(false); {/*Clear "is submitting" status on button*/}
         })
@@ -101,7 +101,7 @@ const ContactUs = () => {
                                 ref={ToastRef}
                                 message={toastMessage} 
                                 type={toastType}
-                            />
+                            /> {/*Toast Notification settings */}
                         </form>
 
                         <div className="other-contact col-9"> {/* Other contact information */}
