@@ -95,7 +95,9 @@ const ContactUs = () => {
                                 onClick={() => {
                                 ToastRef.current.show();
                             }}/>} {/* Submit button.*/}
-                            { isPending && <button type="submit button" className="form-submit btn btn-secondary col-3 formSubmitBtn" aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"  style = {{marginRight: '0.125em'}}/>Submitting...</button>} {/* Submit button when submission is in progress. */}
+                            { isPending && <button type="submit button" className="form-submit btn btn-secondary col-3 formSubmitBtn" 
+                                aria-label="disabled"  tabIndex="-5" disabled> <span className="spinner-border spinner-border-sm" role="status" 
+                                aria-hidden="true"  style = {{marginRight: '0.125em'}}/>Submitting...</button>} {/* Submit button when submission is in progress. */}
                             {/*Details that will be submitted */}
                             <Toast 
                                 ref={ToastRef}
