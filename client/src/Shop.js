@@ -3,7 +3,7 @@ import ProductList from "./ProductList";
 import { Link } from 'react-router-dom';
 
 
-const Shop = () => {
+const Shop = ({ setNewCart }) => {
     // Constant for storing product list
     const [product, setProduct] = useState(null);
 
@@ -73,7 +73,7 @@ const Shop = () => {
                                 }}>
 
                                 </div>
-                                <ProductList product={p} />
+                                <ProductList product={p} setNewCart={setNewCart} />
                             </div>
                         ))}
                     </div>

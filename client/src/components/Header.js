@@ -23,11 +23,15 @@ const Header = ({ newCart, windowListener, setNewCart }) => {
                 return res.json();
             })
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data.message) {
-                    
+                    setNewCart(null);
                 } else {
-                    setNewCart(data);
+                    if (data.length == 0) {
+                        setNewCart(null);
+                    } else {
+                        setNewCart(data);
+                    }
                 }
             })
     }

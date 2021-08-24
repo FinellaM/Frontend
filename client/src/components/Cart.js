@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import SlButton from '@shoelace-style/react/dist/button';
 import { useState, useEffect } from "react";
 
-const Cart = ({ newCart }) => {
+const Cart = ({ newCart, setNewCart }) => {
 
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -10,6 +10,33 @@ const Cart = ({ newCart }) => {
         e.preventDefault();
         document.getElementById("myCart").style.width = "0";
         document.getElementById("myCart").style.boxShadow = "rgb(0 0 0 / 30%) 70px 0px 30px 50px";
+    }
+
+    const removeItem = (e, id) => {
+        e.preventDefault();
+
+        fetch(`/cart/remove/${id}`, {
+            method: 'DELETE'
+        })
+        .then(() => {
+            
+            fetch(`/cart/items`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                // console.log(data);
+                if (data.message) {
+                    setNewCart(null);
+                } else {
+                    if (data.length == 0) {
+                        setNewCart(null);
+                    } else {
+                        setNewCart(data);
+                    }
+                }
+            })
+        })
     }
 
     useEffect(() => {
@@ -88,6 +115,16 @@ const Cart = ({ newCart }) => {
                                         <h5 className="card-text"><strong>{c.item.flavour}</strong></h5>
                                         <p className="card-text mb-1">{c.item.pack + ' Pack'}</p>
                                         <h5 className="card-text"><strong>{'£ ' + c.item.price}</strong></h5>
+                                        <SlButton onClick={(e) => removeItem(e, c.item._id)} style={{
+                                            width: '100%',
+                                            textAlign: 'left !important',
+                                        }}>
+                                            <i className="fa fa-cart-arrow-down" style={{
+                                                fontSize: '20px',
+                                                marginRight: '0.5em',
+                                            }}></i>
+                                            Remove Item
+                                        </SlButton>
                                     </div>
                                 </div>
                             </div>

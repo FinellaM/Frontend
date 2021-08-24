@@ -47,14 +47,14 @@ function App() {
         <div className="App">
           <Header newCart={newCart} windowListener={windowListener} setNewCart={setNewCart} />
           <Sidenav />
-          <Cart newCart={newCart} />
+          <Cart newCart={newCart} setNewCart={setNewCart} />
           <div className="content">
             <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
               <Route exact path="/shop">
-                <Shop />
+                <Shop setNewCart={setNewCart} />
               </Route>
               <Route exact path="/product/:id">
                 <ProductDetails setNewCart={setNewCart} />
@@ -69,7 +69,7 @@ function App() {
                 <Stockist />
               </Route>
               <Route exact path="/checkout">
-                <Checkout />
+                <Checkout setNewCart={setNewCart} />
               </Route>
               <Route exact path="/privacy-policy">
                 <Privacy />

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ProductList = ({ product }) => {
+const ProductList = ({ product, setNewCart }) => {
     // Show the rollover effect every time the mouse is hovering over the specified area
     const showRolloverEffect = (e, id) => {
         if (e.target.previousElementSibling && e.target.children[0] && document.getElementById(id).getElementsByClassName("splash-image")[0]) {
@@ -16,6 +16,28 @@ const ProductList = ({ product }) => {
             e.target.children[0].style.opacity = '0';
             document.getElementById(id).getElementsByClassName("splash-image")[0].style.opacity = '0';
         }
+    }
+
+    const addCart = (id) => {
+        // console.log(cartState);
+        document.getElementById("cart-badge").className += "cart-badge";
+        setTimeout(() => { document.getElementById("cart-badge").className = ""; }, 1000);
+
+        fetch(`/cart/${id}`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+
+                fetch(`/cart/items`)
+                    .then(res => {
+                        return res.json();
+                    })
+                    .then(data => {
+                        // console.log(data);
+                        setNewCart(data);
+                    })
+            })
     }
 
     return (
@@ -35,7 +57,7 @@ const ProductList = ({ product }) => {
                             <div className="row overlay w-100 h-100" onMouseEnter={(e) => showRolloverEffect(e, product._id)} onMouseLeave={(e) => hideRolloverEffect(e, product._id)}>
                                 <div className="overlay-content text-center">
                                     <div>
-                                        <a type="button" className="custom-btn btn-3 m-3"><span>Add to Cart</span></a>
+                                        <a type="button" className="custom-btn btn-3 m-3"><span onClick={() => addCart(product.items[0])}>Add to Cart</span></a>
                                     </div>
                                     <div>
                                         <Link to={`/product/${product._id}`} className="custom-btn btn-3 m-3"><span>View Details</span></Link>

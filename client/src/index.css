@@ -553,7 +553,7 @@ Contact Page Styling -----------------------------------------------------------
 
 /*Adjust size of form input fields*/
 .form-input {
-  height: 50px;
+  height: 40px;
 }
 
 /*Adjust message text area size*/
@@ -2057,5 +2057,14 @@ footer a{
 .wrapper .youtube:hover .tooltip::before {
   background-color: #de463b;
   color: #ffffff;
+}
+
+/* Hide the other two tables in Mixed Pack product */
+#nt-60f6a01877f5a752b9c31bfd-1, #nt-60f6a0bd77f5a752b9c31bfe-2 {
+  display: none;
+}
+
+.active-sidenav {
+  color: #e4690c;
 }
 
